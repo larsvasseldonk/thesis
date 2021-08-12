@@ -1,0 +1,385 @@
+{
+    "name": "louvain clustering with static_semantic data",
+    "microservice_metrics": {
+        "data": "static_semantic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 0.4,
+        "degree_source_2": null,
+        "number_of_nodes": 77,
+        "coverage": 1.0,
+        "number_of_modules": 13,
+        "number_of_missing_modules": 0,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 0,
+        "number_of_classes": 64,
+        "number_of_missing_classes": 0,
+        "no_behavior_classes": 0,
+        "third_party_classes": 0,
+        "other_reason_classes": 0,
+        "number_of_edges": 737,
+        "number_of_services": 6,
+        "number_of_services_with_interface": 5,
+        "number_of_interfaces": 17,
+        "number_of_operations": 33,
+        "average_cohesion_at_domain_level": 0.595,
+        "average_cohesion_at_message_level": 0.592,
+        "average_interface_number": 3.4,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.833,
+        "structural_modularity_quality": 0.036,
+        "conceptual_modularity_quality": 0.212,
+        "max_service_size": 28
+    },
+    "services": [
+        {
+            "id": "ser66",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 1.379437176829959,
+                "n_inter_edges": 6,
+                "total_weight_inter_edges": 0.22353074470359668,
+                "cluster_factor": 0.925,
+                "ifn": 2,
+                "opn": 4,
+                "scoh": 0.0,
+                "scop": 0.0,
+                "ccoh": 0.3333333333333333,
+                "ccop": 0.0738095238095238
+            },
+            "code_fragments": [
+                "twitter.timezones.UTC",
+                "twitter.timezones.FixedOffset",
+                "twitter.timezones.LocalTimezone"
+            ],
+            "interfaces": [
+                {
+                    "name": "twitter.timezones.UTC",
+                    "operations": [
+                        "twitter.timezones.UTC.utcoffset"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.timezones.LocalTimezone",
+                    "operations": [
+                        "twitter.timezones.LocalTimezone.dst",
+                        "twitter.timezones.LocalTimezone.utcoffset",
+                        "twitter.timezones.LocalTimezone.tzname"
+                    ],
+                    "chm": 1.0,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser67",
+            "statistics": {
+                "n_intra_edges": 65,
+                "total_weight_intra_edges": 6.374157395750134,
+                "n_inter_edges": 60,
+                "total_weight_inter_edges": 2.26534173266502,
+                "cluster_factor": 0.849,
+                "ifn": 7,
+                "opn": 16,
+                "scoh": 0.09,
+                "scop": 0.025654761904761902,
+                "ccoh": 0.0975,
+                "ccop": 0.08119047619047619
+            },
+            "code_fragments": [
+                "twitter.oauth2",
+                "twitter.oauth2.OAuth2",
+                "twitter.ircbot.SchedTask",
+                "twitter.ircbot.Scheduler",
+                "twitter.ircbot.TwitterBot",
+                "twitter.oauth.OAuth",
+                "twitter.ircbot",
+                "twitter.auth.UserPassAuth",
+                "twitter.api.TwitterResponse",
+                "twitter.api.Twitter",
+                "twitter.logger",
+                "twitter.archiver",
+                "twitter.auth.NoAuth",
+                "twitter.cmdline.RateLimitStatus",
+                "twitter.follow",
+                "twitter.oauth_dance",
+                "twitter.oauth",
+                "twitter.util",
+                "twitter.auth.Auth",
+                "twitter.util.Fail"
+            ],
+            "interfaces": [
+                {
+                    "name": "twitter.oauth",
+                    "operations": [
+                        "twitter.oauth.read_token_file"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.oauth.OAuth",
+                    "operations": [
+                        "twitter.oauth.OAuth.generate_headers",
+                        "twitter.oauth.OAuth.__init__",
+                        "twitter.oauth.OAuth",
+                        "twitter.oauth.OAuth.encode_params"
+                    ],
+                    "chm": 0.09583333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.auth.NoAuth",
+                    "operations": [
+                        "twitter.auth.NoAuth.encode_params",
+                        "twitter.auth.NoAuth.generate_headers"
+                    ],
+                    "chm": 0.25,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.api.Twitter",
+                    "operations": [
+                        "twitter.api.Twitter.__init__",
+                        "twitter.api.Twitter"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.util",
+                    "operations": [
+                        "twitter.util.align_text",
+                        "twitter.util.actually_bytes",
+                        "twitter.util.printNicely",
+                        "twitter.util.smrt_input"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.cmdline.RateLimitStatus",
+                    "operations": [
+                        "twitter.cmdline.RateLimitStatus.__call__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.oauth_dance",
+                    "operations": [
+                        "twitter.oauth_dance",
+                        "twitter.oauth_dance.oauth_dance"
+                    ],
+                    "chm": 0.0,
+                    "chd": 2.0
+                }
+            ]
+        },
+        {
+            "id": "ser68",
+            "statistics": {
+                "n_intra_edges": 4,
+                "total_weight_intra_edges": 0.9134875535791691,
+                "n_inter_edges": 12,
+                "total_weight_inter_edges": 0.6974551040665964,
+                "cluster_factor": 0.724,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.0,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.055357142857142855
+            },
+            "code_fragments": [
+                "twitter.cmdline.ListsVerboseFormatter",
+                "twitter.api.TwitterDictResponse",
+                "twitter.cmdline.ListsFormatter",
+                "twitter.api.TwitterListResponse"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser69",
+            "statistics": {
+                "n_intra_edges": 27,
+                "total_weight_intra_edges": 5.8009540867575335,
+                "n_inter_edges": 94,
+                "total_weight_inter_edges": 4.463647386796035,
+                "cluster_factor": 0.722,
+                "ifn": 5,
+                "opn": 6,
+                "scoh": 0.04,
+                "scop": 0.007142857142857143,
+                "ccoh": 0.27,
+                "ccop": 0.26726190476190476
+            },
+            "code_fragments": [
+                "twitter.ansi.AnsiCmd",
+                "twitter.api.TwitterError",
+                "twitter.ansi.ColourMap",
+                "twitter.cmdline.NoSuchActionError",
+                "twitter.auth.MissingCredentialsError",
+                "twitter.ansi.AnsiColourException",
+                "twitter.cmdline.AnsiStatusFormatter",
+                "twitter.cmdline.AnsiSearchFormatter",
+                "twitter.ansi",
+                "twitter.cmdline.AnsiListsFormatter"
+            ],
+            "interfaces": [
+                {
+                    "name": "twitter.ansi.AnsiCmd",
+                    "operations": [
+                        "twitter.ansi.AnsiCmd",
+                        "twitter.ansi.AnsiCmd.__init__"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.cmdline.AnsiListsFormatter",
+                    "operations": [
+                        "twitter.cmdline.AnsiListsFormatter.__call__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.cmdline.AnsiSearchFormatter",
+                    "operations": [
+                        "twitter.cmdline.AnsiSearchFormatter.__call__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.auth.MissingCredentialsError",
+                    "operations": [
+                        "twitter.auth.MissingCredentialsError"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.api.TwitterError",
+                    "operations": [
+                        "twitter.api.TwitterError"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser70",
+            "statistics": {
+                "n_intra_edges": 41,
+                "total_weight_intra_edges": 4.415189147822654,
+                "n_inter_edges": 30,
+                "total_weight_inter_edges": 1.351349115873115,
+                "cluster_factor": 0.867,
+                "ifn": 2,
+                "opn": 4,
+                "scoh": 0.08333333333333333,
+                "scop": 0.0,
+                "ccoh": 0.2708333333333333,
+                "ccop": 0.08234126984126983
+            },
+            "code_fragments": [
+                "twitter.stream.SockReader",
+                "twitter.stream_example",
+                "twitter.stream.Timer",
+                "twitter.stream",
+                "twitter.api.TwitterHTTPError",
+                "twitter.api.TwitterCall",
+                "twitter.stream.HttpChunkDecoder",
+                "twitter.cmdline.SetStatusAction",
+                "twitter.api",
+                "twitter.stream.TwitterStream",
+                "twitter.stream.JsonDecoder",
+                "twitter.stream.TwitterJSONIter"
+            ],
+            "interfaces": [
+                {
+                    "name": "twitter.cmdline.SetStatusAction",
+                    "operations": [
+                        "twitter.cmdline.SetStatusAction.__call__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.api.TwitterCall",
+                    "operations": [
+                        "twitter.api.TwitterCall.__call__",
+                        "twitter.api.TwitterCall.__getattr__",
+                        "twitter.api.TwitterCall.__init__"
+                    ],
+                    "chm": 0.16666666666666666,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser71",
+            "statistics": {
+                "n_intra_edges": 297,
+                "total_weight_intra_edges": 26.690917747522917,
+                "n_inter_edges": 98,
+                "total_weight_inter_edges": 5.196700080349561,
+                "cluster_factor": 0.911,
+                "ifn": 1,
+                "opn": 3,
+                "scoh": 0.01913265306122449,
+                "scop": 0.008630952380952382,
+                "ccoh": 0.3788265306122449,
+                "ccop": 0.25416666666666665
+            },
+            "code_fragments": [
+                "twitter.cmdline.ListsAction",
+                "twitter.cmdline.TwitterShell",
+                "twitter.cmdline.Action",
+                "twitter.cmdline.VerboseStatusFormatter",
+                "twitter.cmdline.SearchAction",
+                "twitter.cmdline.NoSuchAction",
+                "twitter.cmdline.JSONStatusFormatter",
+                "twitter.cmdline.StatusFormatter",
+                "twitter.cmdline.FriendsAction",
+                "twitter.cmdline.UserAction",
+                "twitter.cmdline",
+                "twitter.api._DEFAULT",
+                "twitter.cmdline.VerboseAdminFormatter",
+                "twitter.cmdline.RepliesAction",
+                "twitter.cmdline.AdminAction",
+                "twitter.cmdline.VerboseSearchFormatter",
+                "twitter.cmdline.FollowAction",
+                "twitter.cmdline.HelpAction",
+                "twitter.cmdline.URLSearchFormatter",
+                "twitter.cmdline.StatusAction",
+                "twitter.cmdline.AdminFormatter",
+                "twitter.cmdline.SearchFormatter",
+                "twitter.cmdline.ReplAction",
+                "twitter.cmdline.DoNothingAction",
+                "twitter.cmdline.URLStatusFormatter",
+                "twitter.cmdline.PythonPromptAction",
+                "twitter.cmdline.LeaveAction",
+                "twitter.cmdline.MyListsAction"
+            ],
+            "interfaces": [
+                {
+                    "name": "twitter.cmdline",
+                    "operations": [
+                        "twitter.cmdline.correctRTStatus",
+                        "twitter.cmdline.get_time_string",
+                        "twitter.cmdline.replaceInStatus"
+                    ],
+                    "chm": 0.5555555555555556,
+                    "chd": 0.1111111111111111
+                }
+            ]
+        }
+    ]
+}

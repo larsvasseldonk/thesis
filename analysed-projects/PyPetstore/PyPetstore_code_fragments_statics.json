@@ -1,0 +1,1759 @@
+{
+    "program": "PyPetstore",
+    "path": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore",
+    "statistics": {
+        "modules_covered": 4,
+        "module_coverage": 0.8,
+        "classes_covered": 4,
+        "class_coverage": 0.8
+    },
+    "code_fragments": [
+        {
+            "id": "cf0",
+            "name": "pypetstore.util",
+            "type": "module",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf1",
+            "name": "pypetstore.util.print_main_menu",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf2",
+            "name": "pypetstore.main",
+            "type": "module",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf3",
+            "name": "pypetstore.__init__",
+            "type": "module",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf4",
+            "name": "pypetstore.order",
+            "type": "module",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    4
+                ],
+                [
+                    "order.Order.search_order",
+                    3
+                ],
+                [
+                    "order.Order.print_nicely",
+                    2
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    4
+                ],
+                [
+                    "order.Order.to_db",
+                    2
+                ],
+                [
+                    "order.Order.get_id",
+                    2
+                ],
+                [
+                    "order.Order.__init__",
+                    1
+                ],
+                [
+                    "pypetstore.customer.Customer.search_customer",
+                    1
+                ],
+                [
+                    "pypetstore.orderdetail.view_orderdetails",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.search_order",
+                "pypetstore.order.Order.print_nicely",
+                "pypetstore.order.Order.search_order",
+                "pypetstore.order.Order.to_db",
+                "pypetstore.order.Order.get_id",
+                "pypetstore.order.Order.__init__",
+                "pypetstore.order.Order.to_db",
+                "pypetstore.order.Order.get_id",
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.order.Order.print_nicely",
+                "pypetstore.order.Order.search_order",
+                "pypetstore.orderdetail.view_orderdetails"
+            ],
+            "outgoing_edges": [
+                [
+                    "cf4",
+                    "cf5",
+                    10.0
+                ],
+                [
+                    "cf4",
+                    "cf20",
+                    1.0
+                ],
+                [
+                    "cf4",
+                    "cf61",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf5",
+            "name": "pypetstore.order.Order",
+            "type": "class",
+            "destinations": [
+                [
+                    "pypetstore.external_logger.method_logger",
+                    1
+                ],
+                [
+                    "pypetstore.external_logger.function_logger",
+                    1
+                ],
+                [
+                    "<builtin>.str",
+                    2
+                ],
+                [
+                    "<builtin>.print",
+                    3
+                ],
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    2
+                ],
+                [
+                    "order.Order.get_status",
+                    1
+                ],
+                [
+                    "order.Order.get_id",
+                    1
+                ],
+                [
+                    "order.Order.__init__",
+                    1
+                ],
+                [
+                    "order.Order.set_id",
+                    1
+                ],
+                [
+                    "pypetstore.customer.Customer.search_customer",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.get_status",
+                "pypetstore.order.Order.get_id",
+                "pypetstore.order.Order.__init__",
+                "pypetstore.order.Order.set_id",
+                "pypetstore.customer.Customer.search_customer"
+            ],
+            "outgoing_edges": [
+                [
+                    "cf5",
+                    "cf20",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf6",
+            "name": "pypetstore.order.Order.__init__",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf7",
+            "name": "pypetstore.order.Order.set_id",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.str",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf8",
+            "name": "pypetstore.order.Order.get_id",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf9",
+            "name": "pypetstore.order.Order.set_status",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf10",
+            "name": "pypetstore.order.Order.get_status",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf11",
+            "name": "pypetstore.order.Order.to_db",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf12",
+            "name": "pypetstore.order.Order.print_nicely",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "order.Order.get_status",
+                    1
+                ],
+                [
+                    "order.Order.get_id",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.get_status",
+                "pypetstore.order.Order.get_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf13",
+            "name": "pypetstore.order.Order.search_order",
+            "type": "method",
+            "destinations": [
+                [
+                    "order.Order.__init__",
+                    1
+                ],
+                [
+                    "order.Order.set_id",
+                    1
+                ],
+                [
+                    "<builtin>.str",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "pypetstore.customer.Customer.search_customer",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.__init__",
+                "pypetstore.order.Order.set_id",
+                "pypetstore.customer.Customer.search_customer"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf14",
+            "name": "pypetstore.order.view_orders",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "order.Order.search_order",
+                    1
+                ],
+                [
+                    "order.Order.print_nicely",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.search_order",
+                "pypetstore.order.Order.print_nicely"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf15",
+            "name": "pypetstore.order.view_order",
+            "type": "function",
+            "destinations": [
+                [
+                    "order.Order.print_nicely",
+                    1
+                ],
+                [
+                    "order.Order.search_order",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ],
+                [
+                    "pypetstore.orderdetail.view_orderdetails",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.print_nicely",
+                "pypetstore.order.Order.search_order",
+                "pypetstore.orderdetail.view_orderdetails"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf16",
+            "name": "pypetstore.order.create_order",
+            "type": "function",
+            "destinations": [
+                [
+                    "order.Order.__init__",
+                    1
+                ],
+                [
+                    "order.Order.to_db",
+                    1
+                ],
+                [
+                    "order.Order.get_id",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ],
+                [
+                    "pypetstore.customer.Customer.search_customer",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.__init__",
+                "pypetstore.order.Order.to_db",
+                "pypetstore.order.Order.get_id",
+                "pypetstore.customer.Customer.search_customer"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf17",
+            "name": "pypetstore.order.delete_order",
+            "type": "function",
+            "destinations": [
+                [
+                    "order.Order.search_order",
+                    1
+                ],
+                [
+                    "order.Order.to_db",
+                    1
+                ],
+                [
+                    "order.Order.get_id",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.order.Order.search_order",
+                "pypetstore.order.Order.to_db",
+                "pypetstore.order.Order.get_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf18",
+            "name": "pypetstore.order.print_orders_menu",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf19",
+            "name": "pypetstore.customer",
+            "type": "module",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    5
+                ],
+                [
+                    "customer.Customer.search_customer",
+                    3
+                ],
+                [
+                    "customer.Customer.print_nicely",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ],
+                [
+                    "customer.Customer.to_db",
+                    3
+                ],
+                [
+                    "<builtin>.input",
+                    4
+                ],
+                [
+                    "customer.Customer.__init__",
+                    1
+                ],
+                [
+                    "customer.Customer.set_name",
+                    1
+                ],
+                [
+                    "customer.Customer.set_email",
+                    1
+                ],
+                [
+                    "customer.Customer.get_id",
+                    2
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.customer.Customer.print_nicely",
+                "pypetstore.customer.Customer.to_db",
+                "pypetstore.customer.Customer.__init__",
+                "pypetstore.customer.Customer.set_name",
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.customer.Customer.to_db",
+                "pypetstore.customer.Customer.set_email",
+                "pypetstore.customer.Customer.get_id",
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.customer.Customer.to_db",
+                "pypetstore.customer.Customer.get_id"
+            ],
+            "outgoing_edges": [
+                [
+                    "cf19",
+                    "cf20",
+                    12.0
+                ]
+            ]
+        },
+        {
+            "id": "cf20",
+            "name": "pypetstore.customer.Customer",
+            "type": "class",
+            "destinations": [
+                [
+                    "pypetstore.external_logger.method_logger",
+                    1
+                ],
+                [
+                    "pypetstore.external_logger.function_logger",
+                    1
+                ],
+                [
+                    "<builtin>.str",
+                    2
+                ],
+                [
+                    "<builtin>.print",
+                    3
+                ],
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    2
+                ],
+                [
+                    "customer.Customer.get_email",
+                    1
+                ],
+                [
+                    "customer.Customer.get_id",
+                    1
+                ],
+                [
+                    "customer.Customer.get_name",
+                    1
+                ],
+                [
+                    "customer.Customer.__init__",
+                    1
+                ],
+                [
+                    "customer.Customer.set_id",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.get_email",
+                "pypetstore.customer.Customer.get_id",
+                "pypetstore.customer.Customer.get_name",
+                "pypetstore.customer.Customer.__init__",
+                "pypetstore.customer.Customer.set_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf21",
+            "name": "pypetstore.customer.Customer.__init__",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf22",
+            "name": "pypetstore.customer.Customer.set_id",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.str",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf23",
+            "name": "pypetstore.customer.Customer.get_id",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf24",
+            "name": "pypetstore.customer.Customer.set_name",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf25",
+            "name": "pypetstore.customer.Customer.get_name",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf26",
+            "name": "pypetstore.customer.Customer.set_email",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf27",
+            "name": "pypetstore.customer.Customer.get_email",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf28",
+            "name": "pypetstore.customer.Customer.to_db",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf29",
+            "name": "pypetstore.customer.Customer.print_nicely",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "customer.Customer.get_email",
+                    1
+                ],
+                [
+                    "customer.Customer.get_id",
+                    1
+                ],
+                [
+                    "customer.Customer.get_name",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.get_email",
+                "pypetstore.customer.Customer.get_id",
+                "pypetstore.customer.Customer.get_name"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf30",
+            "name": "pypetstore.customer.Customer.search_customer",
+            "type": "method",
+            "destinations": [
+                [
+                    "customer.Customer.__init__",
+                    1
+                ],
+                [
+                    "<builtin>.str",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "customer.Customer.set_id",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.__init__",
+                "pypetstore.customer.Customer.set_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf31",
+            "name": "pypetstore.customer.view_customers",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "customer.Customer.search_customer",
+                    1
+                ],
+                [
+                    "customer.Customer.print_nicely",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.customer.Customer.print_nicely"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf32",
+            "name": "pypetstore.customer.create_customer",
+            "type": "function",
+            "destinations": [
+                [
+                    "customer.Customer.to_db",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ],
+                [
+                    "customer.Customer.__init__",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.to_db",
+                "pypetstore.customer.Customer.__init__"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf33",
+            "name": "pypetstore.customer.update_customer",
+            "type": "function",
+            "destinations": [
+                [
+                    "customer.Customer.set_name",
+                    1
+                ],
+                [
+                    "customer.Customer.search_customer",
+                    1
+                ],
+                [
+                    "customer.Customer.to_db",
+                    1
+                ],
+                [
+                    "customer.Customer.set_email",
+                    1
+                ],
+                [
+                    "customer.Customer.get_id",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.set_name",
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.customer.Customer.to_db",
+                "pypetstore.customer.Customer.set_email",
+                "pypetstore.customer.Customer.get_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf34",
+            "name": "pypetstore.customer.delete_customer",
+            "type": "function",
+            "destinations": [
+                [
+                    "customer.Customer.search_customer",
+                    1
+                ],
+                [
+                    "customer.Customer.to_db",
+                    1
+                ],
+                [
+                    "customer.Customer.get_id",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.customer.Customer.to_db",
+                "pypetstore.customer.Customer.get_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf35",
+            "name": "pypetstore.customer.print_customers_menu",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf36",
+            "name": "pypetstore.product",
+            "type": "module",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    5
+                ],
+                [
+                    "<builtin>.input",
+                    4
+                ],
+                [
+                    "product.Product.get_id",
+                    3
+                ],
+                [
+                    "product.Product.__init__",
+                    1
+                ],
+                [
+                    "product.Product.to_db",
+                    3
+                ],
+                [
+                    "product.Product.set_price",
+                    1
+                ],
+                [
+                    "product.Product.set_name",
+                    1
+                ],
+                [
+                    "product.Product.set_stock",
+                    1
+                ],
+                [
+                    "product.Product.search_product",
+                    3
+                ],
+                [
+                    "product.Product.print_nicely",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.product.Product.get_id",
+                "pypetstore.product.Product.__init__",
+                "pypetstore.product.Product.to_db",
+                "pypetstore.product.Product.set_price",
+                "pypetstore.product.Product.set_name",
+                "pypetstore.product.Product.get_id",
+                "pypetstore.product.Product.set_stock",
+                "pypetstore.product.Product.to_db",
+                "pypetstore.product.Product.search_product",
+                "pypetstore.product.Product.get_id",
+                "pypetstore.product.Product.to_db",
+                "pypetstore.product.Product.search_product",
+                "pypetstore.product.Product.print_nicely",
+                "pypetstore.product.Product.search_product"
+            ],
+            "outgoing_edges": [
+                [
+                    "cf36",
+                    "cf37",
+                    14.0
+                ]
+            ]
+        },
+        {
+            "id": "cf37",
+            "name": "pypetstore.product.Product",
+            "type": "class",
+            "destinations": [
+                [
+                    "pypetstore.external_logger.method_logger",
+                    1
+                ],
+                [
+                    "pypetstore.external_logger.function_logger",
+                    1
+                ],
+                [
+                    "<builtin>.float",
+                    2
+                ],
+                [
+                    "<builtin>.int",
+                    2
+                ],
+                [
+                    "<builtin>.str",
+                    2
+                ],
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    2
+                ],
+                [
+                    "<builtin>.print",
+                    2
+                ],
+                [
+                    "product.Product.__init__",
+                    1
+                ],
+                [
+                    "product.Product.set_id",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.product.Product.__init__",
+                "pypetstore.product.Product.set_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf38",
+            "name": "pypetstore.product.Product.__init__",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.float",
+                    1
+                ],
+                [
+                    "<builtin>.int",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf39",
+            "name": "pypetstore.product.Product.set_id",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.str",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf40",
+            "name": "pypetstore.product.Product.get_id",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf41",
+            "name": "pypetstore.product.Product.set_name",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf42",
+            "name": "pypetstore.product.Product.get_name",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf43",
+            "name": "pypetstore.product.Product.set_price",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.float",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf44",
+            "name": "pypetstore.product.Product.get_price",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf45",
+            "name": "pypetstore.product.Product.set_stock",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.int",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf46",
+            "name": "pypetstore.product.Product.get_stock",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf47",
+            "name": "pypetstore.product.Product.to_db",
+            "type": "method",
+            "destinations": [
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf48",
+            "name": "pypetstore.product.Product.print_nicely",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf49",
+            "name": "pypetstore.product.Product.search_product",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.str",
+                    1
+                ],
+                [
+                    "product.Product.__init__",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "product.Product.set_id",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.product.Product.__init__",
+                "pypetstore.product.Product.set_id"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf50",
+            "name": "pypetstore.product.view_products",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "product.Product.print_nicely",
+                    1
+                ],
+                [
+                    "product.Product.search_product",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.product.Product.print_nicely",
+                "pypetstore.product.Product.search_product"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf51",
+            "name": "pypetstore.product.create_product",
+            "type": "function",
+            "destinations": [
+                [
+                    "product.Product.get_id",
+                    1
+                ],
+                [
+                    "product.Product.__init__",
+                    1
+                ],
+                [
+                    "product.Product.to_db",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.product.Product.get_id",
+                "pypetstore.product.Product.__init__",
+                "pypetstore.product.Product.to_db"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf52",
+            "name": "pypetstore.product.update_product",
+            "type": "function",
+            "destinations": [
+                [
+                    "product.Product.set_price",
+                    1
+                ],
+                [
+                    "product.Product.set_name",
+                    1
+                ],
+                [
+                    "product.Product.get_id",
+                    1
+                ],
+                [
+                    "product.Product.set_stock",
+                    1
+                ],
+                [
+                    "product.Product.to_db",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ],
+                [
+                    "product.Product.search_product",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.product.Product.set_price",
+                "pypetstore.product.Product.set_name",
+                "pypetstore.product.Product.get_id",
+                "pypetstore.product.Product.set_stock",
+                "pypetstore.product.Product.to_db",
+                "pypetstore.product.Product.search_product"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf53",
+            "name": "pypetstore.product.delete_product",
+            "type": "function",
+            "destinations": [
+                [
+                    "product.Product.get_id",
+                    1
+                ],
+                [
+                    "product.Product.to_db",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ],
+                [
+                    "product.Product.search_product",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.product.Product.get_id",
+                "pypetstore.product.Product.to_db",
+                "pypetstore.product.Product.search_product"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf54",
+            "name": "pypetstore.product.print_products_menu",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf55",
+            "name": "pypetstore.database",
+            "type": "module",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf56",
+            "name": "pypetstore.database.Database",
+            "type": "class",
+            "destinations": [
+                [
+                    "pypetstore.external_logger.method_logger",
+                    1
+                ],
+                [
+                    "database.Database.create_connection",
+                    1
+                ],
+                [
+                    "os.getcwd",
+                    1
+                ],
+                [
+                    "database.Database.create_tables",
+                    1
+                ],
+                [
+                    "os.path.join",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    2
+                ],
+                [
+                    "sqlite3.connect",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.database.Database.create_connection",
+                "pypetstore.database.Database.create_tables"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf57",
+            "name": "pypetstore.database.Database.__init__",
+            "type": "method",
+            "destinations": [
+                [
+                    "database.Database.create_connection",
+                    1
+                ],
+                [
+                    "os.getcwd",
+                    1
+                ],
+                [
+                    "database.Database.create_tables",
+                    1
+                ],
+                [
+                    "os.path.join",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.database.Database.create_connection",
+                "pypetstore.database.Database.create_tables"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf58",
+            "name": "pypetstore.database.Database.create_connection",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "sqlite3.connect",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf59",
+            "name": "pypetstore.database.Database.create_tables",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf60",
+            "name": "pypetstore.database.Database.close_connection",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf61",
+            "name": "pypetstore.orderdetail",
+            "type": "module",
+            "destinations": [
+                [
+                    "orderdetail.Orderdetail.to_db",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.__init__",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    2
+                ],
+                [
+                    "pypetstore.product.Product.search_product",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ],
+                [
+                    "pypetstore.product.view_products",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.search_orderdetail",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.print_nicely",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.orderdetail.Orderdetail.to_db",
+                "pypetstore.orderdetail.Orderdetail.__init__",
+                "pypetstore.product.Product.search_product",
+                "pypetstore.product.view_products",
+                "pypetstore.orderdetail.Orderdetail.search_orderdetail",
+                "pypetstore.orderdetail.Orderdetail.print_nicely"
+            ],
+            "outgoing_edges": [
+                [
+                    "cf61",
+                    "cf62",
+                    4.0
+                ],
+                [
+                    "cf61",
+                    "cf37",
+                    1.0
+                ],
+                [
+                    "cf61",
+                    "cf36",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf62",
+            "name": "pypetstore.orderdetail.Orderdetail",
+            "type": "class",
+            "destinations": [
+                [
+                    "pypetstore.external_logger.method_logger",
+                    1
+                ],
+                [
+                    "pypetstore.external_logger.function_logger",
+                    1
+                ],
+                [
+                    "<builtin>.float",
+                    1
+                ],
+                [
+                    "<builtin>.int",
+                    1
+                ],
+                [
+                    "<builtin>.str",
+                    2
+                ],
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    3
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    2
+                ],
+                [
+                    "orderdetail.Orderdetail.set_id",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.__init__",
+                    1
+                ],
+                [
+                    "pypetstore.product.Product.search_product",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.orderdetail.Orderdetail.set_id",
+                "pypetstore.orderdetail.Orderdetail.__init__",
+                "pypetstore.product.Product.search_product"
+            ],
+            "outgoing_edges": [
+                [
+                    "cf62",
+                    "cf37",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf63",
+            "name": "pypetstore.orderdetail.Orderdetail.__init__",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.float",
+                    1
+                ],
+                [
+                    "<builtin>.int",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf64",
+            "name": "pypetstore.orderdetail.Orderdetail.set_id",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.str",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf65",
+            "name": "pypetstore.orderdetail.Orderdetail.get_id",
+            "type": "method",
+            "destinations": [],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf66",
+            "name": "pypetstore.orderdetail.Orderdetail.to_db",
+            "type": "method",
+            "destinations": [
+                [
+                    "pypetstore.database.db.conn.commit",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf67",
+            "name": "pypetstore.orderdetail.Orderdetail.print_nicely",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ]
+            ],
+            "internal_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf68",
+            "name": "pypetstore.orderdetail.Orderdetail.search_orderdetail",
+            "type": "method",
+            "destinations": [
+                [
+                    "<builtin>.str",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.set_id",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.__init__",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "pypetstore.product.Product.search_product",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.orderdetail.Orderdetail.set_id",
+                "pypetstore.orderdetail.Orderdetail.__init__",
+                "pypetstore.product.Product.search_product"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf69",
+            "name": "pypetstore.orderdetail.view_orderdetails",
+            "type": "function",
+            "destinations": [
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.search_orderdetail",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.print_nicely",
+                    1
+                ],
+                [
+                    "pypetstore.database.db.conn.cursor",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.orderdetail.Orderdetail.search_orderdetail",
+                "pypetstore.orderdetail.Orderdetail.print_nicely"
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf70",
+            "name": "pypetstore.orderdetail.create_orderdetails",
+            "type": "function",
+            "destinations": [
+                [
+                    "orderdetail.Orderdetail.to_db",
+                    1
+                ],
+                [
+                    "orderdetail.Orderdetail.__init__",
+                    1
+                ],
+                [
+                    "<builtin>.print",
+                    1
+                ],
+                [
+                    "pypetstore.product.Product.search_product",
+                    1
+                ],
+                [
+                    "<builtin>.input",
+                    1
+                ],
+                [
+                    "pypetstore.product.view_products",
+                    1
+                ]
+            ],
+            "internal_destinations": [
+                "pypetstore.orderdetail.Orderdetail.to_db",
+                "pypetstore.orderdetail.Orderdetail.__init__",
+                "pypetstore.product.Product.search_product",
+                "pypetstore.product.view_products"
+            ],
+            "outgoing_edges": []
+        }
+    ]
+}

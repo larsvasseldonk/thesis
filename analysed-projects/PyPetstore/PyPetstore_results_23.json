@@ -1,0 +1,189 @@
+{
+    "name": "louvain clustering with dynamic_semantic data",
+    "microservice_metrics": {
+        "data": "dynamic_semantic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 1,
+        "degree_source_2": null,
+        "number_of_nodes": 12,
+        "coverage": 1.0,
+        "number_of_modules": 7,
+        "number_of_missing_modules": 0,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 0,
+        "number_of_classes": 5,
+        "number_of_missing_classes": 0,
+        "no_behavior_classes": 0,
+        "third_party_classes": 0,
+        "other_reason_classes": 0,
+        "number_of_edges": 19,
+        "number_of_services": 4,
+        "number_of_services_with_interface": 3,
+        "number_of_interfaces": 6,
+        "number_of_operations": 19,
+        "average_cohesion_at_domain_level": 0.528,
+        "average_cohesion_at_message_level": 0.369,
+        "average_interface_number": 2.0,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.664,
+        "structural_modularity_quality": 0.175,
+        "conceptual_modularity_quality": 0.178,
+        "max_service_size": 4
+    },
+    "services": [
+        {
+            "id": "ser81",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.08108108108108109,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "pypetstore.database",
+                "pypetstore.database.Database"
+            ],
+            "interfaces": [
+                {
+                    "name": "pypetstore.database.Database",
+                    "operations": [
+                        "pypetstore.database.Database.close_connection"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser82",
+            "statistics": {
+                "n_intra_edges": 5,
+                "total_weight_intra_edges": 1.1621621621621623,
+                "n_inter_edges": 4,
+                "total_weight_inter_edges": 0.35135135135135137,
+                "cluster_factor": 0.869,
+                "ifn": 2,
+                "opn": 7,
+                "scoh": 0.3125,
+                "scop": 0.16666666666666666,
+                "ccoh": 0.3125,
+                "ccop": 0.125
+            },
+            "code_fragments": [
+                "pypetstore.product.Product",
+                "pypetstore.orderdetail.Orderdetail",
+                "pypetstore.product",
+                "pypetstore.orderdetail"
+            ],
+            "interfaces": [
+                {
+                    "name": "pypetstore.product",
+                    "operations": [
+                        "pypetstore.product.print_products_menu",
+                        "pypetstore.product.create_product",
+                        "pypetstore.product.update_product",
+                        "pypetstore.product.delete_product",
+                        "pypetstore.product.view_products"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.24999999999999994
+                },
+                {
+                    "name": "pypetstore.orderdetail",
+                    "operations": [
+                        "pypetstore.orderdetail.create_orderdetails",
+                        "pypetstore.orderdetail.view_orderdetails"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "id": "ser83",
+            "statistics": {
+                "n_intra_edges": 2,
+                "total_weight_intra_edges": 0.3918918918918919,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.013513513513513514,
+                "cluster_factor": 0.983,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.2222222222222222,
+                "scop": 0.08333333333333333,
+                "ccoh": 0.1111111111111111,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "pypetstore.util",
+                "pypetstore.main",
+                "pypetstore.order"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser84",
+            "statistics": {
+                "n_intra_edges": 2,
+                "total_weight_intra_edges": 1.2162162162162162,
+                "n_inter_edges": 4,
+                "total_weight_inter_edges": 0.5945945945945946,
+                "cluster_factor": 0.804,
+                "ifn": 3,
+                "opn": 11,
+                "scoh": 0.2222222222222222,
+                "scop": 0.20833333333333331,
+                "ccoh": 0.2222222222222222,
+                "ccop": 0.15277777777777776
+            },
+            "code_fragments": [
+                "pypetstore.customer.Customer",
+                "pypetstore.order.Order",
+                "pypetstore.customer"
+            ],
+            "interfaces": [
+                {
+                    "name": "pypetstore.customer",
+                    "operations": [
+                        "pypetstore.customer.view_customers",
+                        "pypetstore.customer.create_customer",
+                        "pypetstore.customer.update_customer",
+                        "pypetstore.customer.delete_customer",
+                        "pypetstore.customer.print_customers_menu"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.24999999999999994
+                },
+                {
+                    "name": "pypetstore.customer.Customer",
+                    "operations": [
+                        "pypetstore.customer.Customer.search_customer"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "pypetstore.order.Order",
+                    "operations": [
+                        "pypetstore.order.Order.search_order",
+                        "pypetstore.order.Order.print_nicely",
+                        "pypetstore.order.Order.to_db",
+                        "pypetstore.order.Order.__init__",
+                        "pypetstore.order.Order.get_id"
+                    ],
+                    "chm": 0.21666666666666665,
+                    "chd": 0.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,519 @@
+{
+    "name": "louvain clustering with static_semantic data",
+    "microservice_metrics": {
+        "data": "static_semantic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 0.6,
+        "degree_source_2": null,
+        "number_of_nodes": 85,
+        "coverage": 0.988,
+        "number_of_modules": 15,
+        "number_of_missing_modules": 0,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 0,
+        "number_of_classes": 71,
+        "number_of_missing_classes": 1,
+        "no_behavior_classes": 0,
+        "third_party_classes": 0,
+        "other_reason_classes": 1,
+        "number_of_edges": 322,
+        "number_of_services": 8,
+        "number_of_services_with_interface": 6,
+        "number_of_interfaces": 26,
+        "number_of_operations": 57,
+        "average_cohesion_at_domain_level": 0.716,
+        "average_cohesion_at_message_level": 0.864,
+        "average_interface_number": 4.333,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.878,
+        "structural_modularity_quality": 0.084,
+        "conceptual_modularity_quality": 0.137,
+        "max_service_size": 17
+    },
+    "services": [
+        {
+            "id": "ser119",
+            "statistics": {
+                "n_intra_edges": 5,
+                "total_weight_intra_edges": 0.770565153162418,
+                "n_inter_edges": 12,
+                "total_weight_inter_edges": 0.4561693838139229,
+                "cluster_factor": 0.772,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.1388888888888889,
+                "scop": 0.02973184223184223,
+                "ccoh": 0.027777777777777776,
+                "ccop": 0.05867974617974618
+            },
+            "code_fragments": [
+                "mu.modes.web.WebMode",
+                "mu.logic.Editor",
+                "mu.logic",
+                "mu.__main__",
+                "mu.app.AnimatedSplash",
+                "mu.app"
+            ],
+            "interfaces": [
+                {
+                    "name": "mu.logic",
+                    "operations": [
+                        "mu.logic.sniff_newline_convention"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser120",
+            "statistics": {
+                "n_intra_edges": 50,
+                "total_weight_intra_edges": 3.4336385539521004,
+                "n_inter_edges": 35,
+                "total_weight_inter_edges": 1.3879322193194816,
+                "cluster_factor": 0.832,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.07100591715976332,
+                "scop": 0.02442410530645825,
+                "ccoh": 0.2485207100591716,
+                "ccop": 0.1119044354338472
+            },
+            "code_fragments": [
+                "mu.interface.main.Window",
+                "mu.interface.dialogs.MicrobitSettingsWidget",
+                "mu.interface.dialogs.PackagesWidget",
+                "mu.interface.dialogs.FindReplaceDialog",
+                "mu.interface.dialogs.ModeSelector",
+                "mu.interface.dialogs.ModeItem",
+                "mu.interface.dialogs.EnvironmentVariablesWidget",
+                "mu.interface.main.ButtonBar",
+                "mu.interface.dialogs.AdminDialog",
+                "mu.interface.dialogs.LogWidget",
+                "mu.interface.panes.PlotterPane",
+                "mu.interface.main.FileTabs",
+                "mu.interface.dialogs.PackageDialog"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser121",
+            "statistics": {
+                "n_intra_edges": 28,
+                "total_weight_intra_edges": 4.992429414902776,
+                "n_inter_edges": 28,
+                "total_weight_inter_edges": 1.0600112588155475,
+                "cluster_factor": 0.904,
+                "ifn": 2,
+                "opn": 5,
+                "scoh": 0.05102040816326531,
+                "scop": 0.0091991341991342,
+                "ccoh": 0.10204081632653061,
+                "ccop": 0.08934896802543862
+            },
+            "code_fragments": [
+                "mu.virtual_environment.Pip",
+                "mu.logic.MuFlakeCodeReporter",
+                "mu.virtual_environment",
+                "mu.settings.SettingsError",
+                "mu.virtual_environment.VirtualEnvironmentEnsureError",
+                "mu.virtual_environment.VirtualEnvironment",
+                "mu.virtual_environment.SplashLogHandler",
+                "mu.wheels.__init__",
+                "mu.wheels.__init__.WheelsDownloadError",
+                "mu.wheels.__init__.WheelsError",
+                "mu.virtual_environment.Process",
+                "mu.virtual_environment.VirtualEnvironmentError",
+                "mu.virtual_environment.VirtualEnvironmentCreateError",
+                "mu.wheels.__init__.WheelsBuildError"
+            ],
+            "interfaces": [
+                {
+                    "name": "mu.logic.MuFlakeCodeReporter",
+                    "operations": [
+                        "mu.logic.MuFlakeCodeReporter.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.virtual_environment.VirtualEnvironment",
+                    "operations": [
+                        "mu.virtual_environment.VirtualEnvironment.ensure_and_create",
+                        "mu.virtual_environment.VirtualEnvironment.relocate",
+                        "mu.virtual_environment.VirtualEnvironment.ensure",
+                        "mu.virtual_environment.VirtualEnvironment.installed_packages"
+                    ],
+                    "chm": 0.5555555555555555,
+                    "chd": 0.1111111111111111
+                }
+            ]
+        },
+        {
+            "id": "ser122",
+            "statistics": {
+                "n_intra_edges": 44,
+                "total_weight_intra_edges": 3.0986557701672672,
+                "n_inter_edges": 11,
+                "total_weight_inter_edges": 0.30735647674326594,
+                "cluster_factor": 0.953,
+                "ifn": 7,
+                "opn": 13,
+                "scoh": 0.031141868512110725,
+                "scop": 0.0049362402303578775,
+                "ccoh": 0.1384083044982699,
+                "ccop": 0.025317819435466495
+            },
+            "code_fragments": [
+                "mu.interface.themes.ContrastTheme",
+                "mu.interface.themes.Font",
+                "mu.interface.panes.MicroPythonREPLPane",
+                "mu.interface.panes.PythonProcessPane",
+                "mu.interface.themes.NightTheme",
+                "mu.interface.themes",
+                "mu.interface.dialogs",
+                "mu.interface.themes.DayTheme",
+                "mu.interface.themes.Theme",
+                "mu.interface.panes.JupyterREPLPane",
+                "mu.interface.panes.DebugInspectorItem",
+                "mu.interface.editor.CssLexer",
+                "mu.interface.panes.DebugInspector",
+                "mu.modes.microbit",
+                "mu.interface.editor.EditorPane",
+                "mu.interface.panes",
+                "mu.interface.editor.PythonLexer"
+            ],
+            "interfaces": [
+                {
+                    "name": "mu.interface.editor.EditorPane",
+                    "operations": [
+                        "mu.interface.editor.EditorPane.selection_change_listener",
+                        "mu.interface.editor.EditorPane",
+                        "mu.interface.editor.EditorPane.connect_margin",
+                        "mu.interface.editor.EditorPane.set_api",
+                        "mu.interface.editor.EditorPane.set_zoom",
+                        "mu.interface.editor.EditorPane.label",
+                        "mu.interface.editor.EditorPane.title"
+                    ],
+                    "chm": 0.40476190476190477,
+                    "chd": 0.031746031746031744
+                },
+                {
+                    "name": "mu.interface.panes.DebugInspector",
+                    "operations": [
+                        "mu.interface.panes.DebugInspector"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.themes.Font",
+                    "operations": [
+                        "mu.interface.themes.Font"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.panes.JupyterREPLPane",
+                    "operations": [
+                        "mu.interface.panes.JupyterREPLPane"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.panes.DebugInspectorItem",
+                    "operations": [
+                        "mu.interface.panes.DebugInspectorItem"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.panes.PythonProcessPane",
+                    "operations": [
+                        "mu.interface.panes.PythonProcessPane"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.panes.MicroPythonREPLPane",
+                    "operations": [
+                        "mu.interface.panes.MicroPythonREPLPane"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser123",
+            "statistics": {
+                "n_intra_edges": 23,
+                "total_weight_intra_edges": 1.5991414990866848,
+                "n_inter_edges": 19,
+                "total_weight_inter_edges": 0.5431954083214682,
+                "cluster_factor": 0.855,
+                "ifn": 7,
+                "opn": 12,
+                "scoh": 0.04861111111111111,
+                "scop": 0.003787878787878788,
+                "ccoh": 0.1527777777777778,
+                "ccop": 0.09564251108368756
+            },
+            "code_fragments": [
+                "mu.modes.pyboard.PyboardMode",
+                "mu.modes.circuitpython.CircuitPythonMode",
+                "mu.modes.pico.PicoMode",
+                "mu.interface.main.StatusBar",
+                "mu.modes.base.REPLConnection",
+                "mu.interface.widgets.DeviceSelector",
+                "mu.resources.__init__",
+                "mu.logic.DeviceList",
+                "mu.interface.dialogs.ESPFirmwareFlasherWidget",
+                "mu.modes.base.MicroPythonMode",
+                "mu.modes.lego.LegoMode",
+                "mu.logic.Device"
+            ],
+            "interfaces": [
+                {
+                    "name": "mu.modes.base.MicroPythonMode",
+                    "operations": [
+                        "mu.modes.base.MicroPythonMode.deactivate",
+                        "mu.modes.base.MicroPythonMode.toggle_repl",
+                        "mu.modes.base.MicroPythonMode.device_changed"
+                    ],
+                    "chm": 0.4444444444444444,
+                    "chd": 0.0
+                },
+                {
+                    "name": "mu.logic.Device",
+                    "operations": [
+                        "mu.logic.Device.name"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.main.StatusBar",
+                    "operations": [
+                        "mu.interface.main.StatusBar.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.logic.DeviceList",
+                    "operations": [
+                        "mu.logic.DeviceList.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.dialogs.ESPFirmwareFlasherWidget",
+                    "operations": [
+                        "mu.interface.dialogs.ESPFirmwareFlasherWidget.setup"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.resources.__init__",
+                    "operations": [
+                        "mu.resources.__init__.path",
+                        "mu.resources.__init__.load_font_data",
+                        "mu.resources.__init__.load_stylesheet",
+                        "mu.resources.__init__.load_icon"
+                    ],
+                    "chm": 1.1444444444444444,
+                    "chd": 0.27777777777777773
+                },
+                {
+                    "name": "mu.interface.widgets.DeviceSelector",
+                    "operations": [
+                        "mu.interface.widgets.DeviceSelector.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser124",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.43084688184447595,
+                "n_inter_edges": 6,
+                "total_weight_inter_edges": 0.17867003785849073,
+                "cluster_factor": 0.828,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.2222222222222222,
+                "scop": 0.0,
+                "ccoh": 0.3333333333333333,
+                "ccop": 0.08996450172920761
+            },
+            "code_fragments": [
+                "mu.modes.python3.KernelRunner",
+                "mu.modes.python3.PythonMode",
+                "mu.modes.python3.MuKernelManager"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser125",
+            "statistics": {
+                "n_intra_edges": 21,
+                "total_weight_intra_edges": 1.8664583361104337,
+                "n_inter_edges": 18,
+                "total_weight_inter_edges": 0.3501301786192684,
+                "cluster_factor": 0.914,
+                "ifn": 5,
+                "opn": 10,
+                "scoh": 0.09090909090909091,
+                "scop": 0.0,
+                "ccoh": 0.12396694214876033,
+                "ccop": 0.07112332112332112
+            },
+            "code_fragments": [
+                "mu.interface.panes.FileSystemPane",
+                "mu.contrib.uflash",
+                "mu.app.StartupWorker",
+                "mu.interface.panes.MicroPythonDeviceFileList",
+                "mu.modes.microbit.MicrobitMode",
+                "mu.contrib.microfs",
+                "mu.modes.base.FileManager",
+                "mu.modes.esp.ESPMode",
+                "mu.interface.panes.MuFileList",
+                "mu.interface.panes.LocalFileList",
+                "mu.modes.microbit.DeviceFlasher"
+            ],
+            "interfaces": [
+                {
+                    "name": "mu.contrib.uflash",
+                    "operations": [
+                        "mu.contrib.uflash.find_microbit"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.panes.FileSystemPane",
+                    "operations": [
+                        "mu.interface.panes.FileSystemPane",
+                        "mu.interface.panes.FileSystemPane.__init__",
+                        "mu.interface.panes.FileSystemPane.set_zoom",
+                        "mu.interface.panes.FileSystemPane.set_font_size"
+                    ],
+                    "chm": 0.16666666666666666,
+                    "chd": 0.08333333333333333
+                },
+                {
+                    "name": "mu.modes.microbit.MicrobitMode",
+                    "operations": [
+                        "mu.modes.microbit.MicrobitMode.find_microbit",
+                        "mu.modes.microbit.MicrobitMode.minify_if_needed",
+                        "mu.modes.microbit.MicrobitMode.get_device_micropython_version"
+                    ],
+                    "chm": 0.6666666666666666,
+                    "chd": 0.0
+                },
+                {
+                    "name": "mu.interface.panes.LocalFileList",
+                    "operations": [
+                        "mu.interface.panes.LocalFileList.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.interface.panes.MicroPythonDeviceFileList",
+                    "operations": [
+                        "mu.interface.panes.MicroPythonDeviceFileList.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser126",
+            "statistics": {
+                "n_intra_edges": 13,
+                "total_weight_intra_edges": 1.7692191396689698,
+                "n_inter_edges": 6,
+                "total_weight_inter_edges": 0.13379402243560873,
+                "cluster_factor": 0.964,
+                "ifn": 4,
+                "opn": 16,
+                "scoh": 0.04938271604938271,
+                "scop": 0.0281986531986532,
+                "ccoh": 0.13580246913580246,
+                "ccop": 0.040713915713915715
+            },
+            "code_fragments": [
+                "mu.modes.base",
+                "mu.settings.SettingsBase",
+                "mu.settings",
+                "mu.mu_debug",
+                "mu.settings.UserSettings",
+                "mu.settings.VirtualEnvironmentSettings",
+                "mu.modes.base.BaseMode",
+                "mu.settings.SessionSettings",
+                "mu.modes.debugger.DebugMode"
+            ],
+            "interfaces": [
+                {
+                    "name": "mu.modes.debugger.DebugMode",
+                    "operations": [
+                        "mu.modes.debugger.DebugMode.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.modes.base.BaseMode",
+                    "operations": [
+                        "mu.modes.base.BaseMode.remove_plotter",
+                        "mu.modes.base.BaseMode.workspace_dir",
+                        "mu.modes.base.BaseMode.assets_dir",
+                        "mu.modes.base.BaseMode.set_buttons",
+                        "mu.modes.base.BaseMode.return_focus_to_current_tab",
+                        "mu.modes.base.BaseMode.__init__"
+                    ],
+                    "chm": 0.5222222222222224,
+                    "chd": 0.04444444444444444
+                },
+                {
+                    "name": "mu.settings",
+                    "operations": [
+                        "mu.settings.init"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "mu.settings.SettingsBase",
+                    "operations": [
+                        "mu.settings.SettingsBase.__setitem__",
+                        "mu.settings.SettingsBase.save",
+                        "mu.settings.SettingsBase.update",
+                        "mu.settings.SettingsBase.get",
+                        "mu.settings.SettingsBase.__init__",
+                        "mu.settings.SettingsBase.__contains__",
+                        "mu.settings.SettingsBase.__getitem__",
+                        "mu.settings.SettingsBase.init"
+                    ],
+                    "chm": 0.5535714285714286,
+                    "chd": 0.07142857142857142
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,766 @@
+{
+    "name": "louvain clustering with static_dynamic data",
+    "microservice_metrics": {
+        "data": "static_dynamic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 0.5,
+        "degree_source_2": null,
+        "number_of_nodes": 113,
+        "coverage": 0.904,
+        "number_of_modules": 67,
+        "number_of_missing_modules": 3,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 3,
+        "number_of_classes": 58,
+        "number_of_missing_classes": 9,
+        "no_behavior_classes": 5,
+        "third_party_classes": 0,
+        "other_reason_classes": 4,
+        "number_of_edges": 222,
+        "number_of_services": 16,
+        "number_of_services_with_interface": 8,
+        "number_of_interfaces": 32,
+        "number_of_operations": 80,
+        "average_cohesion_at_domain_level": 0.655,
+        "average_cohesion_at_message_level": 0.703,
+        "average_interface_number": 4.0,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.452,
+        "structural_modularity_quality": 0.192,
+        "conceptual_modularity_quality": 0.189,
+        "max_service_size": 33
+    },
+    "services": [
+        {
+            "id": "ser70",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.25,
+                "n_inter_edges": 2,
+                "total_weight_inter_edges": 0.045454545454545456,
+                "cluster_factor": 0.917,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.1875,
+                "scop": 0.007575757575757576,
+                "ccoh": 0.1875,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.models.feature_extraction.embedding_idf.EmbeddingIdf",
+                "asreview.models.feature_extraction.embedding_lstm",
+                "asreview.models.feature_extraction.embedding_lstm.EmbeddingLSTM",
+                "asreview.models.feature_extraction.embedding_idf"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser71",
+            "statistics": {
+                "n_intra_edges": 58,
+                "total_weight_intra_edges": 1.21213249250345,
+                "n_inter_edges": 37,
+                "total_weight_inter_edges": 0.3942618657359861,
+                "cluster_factor": 0.86,
+                "ifn": 8,
+                "opn": 21,
+                "scoh": 0.05325987144168962,
+                "scop": 0.06537433155080213,
+                "ccoh": 0.02938475665748393,
+                "ccop": 0.017335115864527628
+            },
+            "code_fragments": [
+                "asreview.datasets.BenchmarkDataGroup",
+                "asreview.models.balance.undersample.UndersampleBalance",
+                "asreview.datasets.DatasetManager",
+                "asreview.init_sampling",
+                "asreview.review.factory",
+                "asreview.utils",
+                "asreview.data.base.ASReviewData",
+                "asreview.io.pubmed_xml_reader",
+                "asreview.__main__",
+                "asreview.io.excel_reader",
+                "asreview.models.classifiers.logistic.LogisticClassifier",
+                "asreview.models.feature_extraction.utils",
+                "asreview.io.paper_record",
+                "asreview.models.classifiers.svm.SVMClassifier",
+                "asreview.data.utils",
+                "asreview.io.paper_record.PaperRecord",
+                "asreview.exceptions.BadFileFormatError",
+                "asreview.models.query.mixed.MixedQuery",
+                "asreview.models.query.utils",
+                "asreview.models.classifiers.rf.RandomForestClassifier",
+                "asreview.models.classifiers.utils",
+                "asreview.review.simulate",
+                "asreview.datasets.BaseDataGroup",
+                "asreview.datasets",
+                "asreview.search",
+                "asreview.io.utils",
+                "asreview.datasets.BaseDataSet",
+                "asreview.review.minimal.MinimalReview",
+                "asreview.models.query.mixed",
+                "asreview.io.ris_reader",
+                "asreview.models.balance.utils",
+                "asreview.datasets.BaseVersionedDataSet",
+                "asreview.io.csv_reader"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.utils",
+                    "operations": [
+                        "asreview.utils._set_class_weight",
+                        "asreview.utils.pretty_format",
+                        "asreview.utils.is_iterable",
+                        "asreview.utils.get_data_home",
+                        "asreview.utils.get_random_state"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.04
+                },
+                {
+                    "name": "asreview.models.query.mixed.MixedQuery",
+                    "operations": [
+                        "asreview.models.query.mixed.MixedQuery.query"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.init_sampling",
+                    "operations": [
+                        "asreview.init_sampling.sample_prior_knowledge"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.data.base.ASReviewData",
+                    "operations": [
+                        "asreview.data.base.ASReviewData.record_ids",
+                        "asreview.data.base.ASReviewData.__len__",
+                        "asreview.data.base.ASReviewData.hash",
+                        "asreview.data.base.ASReviewData.from_file",
+                        "asreview.data.base.ASReviewData.headings",
+                        "asreview.data.base.ASReviewData.texts",
+                        "asreview.data.base.ASReviewData.labels",
+                        "asreview.data.base.ASReviewData.keywords",
+                        "asreview.data.base.ASReviewData.bodies"
+                    ],
+                    "chm": 0.9027777777777778,
+                    "chd": 0.0
+                },
+                {
+                    "name": "asreview.search",
+                    "operations": [
+                        "asreview.search.fuzzy_find"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.datasets.DatasetManager",
+                    "operations": [
+                        "asreview.datasets.DatasetManager"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.models.classifiers.utils",
+                    "operations": [
+                        "asreview.models.classifiers.utils.get_classifier"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.review.factory",
+                    "operations": [
+                        "asreview.review.factory.review_simulate",
+                        "asreview.review.factory.get_reviewer"
+                    ],
+                    "chm": 0.07142857142857142,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser72",
+            "statistics": {
+                "n_intra_edges": 17,
+                "total_weight_intra_edges": 2.456131574378426,
+                "n_inter_edges": 12,
+                "total_weight_inter_edges": 0.13846767287676232,
+                "cluster_factor": 0.973,
+                "ifn": 3,
+                "opn": 4,
+                "scoh": 0.17,
+                "scop": 0.054532085561497336,
+                "ccoh": 0.15,
+                "ccop": 0.0465017825311943
+            },
+            "code_fragments": [
+                "asreview.webapp.utils.project",
+                "asreview.webapp.utils.datasets",
+                "asreview.webapp.run_model",
+                "asreview.webapp.api",
+                "asreview.entry_points.lab.WebRunModelEntryPoint",
+                "asreview.webapp.types",
+                "asreview.webapp.utils.validation",
+                "asreview.compat",
+                "asreview.webapp.utils.paths",
+                "asreview.webapp.utils.io"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.entry_points.lab.WebRunModelEntryPoint",
+                    "operations": [
+                        "asreview.entry_points.lab.WebRunModelEntryPoint.execute"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.compat",
+                    "operations": [
+                        "asreview.compat.convert_id_to_idx"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.webapp.utils.project",
+                    "operations": [
+                        "asreview.webapp.utils.project.clean_all_project_tmp_files",
+                        "asreview.webapp.utils.project.clean_project_tmp_files"
+                    ],
+                    "chm": 0.0,
+                    "chd": 1.6
+                }
+            ]
+        },
+        {
+            "id": "ser73",
+            "statistics": {
+                "n_intra_edges": 19,
+                "total_weight_intra_edges": 1.1491121848727133,
+                "n_inter_edges": 4,
+                "total_weight_inter_edges": 0.06855407079567892,
+                "cluster_factor": 0.971,
+                "ifn": 5,
+                "opn": 25,
+                "scoh": 0.13194444444444445,
+                "scop": 0.00861556743909685,
+                "ccoh": 0.11805555555555555,
+                "ccop": 0.006164587046939988
+            },
+            "code_fragments": [
+                "asreview.state.hdf5",
+                "asreview.state.json.JSONState",
+                "asreview.state.utils",
+                "asreview.analysis.analysis.Analysis",
+                "asreview.state.base.BaseState",
+                "asreview.settings.ASReviewSettings",
+                "asreview.state.dict",
+                "asreview.state.dict.DictState",
+                "asreview.settings",
+                "asreview.types",
+                "asreview.state.hdf5.HDF5State",
+                "asreview.analysis.statistics"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.state.base.BaseState",
+                    "operations": [
+                        "asreview.state.base.BaseState.startup_vals",
+                        "asreview.state.base.BaseState.is_empty",
+                        "asreview.state.base.BaseState.pred_proba"
+                    ],
+                    "chm": 1.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "asreview.state.utils",
+                    "operations": [
+                        "asreview.state.utils.open_state"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.state.hdf5.HDF5State",
+                    "operations": [
+                        "asreview.state.hdf5.HDF5State.add_classification",
+                        "asreview.state.hdf5.HDF5State._add_as_data",
+                        "asreview.state.hdf5.HDF5State.add_proba",
+                        "asreview.state.hdf5.HDF5State.settings",
+                        "asreview.state.hdf5.HDF5State.set_labels",
+                        "asreview.state.hdf5.HDF5State.set_current_queries"
+                    ],
+                    "chm": 0.2512698412698413,
+                    "chd": 0.14444444444444443
+                },
+                {
+                    "name": "asreview.settings.ASReviewSettings",
+                    "operations": [
+                        "asreview.settings.ASReviewSettings",
+                        "asreview.settings.ASReviewSettings.__setattr__",
+                        "asreview.settings.ASReviewSettings.from_file",
+                        "asreview.settings.ASReviewSettings.__init__"
+                    ],
+                    "chm": 0.05793650793650795,
+                    "chd": 0.0
+                },
+                {
+                    "name": "asreview.state.dict.DictState",
+                    "operations": [
+                        "asreview.state.dict.DictState.set_current_queries",
+                        "asreview.state.dict.DictState.is_empty",
+                        "asreview.state.dict.DictState.set_labels",
+                        "asreview.state.dict.DictState.settings",
+                        "asreview.state.dict.DictState.add_proba",
+                        "asreview.state.dict.DictState.n_queries",
+                        "asreview.state.dict.DictState.get",
+                        "asreview.state.dict.DictState._add_as_data",
+                        "asreview.state.dict.DictState.add_classification",
+                        "asreview.state.dict.DictState.get_feature_matrix",
+                        "asreview.state.dict.DictState.get_current_queries"
+                    ],
+                    "chm": 0.39584415584415594,
+                    "chd": 0.10727272727272728
+                }
+            ]
+        },
+        {
+            "id": "ser74",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.2979175923936873,
+                "n_inter_edges": 2,
+                "total_weight_inter_edges": 0.20454545454545453,
+                "cluster_factor": 0.744,
+                "ifn": 1,
+                "opn": 5,
+                "scoh": 0.25,
+                "scop": 0.05,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.webapp.sqlock.SQLiteLock",
+                "asreview.webapp.sqlock"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.webapp.sqlock.SQLiteLock",
+                    "operations": [
+                        "asreview.webapp.sqlock.SQLiteLock.__exit__",
+                        "asreview.webapp.sqlock.SQLiteLock.__enter__",
+                        "asreview.webapp.sqlock.SQLiteLock.locked",
+                        "asreview.webapp.sqlock.SQLiteLock.__init__",
+                        "asreview.webapp.sqlock.SQLiteLock"
+                    ],
+                    "chm": 0.30634920634920637,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser75",
+            "statistics": {
+                "n_intra_edges": 20,
+                "total_weight_intra_edges": 0.8924734346998289,
+                "n_inter_edges": 8,
+                "total_weight_inter_edges": 0.2269482936705285,
+                "cluster_factor": 0.887,
+                "ifn": 8,
+                "opn": 15,
+                "scoh": 0.06920415224913495,
+                "scop": 0.02562388591800356,
+                "ccoh": 0.04844290657439446,
+                "ccop": 0.010026737967914439
+            },
+            "code_fragments": [
+                "asreview.models.query.cluster.ClusterQuery",
+                "asreview.review.simulate.ReviewSimulate",
+                "asreview.models.feature_extraction.tfidf.Tfidf",
+                "asreview.models.classifiers.base.BaseTrainClassifier",
+                "asreview.models.query.max.MaxQuery",
+                "asreview.models.query.uncertainty.UncertaintyQuery",
+                "asreview.models.classifiers.svm",
+                "asreview.models.query.random.RandomQuery",
+                "asreview.review.base",
+                "asreview.models.query.cluster",
+                "asreview.models.classifiers.rf",
+                "asreview.models.classifiers.logistic",
+                "asreview.models.feature_extraction.base.BaseFeatureExtraction",
+                "asreview.review.base.BaseReview",
+                "asreview.models.query.base.NotProbaQueryStrategy",
+                "asreview.models.query.base.ProbaQueryStrategy",
+                "asreview.models.classifiers.nb.NaiveBayesClassifier"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.models.feature_extraction.tfidf.Tfidf",
+                    "operations": [
+                        "asreview.models.feature_extraction.tfidf.Tfidf.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.models.query.cluster.ClusterQuery",
+                    "operations": [
+                        "asreview.models.query.cluster.ClusterQuery.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.review.simulate.ReviewSimulate",
+                    "operations": [
+                        "asreview.review.simulate.ReviewSimulate.__init__",
+                        "asreview.review.simulate.ReviewSimulate"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "asreview.models.query.random.RandomQuery",
+                    "operations": [
+                        "asreview.models.query.random.RandomQuery.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.models.classifiers.base.BaseTrainClassifier",
+                    "operations": [
+                        "asreview.models.classifiers.base.BaseTrainClassifier.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.review.base.BaseReview",
+                    "operations": [
+                        "asreview.review.base.BaseReview.n_pool",
+                        "asreview.review.base.BaseReview.train",
+                        "asreview.review.base.BaseReview.__init__",
+                        "asreview.review.base.BaseReview.log_probabilities",
+                        "asreview.review.base.BaseReview.log_current_query",
+                        "asreview.review.base.BaseReview.classify",
+                        "asreview.review.base.BaseReview.query"
+                    ],
+                    "chm": 0.3401207919065061,
+                    "chd": 0.055555555555555546
+                },
+                {
+                    "name": "asreview.models.query.base.NotProbaQueryStrategy",
+                    "operations": [
+                        "asreview.models.query.base.NotProbaQueryStrategy.query"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.models.classifiers.nb.NaiveBayesClassifier",
+                    "operations": [
+                        "asreview.models.classifiers.nb.NaiveBayesClassifier.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser76",
+            "statistics": {
+                "n_intra_edges": 7,
+                "total_weight_intra_edges": 0.2518936328618134,
+                "n_inter_edges": 5,
+                "total_weight_inter_edges": 0.07314322456102147,
+                "cluster_factor": 0.873,
+                "ifn": 3,
+                "opn": 5,
+                "scoh": 0.28,
+                "scop": 0.023707664884135473,
+                "ccoh": 0.28,
+                "ccop": 0.0058823529411764705
+            },
+            "code_fragments": [
+                "asreview.models.balance.triple",
+                "asreview.models.balance.double.DoubleBalance",
+                "asreview.models.balance.double",
+                "asreview.models.balance.simple.SimpleBalance",
+                "asreview.models.balance.triple.TripleBalance"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.models.balance.double.DoubleBalance",
+                    "operations": [
+                        "asreview.models.balance.double.DoubleBalance.sample",
+                        "asreview.models.balance.double.DoubleBalance.__init__"
+                    ],
+                    "chm": 0.1,
+                    "chd": 0.0
+                },
+                {
+                    "name": "asreview.models.balance.triple.TripleBalance",
+                    "operations": [
+                        "asreview.models.balance.triple.TripleBalance.__init__",
+                        "asreview.models.balance.triple.TripleBalance.sample"
+                    ],
+                    "chm": 0.07692307692307693,
+                    "chd": 0.0
+                },
+                {
+                    "name": "asreview.models.balance.simple.SimpleBalance",
+                    "operations": [
+                        "asreview.models.balance.simple.SimpleBalance"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser77",
+            "statistics": {
+                "n_intra_edges": 5,
+                "total_weight_intra_edges": 0.18181818181818182,
+                "n_inter_edges": 6,
+                "total_weight_inter_edges": 9.710937752889002e-05,
+                "cluster_factor": 1.0,
+                "ifn": 3,
+                "opn": 3,
+                "scoh": 0.1388888888888889,
+                "scop": 0.10056446821152704,
+                "ccoh": 0.1388888888888889,
+                "ccop": 0.00980392156862745
+            },
+            "code_fragments": [
+                "asreview.models.classifiers.lstm_pool",
+                "asreview.models.classifiers.lstm_pool.LSTMPoolClassifier",
+                "asreview.models.classifiers.nn_2_layer.NN2LayerClassifier",
+                "asreview.models.classifiers.nn_2_layer",
+                "asreview.models.classifiers.lstm_base.LSTMBaseClassifier",
+                "asreview.models.classifiers.lstm_base"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.models.classifiers.lstm_pool.LSTMPoolClassifier",
+                    "operations": [
+                        "asreview.models.classifiers.lstm_pool.LSTMPoolClassifier.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.models.classifiers.nn_2_layer.NN2LayerClassifier",
+                    "operations": [
+                        "asreview.models.classifiers.nn_2_layer.NN2LayerClassifier.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "asreview.models.classifiers.lstm_base.LSTMBaseClassifier",
+                    "operations": [
+                        "asreview.models.classifiers.lstm_base.LSTMBaseClassifier.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser78",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.02858620517151576,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 1,
+                "opn": 2,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.models.base",
+                "asreview.models.base.BaseModel"
+            ],
+            "interfaces": [
+                {
+                    "name": "asreview.models.base.BaseModel",
+                    "operations": [
+                        "asreview.models.base.BaseModel.default_param",
+                        "asreview.models.base.BaseModel.param"
+                    ],
+                    "chm": 1.0,
+                    "chd": 1.0
+                }
+            ]
+        },
+        {
+            "id": "ser79",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.09090909090909091,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.models.feature_extraction.doc2vec",
+                "asreview.models.feature_extraction.doc2vec.Doc2Vec"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser80",
+            "statistics": {
+                "n_intra_edges": 9,
+                "total_weight_intra_edges": 0.20454545454545459,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.09,
+                "scop": 0.0,
+                "ccoh": 0.09,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.entry_points.lab",
+                "asreview.entry_points.simulate",
+                "asreview.webapp.tests.conftest",
+                "asreview.batch",
+                "asreview.webapp.start_flask",
+                "asreview.entry_points.base",
+                "asreview.entry_points.lab.LABEntryPoint",
+                "asreview.webapp.utils.misc",
+                "asreview.entry_points.simulate.SimulateEntryPoint",
+                "asreview.entry_points.simulate.BatchEntryPoint"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser81",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.022727272727272728,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.models.feature_extraction.sbert",
+                "asreview.models.feature_extraction.sbert.SBERT"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser82",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.00037225261386074517,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview._version",
+                "asreview.__init__"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser83",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.0037225261386074513,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.models.__init__",
+                "asreview.models.deprecated"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser84",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 3.236979250963001e-05,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.webapp.tests.test_project",
+                "asreview.webapp.tests.utils"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser85",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.022727272727272728,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "asreview.entry_points.algorithms",
+                "asreview.entry_points.algorithms.AlgorithmsEntryPoint"
+            ],
+            "interfaces": []
+        }
+    ]
+}

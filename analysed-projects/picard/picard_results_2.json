@@ -1,0 +1,1102 @@
+{
+    "name": "louvain clustering with dynamic data",
+    "microservice_metrics": {
+        "data": "dynamic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": null,
+        "degree_source_2": null,
+        "number_of_nodes": 189,
+        "coverage": 0.408,
+        "number_of_modules": 113,
+        "number_of_missing_modules": 25,
+        "no_behavior_modules": 0,
+        "third_party_modules": 1,
+        "other_reason_modules": 24,
+        "number_of_classes": 350,
+        "number_of_missing_classes": 249,
+        "no_behavior_classes": 41,
+        "third_party_classes": 0,
+        "other_reason_classes": 208,
+        "number_of_edges": 286,
+        "number_of_services": 20,
+        "number_of_services_with_interface": 14,
+        "number_of_interfaces": 51,
+        "number_of_operations": 125,
+        "average_cohesion_at_domain_level": 0.631,
+        "average_cohesion_at_message_level": 0.722,
+        "average_interface_number": 3.643,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.546,
+        "structural_modularity_quality": 0.161,
+        "conceptual_modularity_quality": 0.124,
+        "max_service_size": 40
+    },
+    "services": [
+        {
+            "id": "ser24",
+            "statistics": {
+                "n_intra_edges": 5,
+                "total_weight_intra_edges": 0.0067629266065517635,
+                "n_inter_edges": 4,
+                "total_weight_inter_edges": 0.000485104440132405,
+                "cluster_factor": 0.965,
+                "ifn": 3,
+                "opn": 8,
+                "scoh": 0.06172839506172839,
+                "scop": 0.011302681992337166,
+                "ccoh": 0.06172839506172839,
+                "ccop": 0.005555555555555556
+            },
+            "code_fragments": [
+                "picard.webservice.api_helpers.MBAPIHelper",
+                "picard.util.__init__.LockableObject",
+                "picard.webservice.api_helpers.APIHelper",
+                "picard.util.preservedtags.PreservedTags",
+                "picard.mbjson",
+                "picard.track.Track",
+                "picard.releasegroup.ReleaseGroup",
+                "picard.util.preservedtags",
+                "picard.dataobj"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.mbjson",
+                    "operations": [
+                        "picard.mbjson.artist_credit_from_node",
+                        "picard.mbjson.get_score",
+                        "picard.mbjson.countries_from_node",
+                        "picard.mbjson.release_to_metadata",
+                        "picard.mbjson.release_group_to_metadata",
+                        "picard.mbjson.recording_to_metadata"
+                    ],
+                    "chm": 0.5000000000000002,
+                    "chd": 0.2733333333333333
+                },
+                {
+                    "name": "picard.util.preservedtags.PreservedTags",
+                    "operations": [
+                        "picard.util.preservedtags.PreservedTags"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.track.Track",
+                    "operations": [
+                        "picard.track.Track.update"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser25",
+            "statistics": {
+                "n_intra_edges": 2,
+                "total_weight_intra_edges": 0.03549823079557128,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.00017121333181143705,
+                "cluster_factor": 0.998,
+                "ifn": 1,
+                "opn": 2,
+                "scoh": 0.2222222222222222,
+                "scop": 0.004166666666666667,
+                "ccoh": 0.1111111111111111,
+                "ccop": 0.004166666666666667
+            },
+            "code_fragments": [
+                "picard.version",
+                "picard.version.Version",
+                "picard.__init__"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.version.Version",
+                    "operations": [
+                        "picard.version.Version",
+                        "picard.version.Version.from_string"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser26",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.0001141422212076247,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.util.settingsoverride",
+                "picard.util.settingsoverride.SettingsOverride"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser27",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.08660541034128523,
+                "n_inter_edges": 9,
+                "total_weight_inter_edges": 0.05464558840315034,
+                "cluster_factor": 0.76,
+                "ifn": 2,
+                "opn": 5,
+                "scoh": 0.1875,
+                "scop": 0.13708051108374383,
+                "ccoh": 0.1875,
+                "ccop": 0.12886391625615765
+            },
+            "code_fragments": [
+                "picard.formats.vorbis.VCommentFile",
+                "picard.coverart.image.TagCoverArtImage",
+                "picard.formats.vorbis",
+                "picard.coverart.image.LocalFileCoverArtImage"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.coverart.image.TagCoverArtImage",
+                    "operations": [
+                        "picard.coverart.image.TagCoverArtImage",
+                        "picard.coverart.image.TagCoverArtImage.__init__"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.formats.vorbis",
+                    "operations": [
+                        "picard.formats.vorbis.OggContainerFile",
+                        "picard.formats.vorbis.OggAudioFile",
+                        "picard.formats.vorbis.OggVideoFile"
+                    ],
+                    "chm": 2.0,
+                    "chd": 1.0
+                }
+            ]
+        },
+        {
+            "id": "ser28",
+            "statistics": {
+                "n_intra_edges": 40,
+                "total_weight_intra_edges": 0.13856865654605643,
+                "n_inter_edges": 9,
+                "total_weight_inter_edges": 0.014153635429745463,
+                "cluster_factor": 0.951,
+                "ifn": 2,
+                "opn": 5,
+                "scoh": 0.025,
+                "scop": 0.006371228448275862,
+                "ccoh": 0.001875,
+                "ccop": 0.0015625
+            },
+            "code_fragments": [
+                "picard.ui.options.genres",
+                "picard.ui.options.ratings",
+                "picard.ui.options.interface",
+                "picard.ui.cdlookup",
+                "picard.config.Option",
+                "picard.ui.options.tags_compatibility_wave",
+                "picard.ui.options.network",
+                "picard.ui.options.tags.TagsOptionsPage",
+                "picard.ui.options.renaming",
+                "picard.ui.options.tags_compatibility_ac3.TagsCompatibilityAC3OptionsPage",
+                "picard.coverart.providers.local",
+                "picard.ui.widgets.scripttextedit",
+                "picard.ui.tagsfromfilenames.TagMatchExpression",
+                "picard.ui.tagsfromfilenames",
+                "picard.ui.options.scripting.ScriptingOptionsPage",
+                "picard.ui.options.fingerprinting",
+                "picard.ui.searchdialog.album",
+                "picard.ui.options.cdlookup",
+                "picard.ui.filebrowser",
+                "picard.ui.options.releases.ReleasesOptionsPage",
+                "picard.ui.scripteditor.ScriptEditorDialog",
+                "picard.ui.options.matching.MatchingOptionsPage",
+                "picard.config.Config",
+                "picard.ui.options.cover.CoverOptionsPage",
+                "picard.ui.searchdialog.track.TrackSearchDialog",
+                "picard.ui.options.plugins",
+                "picard.ui.options.metadata",
+                "picard.ui.mainwindow.MainWindow",
+                "picard.ui.options.advanced",
+                "picard.ui.options.interface_top_tags",
+                "picard.ui.profileeditor",
+                "picard.ui.options.tags_compatibility_id3.TagsCompatibilityID3OptionsPage",
+                "picard.ui.theme.UiTheme",
+                "picard.config.SettingConfigSection",
+                "picard.ui.logview",
+                "picard.ui.itemviews.FileTreeView",
+                "picard.ui.options.tags_compatibility_aac.TagsCompatibilityAACOptionsPage",
+                "picard.coverart.providers.caa.ProviderOptionsCaa",
+                "picard.ui.options.general",
+                "picard.ui.options.dialog"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.config.Option",
+                    "operations": [
+                        "picard.config.Option.get",
+                        "picard.config.Option.__init__",
+                        "picard.config.Option"
+                    ],
+                    "chm": 0.13333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.config.Config",
+                    "operations": [
+                        "picard.config.Config.from_app",
+                        "picard.config.Config.from_file"
+                    ],
+                    "chm": 1.6666666666666665,
+                    "chd": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "id": "ser29",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.0011414222120762468,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.1875,
+                "scop": 0.0,
+                "ccoh": 0.125,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.script.serializer.ScriptImportError",
+                "picard.script.serializer",
+                "picard.script.serializer.PicardScript",
+                "picard.script.serializer.FileNamingScript"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.script.serializer.FileNamingScript",
+                    "operations": [
+                        "picard.script.serializer.FileNamingScript"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser30",
+            "statistics": {
+                "n_intra_edges": 8,
+                "total_weight_intra_edges": 0.5663737016322337,
+                "n_inter_edges": 5,
+                "total_weight_inter_edges": 0.08483620591256706,
+                "cluster_factor": 0.93,
+                "ifn": 4,
+                "opn": 7,
+                "scoh": 0.125,
+                "scop": 0.031842672413793106,
+                "ccoh": 0.078125,
+                "ccop": 0.0296875
+            },
+            "code_fragments": [
+                "picard.formats.mutagenext.compatid3.CompatID3",
+                "picard.formats.id3",
+                "picard.formats.id3.TrueAudioFile",
+                "picard.formats.mutagenext.__init__",
+                "picard.formats.id3.MP3File",
+                "picard.formats.id3.ID3File",
+                "picard.util.tags",
+                "picard.formats.id3.NonCompatID3File"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.formats.id3",
+                    "operations": [
+                        "picard.formats.id3.image_type_as_id3_num",
+                        "picard.formats.id3.types_from_id3"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.2857142857142857
+                },
+                {
+                    "name": "picard.formats.mutagenext.__init__",
+                    "operations": [
+                        "picard.formats.mutagenext.__init__.delall_ci"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.tags",
+                    "operations": [
+                        "picard.util.tags.display_tag_name"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.formats.id3.ID3File",
+                    "operations": [
+                        "picard.formats.id3.ID3File.supports_tag",
+                        "picard.formats.id3.ID3File.__init__",
+                        "picard.formats.id3.ID3File._save"
+                    ],
+                    "chm": 0.2222222222222222,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser31",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.0008846022143590914,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.ui.theme.BaseTheme",
+                "picard.ui.theme"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser32",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.030818399726058668,
+                "n_inter_edges": 2,
+                "total_weight_inter_edges": 0.0036525510786439906,
+                "cluster_factor": 0.944,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.03362068965517241,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.acoustid.manager.AcoustIDManager",
+                "picard.acoustid.manager.Submission"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser33",
+            "statistics": {
+                "n_intra_edges": 2,
+                "total_weight_intra_edges": 0.0035384088574363657,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.2222222222222222,
+                "scop": 0.0,
+                "ccoh": 0.2222222222222222,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.log.TailLogger",
+                "picard.log",
+                "picard.log.TailLogHandler"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser34",
+            "statistics": {
+                "n_intra_edges": 32,
+                "total_weight_intra_edges": 0.8617737701175665,
+                "n_inter_edges": 20,
+                "total_weight_inter_edges": 0.1860803561237302,
+                "cluster_factor": 0.903,
+                "ifn": 15,
+                "opn": 35,
+                "scoh": 0.03804994054696789,
+                "scop": 0.03928229337712096,
+                "ccoh": 0.022592152199762187,
+                "ccop": 0.016521278051450462
+            },
+            "code_fragments": [
+                "picard.cluster",
+                "picard.track.TrackArtist",
+                "picard.util.mbserver",
+                "picard.track",
+                "picard.config",
+                "picard.formats.apev2.OptimFROGFile",
+                "picard.plugin",
+                "picard.disc.Disc",
+                "picard.util.__init__",
+                "picard.config.ConfigSection",
+                "picard.util.imagelist",
+                "picard.util.textencoding",
+                "picard.formats.apev2.MusepackFile",
+                "picard.formats.apev2.AACFile",
+                "picard.ui.item.FileListItem",
+                "picard.browser.filelookup.FileLookup",
+                "picard.config.Memovar",
+                "picard.track.TagGenreFilter",
+                "picard.formats.apev2",
+                "picard.util.emptydir",
+                "picard.formats.apev2.APEv2File",
+                "picard.formats.ac3",
+                "picard.dataobj.DataObject",
+                "picard.ui.metadatabox.MetadataBox",
+                "picard.formats.ac3.AC3File",
+                "picard.ui.tablebaseddialog",
+                "picard.ui.searchdialog.__init__.SearchDialog",
+                "picard.ui.__init__",
+                "picard.util.filenaming"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.config",
+                    "operations": [
+                        "picard.config.get_config"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config.ConfigSection",
+                    "operations": [
+                        "picard.config.ConfigSection.__init__",
+                        "picard.config.ConfigSection.value",
+                        "picard.config.ConfigSection.key"
+                    ],
+                    "chm": 0.5222222222222223,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.formats.apev2.APEv2File",
+                    "operations": [
+                        "picard.formats.apev2.APEv2File.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.item.FileListItem",
+                    "operations": [
+                        "picard.ui.item.FileListItem.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.dataobj.DataObject",
+                    "operations": [
+                        "picard.dataobj.DataObject.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.track.TrackArtist",
+                    "operations": [
+                        "picard.track.TrackArtist.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.imagelist",
+                    "operations": [
+                        "picard.util.imagelist.remove_metadata_images",
+                        "picard.util.imagelist.add_metadata_images",
+                        "picard.util.imagelist.update_metadata_images"
+                    ],
+                    "chm": 0.4444444444444444,
+                    "chd": 1.0
+                },
+                {
+                    "name": "picard.ui.metadatabox.MetadataBox",
+                    "operations": [
+                        "picard.ui.metadatabox.MetadataBox"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.cluster",
+                    "operations": [
+                        "picard.cluster.Cluster._lookup_finished.statusbar"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.textencoding",
+                    "operations": [
+                        "picard.util.textencoding.replace_non_ascii"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.emptydir",
+                    "operations": [
+                        "picard.util.emptydir.rm_empty_dir"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.track.TagGenreFilter",
+                    "operations": [
+                        "picard.track.TagGenreFilter.__init__",
+                        "picard.track.TagGenreFilter.skip"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.util.__init__",
+                    "operations": [
+                        "picard.util.__init__.load_json",
+                        "picard.util.__init__.build_qurl",
+                        "picard.util.__init__.format_time",
+                        "picard.util.__init__.sanitize_date",
+                        "picard.util.__init__.encode_filename",
+                        "picard.util.__init__.throttle.decorator",
+                        "picard.util.__init__.replace_win32_incompat",
+                        "picard.util.__init__.uniqify",
+                        "picard.util.__init__.strip_non_alnum",
+                        "picard.util.__init__.throttle",
+                        "picard.util.__init__.sanitize_filename",
+                        "picard.util.__init__.translate_from_sortname",
+                        "picard.util.__init__.restore_method"
+                    ],
+                    "chm": 0.038461538461538464,
+                    "chd": 0.017094017094017092
+                },
+                {
+                    "name": "picard.util.filenaming",
+                    "operations": [
+                        "picard.util.filenaming.move_ensure_casing",
+                        "picard.util.filenaming.make_save_path",
+                        "picard.util.filenaming.make_short_filename",
+                        "picard.util.filenaming.get_available_filename"
+                    ],
+                    "chm": 0.027777777777777776,
+                    "chd": 0.13333333333333333
+                },
+                {
+                    "name": "picard.util.mbserver",
+                    "operations": [
+                        "picard.util.mbserver.build_submission_url"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser35",
+            "statistics": {
+                "n_intra_edges": 14,
+                "total_weight_intra_edges": 1.5699691816002739,
+                "n_inter_edges": 26,
+                "total_weight_inter_edges": 1.3584636457025452,
+                "cluster_factor": 0.698,
+                "ifn": 7,
+                "opn": 29,
+                "scoh": 0.14,
+                "scop": 0.1932710727969349,
+                "ccoh": 0.07,
+                "ccop": 0.140415469348659
+            },
+            "code_fragments": [
+                "picard.util.imagelist.ImageList",
+                "picard.cluster.FileList",
+                "picard.file.File",
+                "picard.metadata.Metadata",
+                "picard.formats.midi.MIDIFile",
+                "picard.formats.midi",
+                "picard.cluster.Cluster",
+                "picard.browser.addrelease",
+                "picard.formats.asf",
+                "picard.formats.wav"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.browser.addrelease",
+                    "operations": [
+                        "picard.browser.addrelease.is_available",
+                        "picard.browser.addrelease.submit_file",
+                        "picard.browser.addrelease.is_enabled",
+                        "picard.browser.addrelease.submit_cluster"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.2222222222222222
+                },
+                {
+                    "name": "picard.cluster.Cluster",
+                    "operations": [
+                        "picard.cluster.Cluster.update"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.cluster.FileList",
+                    "operations": [
+                        "picard.cluster.FileList"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.file.File",
+                    "operations": [
+                        "picard.file.File.__init__",
+                        "picard.file.File.format_specific_metadata",
+                        "picard.file.File._info",
+                        "picard.file.File._rename",
+                        "picard.file.File.update",
+                        "picard.file.File._save_and_rename"
+                    ],
+                    "chm": 0.4122222222222222,
+                    "chd": 0.04444444444444444
+                },
+                {
+                    "name": "picard.util.imagelist.ImageList",
+                    "operations": [
+                        "picard.util.imagelist.ImageList.__init__",
+                        "picard.util.imagelist.ImageList.to_be_saved_to_tags",
+                        "picard.util.imagelist.ImageList.hash_dict"
+                    ],
+                    "chm": 0.4444444444444444,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.formats.asf",
+                    "operations": [
+                        "picard.formats.asf.pack_image",
+                        "picard.formats.asf.unpack_image"
+                    ],
+                    "chm": 0.25,
+                    "chd": 0.6666666666666666
+                },
+                {
+                    "name": "picard.metadata.Metadata",
+                    "operations": [
+                        "picard.metadata.Metadata.__contains__",
+                        "picard.metadata.Metadata.add",
+                        "picard.metadata.Metadata.rawitems",
+                        "picard.metadata.Metadata.getall",
+                        "picard.metadata.Metadata.add_unique",
+                        "picard.metadata.Metadata.get",
+                        "picard.metadata.Metadata",
+                        "picard.metadata.Metadata.__iter__",
+                        "picard.metadata.Metadata.__getitem__",
+                        "picard.metadata.Metadata.items",
+                        "picard.metadata.Metadata.__init__",
+                        "picard.metadata.Metadata.__setitem__"
+                    ],
+                    "chm": 0.47391774891774924,
+                    "chd": 0.015151515151515152
+                }
+            ]
+        },
+        {
+            "id": "ser36",
+            "statistics": {
+                "n_intra_edges": 4,
+                "total_weight_intra_edges": 0.007961419929231823,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 2,
+                "opn": 8,
+                "scoh": 0.16,
+                "scop": 0.0,
+                "ccoh": 0.08,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.file",
+                "picard.plugin.PluginFunctions",
+                "picard.coverart.__init__",
+                "picard.album",
+                "picard.metadata"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.metadata",
+                    "operations": [
+                        "picard.metadata.weights_from_preferred_countries",
+                        "picard.metadata.weights_from_preferred_formats",
+                        "picard.metadata.weights_from_release_type_scores"
+                    ],
+                    "chm": 0.4222222222222222,
+                    "chd": 0.7809523809523808
+                },
+                {
+                    "name": "picard.file",
+                    "operations": [
+                        "picard.file.File._lookup_finished.statusbar",
+                        "picard.file.run_file_post_load_processors",
+                        "picard.file.run_file_post_addition_to_track_processors",
+                        "picard.file.run_file_post_removal_from_track_processors",
+                        "picard.file.run_file_post_save_processors"
+                    ],
+                    "chm": 0.4,
+                    "chd": 0.6444444444444445
+                }
+            ]
+        },
+        {
+            "id": "ser37",
+            "statistics": {
+                "n_intra_edges": 14,
+                "total_weight_intra_edges": 0.1039835635201461,
+                "n_inter_edges": 4,
+                "total_weight_inter_edges": 0.0025111288665677434,
+                "cluster_factor": 0.988,
+                "ifn": 1,
+                "opn": 3,
+                "scoh": 0.07142857142857142,
+                "scop": 0.0271243842364532,
+                "ccoh": 0.0663265306122449,
+                "ccop": 0.008035714285714285
+            },
+            "code_fragments": [
+                "picard.util.imageinfo.IdentifyTiff",
+                "picard.util.imageinfo.IdentifyWebP",
+                "picard.util.imageinfo.IdentifyJPEG",
+                "picard.coverart.image",
+                "picard.util.bitreader.LSBBitReader",
+                "picard.coverart.image.DataHash",
+                "picard.util.imageinfo.IdentifyPNG",
+                "picard.util.imageinfo.IdentifyGIF",
+                "picard.util.imageinfo.IdentifyPDF",
+                "picard.util.imageinfo.IdentifyImageType",
+                "picard.util.bitreader._BitReader",
+                "picard.coverart.image.CoverArtImage",
+                "picard.util.imageinfo",
+                "picard.util.bitreader"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.coverart.image.CoverArtImage",
+                    "operations": [
+                        "picard.coverart.image.CoverArtImage.maintype",
+                        "picard.coverart.image.CoverArtImage.is_front_image",
+                        "picard.coverart.image.CoverArtImage.data"
+                    ],
+                    "chm": 1.3333333333333333,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser38",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.001169957767378153,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.00017121333181143705,
+                "cluster_factor": 0.932,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.25,
+                "scop": 0.008620689655172414,
+                "ccoh": 0.25,
+                "ccop": 0.008620689655172414
+            },
+            "code_fragments": [
+                "picard.similarity",
+                "picard.util.astrcmp"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.similarity",
+                    "operations": [
+                        "picard.similarity.similarity2"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser39",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.1627668074420728,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.1875,
+                "scop": 0.0,
+                "ccoh": 0.1875,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.ui.colors.DefaultColor",
+                "picard.ui.colors",
+                "picard.ui.options.interface_colors.InterfaceColorsOptionsPage",
+                "picard.ui.colors.InterfaceColors"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser40",
+            "statistics": {
+                "n_intra_edges": 16,
+                "total_weight_intra_edges": 0.008132633261043262,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 1,
+                "opn": 2,
+                "scoh": 0.1111111111111111,
+                "scop": 0.0,
+                "ccoh": 0.027777777777777776,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.util.bytes2human",
+                "picard.webservice.__init__.WSDeleteRequest",
+                "picard.oauth.OAuthManager",
+                "picard.webservice.__init__",
+                "picard.webservice.__init__.WSPostRequest",
+                "picard.webservice.__init__.UnknownResponseParserError",
+                "picard.webservice.__init__.WebService",
+                "picard.webservice.__init__.WSPutRequest",
+                "picard.webservice.__init__.WSRequest",
+                "picard.webservice.ratecontrol",
+                "picard.webservice.api_helpers",
+                "picard.webservice.__init__.WSGetRequest"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.webservice.api_helpers",
+                    "operations": [
+                        "picard.webservice.api_helpers.escape_lucene_query",
+                        "picard.webservice.api_helpers._wrap_xml_metadata"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser41",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.15937107636114597,
+                "n_inter_edges": 2,
+                "total_weight_inter_edges": 0.009416733249629038,
+                "cluster_factor": 0.971,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.25,
+                "scop": 0.03987068965517242,
+                "ccoh": 0.25,
+                "ccop": 0.03125
+            },
+            "code_fragments": [
+                "picard.formats.mp4.MP4File",
+                "picard.formats.mp4"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.formats.mp4.MP4File",
+                    "operations": [
+                        "picard.formats.mp4.MP4File.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser42",
+            "statistics": {
+                "n_intra_edges": 33,
+                "total_weight_intra_edges": 0.3076988928204544,
+                "n_inter_edges": 18,
+                "total_weight_inter_edges": 0.07570482821595714,
+                "cluster_factor": 0.89,
+                "ifn": 10,
+                "opn": 18,
+                "scoh": 0.0322265625,
+                "scop": 0.018952047413793104,
+                "ccoh": 0.0234375,
+                "ccop": 0.006546336206896552
+            },
+            "code_fragments": [
+                "picard.script.parser.ScriptExpression",
+                "picard.script.__init__",
+                "picard.ui.options.matching",
+                "picard.formats.asf.ASFFile",
+                "picard.ui.options.scripting",
+                "picard.script.parser.ScriptFunction",
+                "picard.ui.options.__init__",
+                "picard.script.parser",
+                "picard.ui.options.releases",
+                "picard.script.functions",
+                "picard.script.parser.StackItem",
+                "picard.ui.options.cover",
+                "picard.script.parser.ScriptVariable",
+                "picard.formats.__init__",
+                "picard.script.parser.ScriptText",
+                "picard.script.parser.ScriptEndOfFile",
+                "picard.coverart.providers.__init__",
+                "picard.ui.options.tags",
+                "picard.ui.itemviews",
+                "picard.ui.options.tags_compatibility_ac3",
+                "picard.script.functions.FunctionRegistryItem",
+                "picard.ui.options.interface_colors",
+                "picard.coverart.providers.provider.CoverArtProviderMetaClass",
+                "picard.plugin.ExtensionPoint",
+                "picard.script.parser.ScriptParser",
+                "picard.ui.options.tags_compatibility_aac",
+                "picard.ui.mainwindow",
+                "picard.formats.util",
+                "picard.util.scripttofilename",
+                "picard.script.parser.ScriptUnknownFunction",
+                "picard.script.parser.ScriptParseError",
+                "picard.ui.options.tags_compatibility_id3"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.util.scripttofilename",
+                    "operations": [
+                        "picard.util.scripttofilename.script_to_filename",
+                        "picard.util.scripttofilename.script_to_filename_with_metadata"
+                    ],
+                    "chm": 1.5,
+                    "chd": 1.2
+                },
+                {
+                    "name": "picard.plugin.ExtensionPoint",
+                    "operations": [
+                        "picard.plugin.ExtensionPoint.register",
+                        "picard.plugin.ExtensionPoint.__init__"
+                    ],
+                    "chm": 0.25,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.formats.asf.ASFFile",
+                    "operations": [
+                        "picard.formats.asf.ASFFile._info",
+                        "picard.formats.asf.ASFFile._get_tag_name",
+                        "picard.formats.asf.ASFFile._remove_deleted_tags"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.formats.util",
+                    "operations": [
+                        "picard.formats.util.guess_format"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.options.__init__",
+                    "operations": [
+                        "picard.ui.options.__init__.register_options_page"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.options.interface_colors",
+                    "operations": [
+                        "picard.ui.options.interface_colors.delete_items_of_layout"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.script.__init__",
+                    "operations": [
+                        "picard.script.__init__.get_file_naming_script"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.script.parser",
+                    "operations": [
+                        "picard.script.parser.normalize_tagname"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.mainwindow",
+                    "operations": [
+                        "picard.ui.mainwindow.MainWindow.make_script_selector_menu._add_menu_item",
+                        "picard.ui.mainwindow.MainWindow.create_action_toolbar.add_toolbar_action",
+                        "picard.ui.mainwindow.MainWindow.set_statusbar_message.isdict",
+                        "picard.ui.mainwindow.MainWindow.analyze.callback",
+                        "picard.ui.mainwindow.MainWindow.generate_fingerprints.callback"
+                    ],
+                    "chm": 0.1,
+                    "chd": 0.24
+                },
+                {
+                    "name": "picard.ui.options.releases",
+                    "operations": [
+                        "picard.ui.options.releases.ReleasesOptionsPage.__init__.add_slider"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser43",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.00039949777422668647,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.0,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.util.lrucache.LRUCache",
+                "picard.util.lrucache"
+            ],
+            "interfaces": []
+        }
+    ]
+}

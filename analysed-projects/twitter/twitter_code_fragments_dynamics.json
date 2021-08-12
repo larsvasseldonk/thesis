@@ -1,0 +1,2643 @@
+{
+    "program": "twitter",
+    "path": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\twitter\\twitter",
+    "statistics": {
+        "modules_covered": 8,
+        "module_coverage": 0.615,
+        "classes_covered": 24,
+        "class_coverage": 0.375
+    },
+    "code_fragments": [
+        {
+            "id": "cf0",
+            "name": "twitter.timezones",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf1",
+            "name": "twitter.timezones.UTC",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf2",
+            "name": "twitter.timezones.UTC.utcoffset",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf3",
+            "name": "twitter.timezones.UTC.tzname",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf4",
+            "name": "twitter.timezones.UTC.dst",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf5",
+            "name": "twitter.timezones.FixedOffset",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf6",
+            "name": "twitter.timezones.FixedOffset.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf7",
+            "name": "twitter.timezones.FixedOffset.utcoffset",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf8",
+            "name": "twitter.timezones.FixedOffset.tzname",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf9",
+            "name": "twitter.timezones.FixedOffset.dst",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf10",
+            "name": "twitter.timezones.LocalTimezone",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "twitter.timezones.LocalTimezone._isdst",
+                    3770
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf11",
+            "name": "twitter.timezones.LocalTimezone.utcoffset",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf12",
+            "name": "twitter.timezones.LocalTimezone.dst",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf13",
+            "name": "twitter.timezones.LocalTimezone.tzname",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf14",
+            "name": "twitter.timezones.LocalTimezone._isdst",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf15",
+            "name": "twitter.oauth_dance",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.oauth.OAuth.__init__",
+                    2
+                ],
+                [
+                    "twitter.api.Twitter.__init__",
+                    2
+                ],
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    4
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    2
+                ],
+                [
+                    "twitter.oauth_dance.parse_oauth_tokens",
+                    2
+                ],
+                [
+                    "twitter.oauth_dance.get_oauth_pin",
+                    1
+                ],
+                [
+                    "twitter.oauth.write_token_file",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf15",
+                    "cf259",
+                    2.0
+                ],
+                [
+                    "cf15",
+                    "cf158",
+                    2.0
+                ],
+                [
+                    "cf15",
+                    "cf151",
+                    6.0
+                ],
+                [
+                    "cf15",
+                    "cf256",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf16",
+            "name": "twitter.oauth_dance.oauth2_dance",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf17",
+            "name": "twitter.oauth_dance.get_oauth_pin",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf18",
+            "name": "twitter.oauth_dance.oauth_dance",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf19",
+            "name": "twitter.oauth_dance.parse_oauth_tokens",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf20",
+            "name": "twitter.cmdline",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.ansi.AnsiCmd.__init__",
+                    25
+                ],
+                [
+                    "twitter.cmdline.parse_args",
+                    11
+                ],
+                [
+                    "twitter.cmdline.loadConfig",
+                    11
+                ],
+                [
+                    "twitter.oauth_dance",
+                    1
+                ],
+                [
+                    "twitter.oauth.read_token_file",
+                    11
+                ],
+                [
+                    "twitter.oauth.OAuth.__init__",
+                    11
+                ],
+                [
+                    "twitter.api.Twitter.__init__",
+                    11
+                ],
+                [
+                    "twitter.cmdline.DoNothingAction.__call__",
+                    1
+                ],
+                [
+                    "twitter.cmdline.AdminAction.__call__",
+                    12
+                ],
+                [
+                    "twitter.cmdline.get_formatter",
+                    9
+                ],
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    18
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    9
+                ],
+                [
+                    "twitter.cmdline.FollowAction.getUser",
+                    1
+                ],
+                [
+                    "twitter.cmdline.VerboseAdminFormatter.__call__",
+                    2
+                ],
+                [
+                    "twitter.util.printNicely",
+                    64
+                ],
+                [
+                    "twitter.cmdline.LeaveAction.getUser",
+                    1
+                ],
+                [
+                    "twitter.cmdline.AnsiListsFormatter.__call__",
+                    2
+                ],
+                [
+                    "twitter.cmdline.MyListsAction.getStatuses",
+                    3
+                ],
+                [
+                    "twitter.cmdline.StatusAction.__call__",
+                    4
+                ],
+                [
+                    "twitter.cmdline.RepliesAction.getStatuses",
+                    1
+                ],
+                [
+                    "twitter.cmdline.get_time_string",
+                    60
+                ],
+                [
+                    "twitter.cmdline.correctRTStatus",
+                    40
+                ],
+                [
+                    "twitter.cmdline.URLStatusFormatter.__call__",
+                    40
+                ],
+                [
+                    "twitter.cmdline.UserAction.getStatuses",
+                    1
+                ],
+                [
+                    "twitter.cmdline.AnsiSearchFormatter.__call__",
+                    20
+                ],
+                [
+                    "twitter.cmdline.SearchAction.__call__",
+                    1
+                ],
+                [
+                    "twitter.cmdline.SetStatusAction.__call__",
+                    1
+                ],
+                [
+                    "twitter.cmdline.RateLimitStatus.__call__",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf20",
+                    "cf196",
+                    25.0
+                ],
+                [
+                    "cf20",
+                    "cf15",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf256",
+                    11.0
+                ],
+                [
+                    "cf20",
+                    "cf259",
+                    11.0
+                ],
+                [
+                    "cf20",
+                    "cf158",
+                    11.0
+                ],
+                [
+                    "cf20",
+                    "cf93",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf68",
+                    12.0
+                ],
+                [
+                    "cf20",
+                    "cf151",
+                    27.0
+                ],
+                [
+                    "cf20",
+                    "cf80",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf46",
+                    2.0
+                ],
+                [
+                    "cf20",
+                    "cf101",
+                    64.0
+                ],
+                [
+                    "cf20",
+                    "cf82",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf41",
+                    2.0
+                ],
+                [
+                    "cf20",
+                    "cf72",
+                    3.0
+                ],
+                [
+                    "cf20",
+                    "cf64",
+                    4.0
+                ],
+                [
+                    "cf20",
+                    "cf78",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf35",
+                    40.0
+                ],
+                [
+                    "cf20",
+                    "cf76",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf53",
+                    20.0
+                ],
+                [
+                    "cf20",
+                    "cf66",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf84",
+                    1.0
+                ],
+                [
+                    "cf20",
+                    "cf95",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf21",
+            "name": "twitter.cmdline.parse_args",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf22",
+            "name": "twitter.cmdline.get_time_string",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf23",
+            "name": "twitter.cmdline.reRepl",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf24",
+            "name": "twitter.cmdline.replaceInStatus",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf25",
+            "name": "twitter.cmdline.correctRTStatus",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf26",
+            "name": "twitter.cmdline.StatusFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf27",
+            "name": "twitter.cmdline.StatusFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf28",
+            "name": "twitter.cmdline.AnsiStatusFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf29",
+            "name": "twitter.cmdline.AnsiStatusFormatter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf30",
+            "name": "twitter.cmdline.AnsiStatusFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf31",
+            "name": "twitter.cmdline.VerboseStatusFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf32",
+            "name": "twitter.cmdline.VerboseStatusFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf33",
+            "name": "twitter.cmdline.JSONStatusFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf34",
+            "name": "twitter.cmdline.JSONStatusFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf35",
+            "name": "twitter.cmdline.URLStatusFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf36",
+            "name": "twitter.cmdline.URLStatusFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf37",
+            "name": "twitter.cmdline.ListsFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf38",
+            "name": "twitter.cmdline.ListsFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf39",
+            "name": "twitter.cmdline.ListsVerboseFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf40",
+            "name": "twitter.cmdline.ListsVerboseFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf41",
+            "name": "twitter.cmdline.AnsiListsFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf42",
+            "name": "twitter.cmdline.AnsiListsFormatter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf43",
+            "name": "twitter.cmdline.AnsiListsFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf44",
+            "name": "twitter.cmdline.AdminFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf45",
+            "name": "twitter.cmdline.AdminFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf46",
+            "name": "twitter.cmdline.VerboseAdminFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf47",
+            "name": "twitter.cmdline.VerboseAdminFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf48",
+            "name": "twitter.cmdline.SearchFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf49",
+            "name": "twitter.cmdline.SearchFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf50",
+            "name": "twitter.cmdline.VerboseSearchFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf51",
+            "name": "twitter.cmdline.URLSearchFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf52",
+            "name": "twitter.cmdline.URLSearchFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf53",
+            "name": "twitter.cmdline.AnsiSearchFormatter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf54",
+            "name": "twitter.cmdline.AnsiSearchFormatter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf55",
+            "name": "twitter.cmdline.AnsiSearchFormatter.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf56",
+            "name": "twitter.cmdline.get_term_encoding",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf57",
+            "name": "twitter.cmdline.get_formatter",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf58",
+            "name": "twitter.cmdline.Action",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf59",
+            "name": "twitter.cmdline.Action.ask",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf60",
+            "name": "twitter.cmdline.Action.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf61",
+            "name": "twitter.cmdline.NoSuchActionError",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf62",
+            "name": "twitter.cmdline.NoSuchAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf63",
+            "name": "twitter.cmdline.NoSuchAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf64",
+            "name": "twitter.cmdline.StatusAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf65",
+            "name": "twitter.cmdline.StatusAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf66",
+            "name": "twitter.cmdline.SearchAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf67",
+            "name": "twitter.cmdline.SearchAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf68",
+            "name": "twitter.cmdline.AdminAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf69",
+            "name": "twitter.cmdline.AdminAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf70",
+            "name": "twitter.cmdline.ListsAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf71",
+            "name": "twitter.cmdline.ListsAction.getStatuses",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf72",
+            "name": "twitter.cmdline.MyListsAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf73",
+            "name": "twitter.cmdline.MyListsAction.getStatuses",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf74",
+            "name": "twitter.cmdline.FriendsAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf75",
+            "name": "twitter.cmdline.FriendsAction.getStatuses",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf76",
+            "name": "twitter.cmdline.UserAction",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    2
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf76",
+                    "cf151",
+                    3.0
+                ]
+            ]
+        },
+        {
+            "id": "cf77",
+            "name": "twitter.cmdline.UserAction.getStatuses",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    2
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    1
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf78",
+            "name": "twitter.cmdline.RepliesAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf79",
+            "name": "twitter.cmdline.RepliesAction.getStatuses",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf80",
+            "name": "twitter.cmdline.FollowAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf81",
+            "name": "twitter.cmdline.FollowAction.getUser",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf82",
+            "name": "twitter.cmdline.LeaveAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf83",
+            "name": "twitter.cmdline.LeaveAction.getUser",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf84",
+            "name": "twitter.cmdline.SetStatusAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf85",
+            "name": "twitter.cmdline.SetStatusAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf86",
+            "name": "twitter.cmdline.TwitterShell",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf87",
+            "name": "twitter.cmdline.TwitterShell.render_prompt",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf88",
+            "name": "twitter.cmdline.TwitterShell.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf89",
+            "name": "twitter.cmdline.PythonPromptAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf90",
+            "name": "twitter.cmdline.PythonPromptAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf91",
+            "name": "twitter.cmdline.HelpAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf92",
+            "name": "twitter.cmdline.HelpAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf93",
+            "name": "twitter.cmdline.DoNothingAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf94",
+            "name": "twitter.cmdline.DoNothingAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf95",
+            "name": "twitter.cmdline.RateLimitStatus",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf96",
+            "name": "twitter.cmdline.RateLimitStatus.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf97",
+            "name": "twitter.cmdline.ReplAction",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf98",
+            "name": "twitter.cmdline.ReplAction.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf99",
+            "name": "twitter.cmdline.loadConfig",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf100",
+            "name": "twitter.cmdline.main",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf101",
+            "name": "twitter.util",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.util.follow_redirects.follow",
+                    34
+                ],
+                [
+                    "twitter.util.follow_redirects.RedirectHandler.__init__",
+                    18
+                ],
+                [
+                    "twitter.util.find_links",
+                    2
+                ],
+                [
+                    "twitter.util.follow_redirects",
+                    2
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf101",
+                    "cf112",
+                    18.0
+                ]
+            ]
+        },
+        {
+            "id": "cf102",
+            "name": "twitter.util.htmlentitydecode",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf103",
+            "name": "twitter.util.smrt_input",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf104",
+            "name": "twitter.util.printNicely",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf105",
+            "name": "twitter.util.actually_bytes",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf106",
+            "name": "twitter.util.err",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf107",
+            "name": "twitter.util.Fail",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf108",
+            "name": "twitter.util.Fail.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf109",
+            "name": "twitter.util.Fail.count",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf110",
+            "name": "twitter.util.Fail.wait",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf111",
+            "name": "twitter.util.find_links",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf112",
+            "name": "twitter.util.follow_redirects",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "twitter.util.follow_redirects.follow",
+                    34
+                ],
+                [
+                    "twitter.util.follow_redirects.RedirectHandler.__init__",
+                    18
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf113",
+            "name": "twitter.util.follow_redirects.follow",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf114",
+            "name": "twitter.util.follow_redirects.RedirectHandler",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf115",
+            "name": "twitter.util.follow_redirects.RedirectHandler.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf116",
+            "name": "twitter.util.follow_redirects.RedirectHandler.redirect_request",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf117",
+            "name": "twitter.util.expand_line",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "twitter.util.find_links",
+                    2
+                ],
+                [
+                    "twitter.util.follow_redirects",
+                    2
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf118",
+            "name": "twitter.util.parse_host_list",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf119",
+            "name": "twitter.util.align_text",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf120",
+            "name": "twitter.follow",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.follow.parse_args",
+                    1
+                ],
+                [
+                    "twitter.oauth.read_token_file",
+                    1
+                ],
+                [
+                    "twitter.oauth.OAuth.__init__",
+                    1
+                ],
+                [
+                    "twitter.api.Twitter.__init__",
+                    1
+                ],
+                [
+                    "twitter.util.Fail.__init__",
+                    3
+                ],
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    6
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    3
+                ],
+                [
+                    "twitter.follow.follow_portion",
+                    1
+                ],
+                [
+                    "twitter.util.err",
+                    4
+                ],
+                [
+                    "twitter.follow.follow",
+                    1
+                ],
+                [
+                    "twitter.follow.lookup_portion",
+                    2
+                ],
+                [
+                    "twitter.follow.lookup",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf120",
+                    "cf256",
+                    1.0
+                ],
+                [
+                    "cf120",
+                    "cf259",
+                    1.0
+                ],
+                [
+                    "cf120",
+                    "cf158",
+                    1.0
+                ],
+                [
+                    "cf120",
+                    "cf107",
+                    3.0
+                ],
+                [
+                    "cf120",
+                    "cf151",
+                    9.0
+                ],
+                [
+                    "cf120",
+                    "cf101",
+                    4.0
+                ]
+            ]
+        },
+        {
+            "id": "cf121",
+            "name": "twitter.follow.parse_args",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf122",
+            "name": "twitter.follow.lookup_portion",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    4
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    2
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf123",
+            "name": "twitter.follow.lookup",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "twitter.util.Fail.__init__",
+                    2
+                ],
+                [
+                    "twitter.follow.lookup_portion",
+                    2
+                ],
+                [
+                    "twitter.util.err",
+                    2
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf124",
+            "name": "twitter.follow.follow_portion",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    2
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    1
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf125",
+            "name": "twitter.follow.follow",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "twitter.util.Fail.__init__",
+                    1
+                ],
+                [
+                    "twitter.follow.follow_portion",
+                    1
+                ],
+                [
+                    "twitter.util.err",
+                    1
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf126",
+            "name": "twitter.follow.rate_limit_status",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf127",
+            "name": "twitter.follow.main",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "twitter.follow.parse_args",
+                    1
+                ],
+                [
+                    "twitter.oauth.read_token_file",
+                    1
+                ],
+                [
+                    "twitter.oauth.OAuth.__init__",
+                    1
+                ],
+                [
+                    "twitter.api.Twitter.__init__",
+                    1
+                ],
+                [
+                    "twitter.follow.follow",
+                    1
+                ],
+                [
+                    "twitter.follow.lookup",
+                    1
+                ],
+                [
+                    "twitter.util.err",
+                    1
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf128",
+            "name": "twitter.oauth2",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf129",
+            "name": "twitter.oauth2.write_bearer_token_file",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf130",
+            "name": "twitter.oauth2.read_bearer_token_file",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf131",
+            "name": "twitter.oauth2.OAuth2",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf132",
+            "name": "twitter.oauth2.OAuth2.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf133",
+            "name": "twitter.oauth2.OAuth2.encode_params",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf134",
+            "name": "twitter.oauth2.OAuth2.generate_headers",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf135",
+            "name": "twitter.twitter_globals",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf136",
+            "name": "twitter.api",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.api.TwitterCall.__init__",
+                    22
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf136",
+                    "cf151",
+                    22.0
+                ]
+            ]
+        },
+        {
+            "id": "cf137",
+            "name": "twitter.api._DEFAULT",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf138",
+            "name": "twitter.api.TwitterError",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf139",
+            "name": "twitter.api.TwitterHTTPError",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "twitter.api.TwitterHTTPError.__str__",
+                    9
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf140",
+            "name": "twitter.api.TwitterHTTPError.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf141",
+            "name": "twitter.api.TwitterHTTPError.__str__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf142",
+            "name": "twitter.api.TwitterResponse",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf143",
+            "name": "twitter.api.TwitterResponse.rate_limit_remaining",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf144",
+            "name": "twitter.api.TwitterResponse.rate_limit_limit",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf145",
+            "name": "twitter.api.TwitterResponse.rate_limit_reset",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf146",
+            "name": "twitter.api.TwitterDictResponse",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf147",
+            "name": "twitter.api.TwitterListResponse",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf148",
+            "name": "twitter.api.wrap_response",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf149",
+            "name": "twitter.api.method_for_uri",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf150",
+            "name": "twitter.api.build_uri",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf151",
+            "name": "twitter.api.TwitterCall",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "twitter.api.TwitterCall.__init__",
+                    138
+                ],
+                [
+                    "twitter.api.TwitterCall.__getattr__.extend_call",
+                    136
+                ],
+                [
+                    "twitter.api.build_uri",
+                    65
+                ],
+                [
+                    "twitter.api.method_for_uri",
+                    63
+                ],
+                [
+                    "twitter.oauth.OAuth.generate_headers",
+                    61
+                ],
+                [
+                    "twitter.oauth.OAuth.encode_params",
+                    61
+                ],
+                [
+                    "twitter.api.TwitterHTTPError.__init__",
+                    9
+                ],
+                [
+                    "twitter.util.actually_bytes",
+                    42
+                ],
+                [
+                    "twitter.api.wrap_response",
+                    54
+                ],
+                [
+                    "twitter.api.TwitterCall._handle_response",
+                    54
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    2
+                ],
+                [
+                    "twitter.auth.NoAuth.generate_headers",
+                    2
+                ],
+                [
+                    "twitter.auth.NoAuth.encode_params",
+                    2
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf151",
+                    "cf136",
+                    318.0
+                ],
+                [
+                    "cf151",
+                    "cf259",
+                    122.0
+                ],
+                [
+                    "cf151",
+                    "cf139",
+                    9.0
+                ],
+                [
+                    "cf151",
+                    "cf101",
+                    42.0
+                ],
+                [
+                    "cf151",
+                    "cf251",
+                    4.0
+                ]
+            ]
+        },
+        {
+            "id": "cf152",
+            "name": "twitter.api.TwitterCall.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf153",
+            "name": "twitter.api.TwitterCall.__getattr__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf154",
+            "name": "twitter.api.TwitterCall.__getattr__.extend_call",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf155",
+            "name": "twitter.api.TwitterCall.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf156",
+            "name": "twitter.api.TwitterCall._handle_response",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf157",
+            "name": "twitter.api.TwitterCall._handle_response_with_retry",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf158",
+            "name": "twitter.api.Twitter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf159",
+            "name": "twitter.api.Twitter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf160",
+            "name": "twitter.__init__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf161",
+            "name": "twitter.logger",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.oauth.read_token_file",
+                    1
+                ],
+                [
+                    "twitter.oauth.OAuth.__init__",
+                    1
+                ],
+                [
+                    "twitter.api.Twitter.__init__",
+                    1
+                ],
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    10
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    5
+                ],
+                [
+                    "twitter.util.printNicely",
+                    753
+                ],
+                [
+                    "twitter.logger.get_tweets",
+                    5
+                ],
+                [
+                    "twitter.logger.log_debug",
+                    6
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf161",
+                    "cf256",
+                    1.0
+                ],
+                [
+                    "cf161",
+                    "cf259",
+                    1.0
+                ],
+                [
+                    "cf161",
+                    "cf158",
+                    1.0
+                ],
+                [
+                    "cf161",
+                    "cf151",
+                    15.0
+                ],
+                [
+                    "cf161",
+                    "cf101",
+                    753.0
+                ]
+            ]
+        },
+        {
+            "id": "cf162",
+            "name": "twitter.logger.log_debug",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf163",
+            "name": "twitter.logger.get_tweets",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf164",
+            "name": "twitter.logger.main",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf165",
+            "name": "twitter.ircbot",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf166",
+            "name": "twitter.ircbot.get_prefix",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf167",
+            "name": "twitter.ircbot.debug",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf168",
+            "name": "twitter.ircbot.SchedTask",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf169",
+            "name": "twitter.ircbot.SchedTask.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf170",
+            "name": "twitter.ircbot.SchedTask.__repr__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf171",
+            "name": "twitter.ircbot.SchedTask.__lt__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf172",
+            "name": "twitter.ircbot.SchedTask.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf173",
+            "name": "twitter.ircbot.Scheduler",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf174",
+            "name": "twitter.ircbot.Scheduler.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf175",
+            "name": "twitter.ircbot.Scheduler.next_task",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf176",
+            "name": "twitter.ircbot.Scheduler.run_forever",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf177",
+            "name": "twitter.ircbot.TwitterBot",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf178",
+            "name": "twitter.ircbot.TwitterBot.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf179",
+            "name": "twitter.ircbot.TwitterBot.check_statuses",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf180",
+            "name": "twitter.ircbot.TwitterBot.process_events",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf181",
+            "name": "twitter.ircbot.TwitterBot.handle_privmsg",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf182",
+            "name": "twitter.ircbot.TwitterBot.handle_ctcp",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf183",
+            "name": "twitter.ircbot.TwitterBot.handle_umode",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf184",
+            "name": "twitter.ircbot.TwitterBot.privmsg_channels",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf185",
+            "name": "twitter.ircbot.TwitterBot.follow",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf186",
+            "name": "twitter.ircbot.TwitterBot.unfollow",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf187",
+            "name": "twitter.ircbot.TwitterBot._irc_connect",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf188",
+            "name": "twitter.ircbot.TwitterBot.run",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf189",
+            "name": "twitter.ircbot.load_config",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf190",
+            "name": "twitter.ircbot.main",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf191",
+            "name": "twitter.ansi",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf192",
+            "name": "twitter.ansi.AnsiColourException",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf193",
+            "name": "twitter.ansi.ColourMap",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf194",
+            "name": "twitter.ansi.ColourMap.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf195",
+            "name": "twitter.ansi.ColourMap.colourFor",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf196",
+            "name": "twitter.ansi.AnsiCmd",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf197",
+            "name": "twitter.ansi.AnsiCmd.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf198",
+            "name": "twitter.ansi.AnsiCmd.cmdReset",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf199",
+            "name": "twitter.ansi.AnsiCmd.cmdColour",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf200",
+            "name": "twitter.ansi.AnsiCmd.cmdColourNamed",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf201",
+            "name": "twitter.ansi.AnsiCmd.cmdBold",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf202",
+            "name": "twitter.ansi.AnsiCmd.cmdUnderline",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf203",
+            "name": "twitter.ansi.cmdReset",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf204",
+            "name": "twitter.ansi.cmdColour",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf205",
+            "name": "twitter.ansi.cmdColourNamed",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf206",
+            "name": "twitter.stream",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf207",
+            "name": "twitter.stream.HttpChunkDecoder",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf208",
+            "name": "twitter.stream.HttpChunkDecoder.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf209",
+            "name": "twitter.stream.HttpChunkDecoder.decode",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf210",
+            "name": "twitter.stream.JsonDecoder",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf211",
+            "name": "twitter.stream.JsonDecoder.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf212",
+            "name": "twitter.stream.JsonDecoder.decode",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf213",
+            "name": "twitter.stream.Timer",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf214",
+            "name": "twitter.stream.Timer.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf215",
+            "name": "twitter.stream.Timer.reset",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf216",
+            "name": "twitter.stream.Timer.expired",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf217",
+            "name": "twitter.stream.SockReader",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf218",
+            "name": "twitter.stream.SockReader.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf219",
+            "name": "twitter.stream.SockReader.read",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf220",
+            "name": "twitter.stream.TwitterJSONIter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf221",
+            "name": "twitter.stream.TwitterJSONIter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf222",
+            "name": "twitter.stream.TwitterJSONIter.__iter__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf223",
+            "name": "twitter.stream.handle_stream_response",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf224",
+            "name": "twitter.stream.TwitterStream",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf225",
+            "name": "twitter.stream.TwitterStream.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf226",
+            "name": "twitter.stream.TwitterStream.__init__.TwitterStreamCall",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf227",
+            "name": "twitter.stream.TwitterStream.__init__.TwitterStreamCall._handle_response",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf228",
+            "name": "twitter.archiver",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.archiver.parse_args",
+                    1
+                ],
+                [
+                    "twitter.oauth.read_token_file",
+                    1
+                ],
+                [
+                    "twitter.oauth.OAuth.__init__",
+                    1
+                ],
+                [
+                    "twitter.api.Twitter.__init__",
+                    1
+                ],
+                [
+                    "twitter.archiver.load_tweets",
+                    1
+                ],
+                [
+                    "twitter.util.Fail.__init__",
+                    4
+                ],
+                [
+                    "twitter.api.TwitterCall.__getattr__",
+                    8
+                ],
+                [
+                    "twitter.api.TwitterCall.__call__",
+                    4
+                ],
+                [
+                    "twitter.follow.lookup",
+                    4
+                ],
+                [
+                    "twitter.archiver.statuses_resolve_uids",
+                    4
+                ],
+                [
+                    "twitter.timezones.UTC.utcoffset",
+                    754
+                ],
+                [
+                    "twitter.timezones.LocalTimezone.utcoffset",
+                    754
+                ],
+                [
+                    "twitter.timezones.LocalTimezone.dst",
+                    2262
+                ],
+                [
+                    "twitter.timezones.LocalTimezone.tzname",
+                    754
+                ],
+                [
+                    "twitter.archiver.format_date",
+                    754
+                ],
+                [
+                    "twitter.archiver.direct_format_text",
+                    754
+                ],
+                [
+                    "twitter.archiver.statuses_portion",
+                    4
+                ],
+                [
+                    "twitter.util.err",
+                    4
+                ],
+                [
+                    "twitter.archiver.statuses",
+                    1
+                ],
+                [
+                    "twitter.archiver.save_tweets",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf228",
+                    "cf256",
+                    1.0
+                ],
+                [
+                    "cf228",
+                    "cf259",
+                    1.0
+                ],
+                [
+                    "cf228",
+                    "cf158",
+                    1.0
+                ],
+                [
+                    "cf228",
+                    "cf107",
+                    4.0
+                ],
+                [
+                    "cf228",
+                    "cf151",
+                    12.0
+                ],
+                [
+                    "cf228",
+                    "cf120",
+                    4.0
+                ],
+                [
+                    "cf228",
+                    "cf1",
+                    754.0
+                ],
+                [
+                    "cf228",
+                    "cf10",
+                    3770.0
+                ],
+                [
+                    "cf228",
+                    "cf101",
+                    4.0
+                ]
+            ]
+        },
+        {
+            "id": "cf229",
+            "name": "twitter.archiver.parse_args",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf230",
+            "name": "twitter.archiver.load_tweets",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf231",
+            "name": "twitter.archiver.save_tweets",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf232",
+            "name": "twitter.archiver.format_date",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf233",
+            "name": "twitter.archiver.expand_format_text",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf234",
+            "name": "twitter.archiver.direct_format_text",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf235",
+            "name": "twitter.archiver.statuses_resolve_uids",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf236",
+            "name": "twitter.archiver.statuses_portion",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf237",
+            "name": "twitter.archiver.statuses",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf238",
+            "name": "twitter.archiver.rate_limit_status",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf239",
+            "name": "twitter.archiver.main",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf240",
+            "name": "twitter.stream_example",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf241",
+            "name": "twitter.stream_example.parse_arguments",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf242",
+            "name": "twitter.stream_example.main",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf243",
+            "name": "twitter.auth",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf244",
+            "name": "twitter.auth.Auth",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf245",
+            "name": "twitter.auth.Auth.encode_params",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf246",
+            "name": "twitter.auth.Auth.generate_headers",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf247",
+            "name": "twitter.auth.UserPassAuth",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf248",
+            "name": "twitter.auth.UserPassAuth.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf249",
+            "name": "twitter.auth.UserPassAuth.encode_params",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf250",
+            "name": "twitter.auth.UserPassAuth.generate_headers",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf251",
+            "name": "twitter.auth.NoAuth",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf252",
+            "name": "twitter.auth.NoAuth.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf253",
+            "name": "twitter.auth.NoAuth.encode_params",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf254",
+            "name": "twitter.auth.NoAuth.generate_headers",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf255",
+            "name": "twitter.auth.MissingCredentialsError",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf256",
+            "name": "twitter.oauth",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "twitter.oauth.urlencode_noplus",
+                    61
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf257",
+            "name": "twitter.oauth.write_token_file",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf258",
+            "name": "twitter.oauth.read_token_file",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf259",
+            "name": "twitter.oauth.OAuth",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf260",
+            "name": "twitter.oauth.OAuth.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf261",
+            "name": "twitter.oauth.OAuth.encode_params",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf262",
+            "name": "twitter.oauth.OAuth.generate_headers",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf263",
+            "name": "twitter.oauth.urlencode_noplus",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        }
+    ]
+}

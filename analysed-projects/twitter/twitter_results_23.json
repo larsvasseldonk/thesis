@@ -1,0 +1,218 @@
+{
+    "name": "louvain clustering with dynamic_semantic data",
+    "microservice_metrics": {
+        "data": "dynamic_semantic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 1,
+        "degree_source_2": null,
+        "number_of_nodes": 32,
+        "coverage": 0.416,
+        "number_of_modules": 13,
+        "number_of_missing_modules": 5,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 5,
+        "number_of_classes": 64,
+        "number_of_missing_classes": 40,
+        "no_behavior_classes": 8,
+        "third_party_classes": 0,
+        "other_reason_classes": 32,
+        "number_of_edges": 52,
+        "number_of_services": 3,
+        "number_of_services_with_interface": 2,
+        "number_of_interfaces": 10,
+        "number_of_operations": 20,
+        "average_cohesion_at_domain_level": 0.633,
+        "average_cohesion_at_message_level": 0.428,
+        "average_interface_number": 5.0,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.975,
+        "structural_modularity_quality": 0.089,
+        "conceptual_modularity_quality": 0.022,
+        "max_service_size": 20
+    },
+    "services": [
+        {
+            "id": "ser142",
+            "statistics": {
+                "n_intra_edges": 10,
+                "total_weight_intra_edges": 0.13236074270557027,
+                "n_inter_edges": 7,
+                "total_weight_inter_edges": 0.008488063660477453,
+                "cluster_factor": 0.969,
+                "ifn": 7,
+                "opn": 11,
+                "scoh": 0.12345679012345678,
+                "scop": 0.03518518518518518,
+                "ccoh": 0.04938271604938271,
+                "ccop": 0.005555555555555556
+            },
+            "code_fragments": [
+                "twitter.auth.NoAuth",
+                "twitter.follow",
+                "twitter.oauth_dance",
+                "twitter.oauth.OAuth",
+                "twitter.api.TwitterCall",
+                "twitter.api.TwitterHTTPError",
+                "twitter.api",
+                "twitter.util.Fail",
+                "twitter.cmdline.UserAction"
+            ],
+            "interfaces": [
+                {
+                    "name": "twitter.oauth_dance",
+                    "operations": [
+                        "twitter.oauth_dance",
+                        "twitter.oauth_dance.oauth_dance"
+                    ],
+                    "chm": 0.0,
+                    "chd": 2.0
+                },
+                {
+                    "name": "twitter.cmdline.UserAction",
+                    "operations": [
+                        "twitter.cmdline.UserAction.getStatuses"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.util.Fail",
+                    "operations": [
+                        "twitter.util.Fail.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.follow",
+                    "operations": [
+                        "twitter.follow.lookup"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.oauth.OAuth",
+                    "operations": [
+                        "twitter.oauth.OAuth.__init__",
+                        "twitter.oauth.OAuth"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.auth.NoAuth",
+                    "operations": [
+                        "twitter.auth.NoAuth"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "twitter.api.TwitterCall",
+                    "operations": [
+                        "twitter.api.TwitterCall.__call__",
+                        "twitter.api.TwitterCall.__getattr__",
+                        "twitter.api.TwitterCall.__init__"
+                    ],
+                    "chm": 0.16666666666666666,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser143",
+            "statistics": {
+                "n_intra_edges": 2,
+                "total_weight_intra_edges": 1.2,
+                "n_inter_edges": 3,
+                "total_weight_inter_edges": 0.005305039787798408,
+                "cluster_factor": 0.998,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.2222222222222222,
+                "scop": 0.05555555555555555,
+                "ccoh": 0.0,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "twitter.archiver",
+                "twitter.timezones.LocalTimezone",
+                "twitter.timezones.UTC"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser144",
+            "statistics": {
+                "n_intra_edges": 21,
+                "total_weight_intra_edges": 0.253580901856764,
+                "n_inter_edges": 9,
+                "total_weight_inter_edges": 0.021750663129973476,
+                "cluster_factor": 0.959,
+                "ifn": 3,
+                "opn": 9,
+                "scoh": 0.0525,
+                "scop": 0.04166666666666667,
+                "ccoh": 0.025,
+                "ccop": 0.002777777777777778
+            },
+            "code_fragments": [
+                "twitter.cmdline.SearchAction",
+                "twitter.cmdline.SetStatusAction",
+                "twitter.cmdline",
+                "twitter.cmdline.VerboseAdminFormatter",
+                "twitter.cmdline.RepliesAction",
+                "twitter.cmdline.AdminAction",
+                "twitter.cmdline.FollowAction",
+                "twitter.cmdline.StatusAction",
+                "twitter.cmdline.AnsiSearchFormatter",
+                "twitter.cmdline.AnsiListsFormatter",
+                "twitter.logger",
+                "twitter.api.Twitter",
+                "twitter.cmdline.RateLimitStatus",
+                "twitter.ansi.AnsiCmd",
+                "twitter.oauth",
+                "twitter.util",
+                "twitter.cmdline.DoNothingAction",
+                "twitter.cmdline.URLStatusFormatter",
+                "twitter.cmdline.LeaveAction",
+                "twitter.cmdline.MyListsAction"
+            ],
+            "interfaces": [
+                {
+                    "name": "twitter.api.Twitter",
+                    "operations": [
+                        "twitter.api.Twitter.__init__",
+                        "twitter.api.Twitter"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.util",
+                    "operations": [
+                        "twitter.util.parse_host_list",
+                        "twitter.util.actually_bytes",
+                        "twitter.util.expand_line",
+                        "twitter.util.err"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "twitter.oauth",
+                    "operations": [
+                        "twitter.oauth.urlencode_noplus",
+                        "twitter.oauth.read_token_file",
+                        "twitter.oauth.write_token_file"
+                    ],
+                    "chm": 0.1111111111111111,
+                    "chd": 0.3333333333333333
+                }
+            ]
+        }
+    ]
+}

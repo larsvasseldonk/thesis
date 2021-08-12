@@ -1,0 +1,461 @@
+{
+    "name": "louvain clustering with static_dynamic data",
+    "microservice_metrics": {
+        "data": "static_dynamic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 0.5,
+        "degree_source_2": null,
+        "number_of_nodes": 37,
+        "coverage": 0.725,
+        "number_of_modules": 14,
+        "number_of_missing_modules": 2,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 2,
+        "number_of_classes": 37,
+        "number_of_missing_classes": 12,
+        "no_behavior_classes": 6,
+        "third_party_classes": 0,
+        "other_reason_classes": 6,
+        "number_of_edges": 82,
+        "number_of_services": 10,
+        "number_of_services_with_interface": 8,
+        "number_of_interfaces": 21,
+        "number_of_operations": 42,
+        "average_cohesion_at_domain_level": 0.457,
+        "average_cohesion_at_message_level": 0.586,
+        "average_interface_number": 2.625,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.686,
+        "structural_modularity_quality": 0.188,
+        "conceptual_modularity_quality": 0.114,
+        "max_service_size": 8
+    },
+    "services": [
+        {
+            "id": "ser39",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.75,
+                "n_inter_edges": 8,
+                "total_weight_inter_edges": 0.5026465798045601,
+                "cluster_factor": 0.749,
+                "ifn": 4,
+                "opn": 6,
+                "scoh": 0.1875,
+                "scop": 0.3,
+                "ccoh": 0.0625,
+                "ccop": 0.0875
+            },
+            "code_fragments": [
+                "chatterbot.logic.time_adapter.TimeLogicAdapter",
+                "chatterbot.exceptions.OptionalDependencyImportError",
+                "chatterbot.comparisons.SpacySimilarity",
+                "chatterbot.comparisons.JaccardSimilarity"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.comparisons.JaccardSimilarity",
+                    "operations": [
+                        "chatterbot.comparisons.JaccardSimilarity.compare"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.logic.time_adapter.TimeLogicAdapter",
+                    "operations": [
+                        "chatterbot.logic.time_adapter.TimeLogicAdapter.__init__",
+                        "chatterbot.logic.time_adapter.TimeLogicAdapter.process"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.comparisons.SpacySimilarity",
+                    "operations": [
+                        "chatterbot.comparisons.SpacySimilarity.__init__",
+                        "chatterbot.comparisons.SpacySimilarity.compare"
+                    ],
+                    "chm": 0.25,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.exceptions.OptionalDependencyImportError",
+                    "operations": [
+                        "chatterbot.exceptions.OptionalDependencyImportError"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser40",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 1.0318607491856677,
+                "n_inter_edges": 10,
+                "total_weight_inter_edges": 0.4709894136807818,
+                "cluster_factor": 0.814,
+                "ifn": 3,
+                "opn": 8,
+                "scoh": 0.1875,
+                "scop": 0.346875,
+                "ccoh": 0.1875,
+                "ccop": 0.046875
+            },
+            "code_fragments": [
+                "chatterbot.ext.sqlalchemy_app.models.Statement",
+                "chatterbot.storage.sql_storage.SQLStorageAdapter",
+                "chatterbot.conversation.StatementMixin",
+                "chatterbot.storage.storage_adapter.StorageAdapter"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.conversation.StatementMixin",
+                    "operations": [
+                        "chatterbot.conversation.StatementMixin.serialize",
+                        "chatterbot.conversation.StatementMixin.add_tags"
+                    ],
+                    "chm": 0.5,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.storage.sql_storage.SQLStorageAdapter",
+                    "operations": [
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.get_random",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.__init__",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.create",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.create_many"
+                    ],
+                    "chm": 0.6000000000000002,
+                    "chd": 0.1
+                },
+                {
+                    "name": "chatterbot.storage.storage_adapter.StorageAdapter",
+                    "operations": [
+                        "chatterbot.storage.storage_adapter.StorageAdapter.get_object"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser41",
+            "statistics": {
+                "n_intra_edges": 10,
+                "total_weight_intra_edges": 1.2876628664495113,
+                "n_inter_edges": 15,
+                "total_weight_inter_edges": 1.644340390879479,
+                "cluster_factor": 0.61,
+                "ifn": 5,
+                "opn": 15,
+                "scoh": 0.15625,
+                "scop": 0.221875,
+                "ccoh": 0.0625,
+                "ccop": 0.0875
+            },
+            "code_fragments": [
+                "chatterbot.logic.specific_response.SpecificResponseAdapter",
+                "chatterbot.conversation.Statement",
+                "chatterbot.logic.specific_response",
+                "chatterbot.logic.logic_adapter.LogicAdapter",
+                "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation",
+                "chatterbot.logic.unit_conversion.UnitConversion",
+                "chatterbot.logic.best_match",
+                "chatterbot.response_selection"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.logic.logic_adapter.LogicAdapter",
+                    "operations": [
+                        "chatterbot.logic.logic_adapter.LogicAdapter.class_name",
+                        "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                        "chatterbot.logic.logic_adapter.LogicAdapter.can_process"
+                    ],
+                    "chm": 0.3611111111111111,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation",
+                    "operations": [
+                        "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.can_process",
+                        "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.__init__",
+                        "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.process"
+                    ],
+                    "chm": 0.7055555555555556,
+                    "chd": 0.3333333333333333
+                },
+                {
+                    "name": "chatterbot.logic.specific_response.SpecificResponseAdapter",
+                    "operations": [
+                        "chatterbot.logic.specific_response.SpecificResponseAdapter.__init__",
+                        "chatterbot.logic.specific_response.SpecificResponseAdapter.can_process",
+                        "chatterbot.logic.specific_response.SpecificResponseAdapter.process"
+                    ],
+                    "chm": 0.37222222222222223,
+                    "chd": 0.3333333333333333
+                },
+                {
+                    "name": "chatterbot.conversation.Statement",
+                    "operations": [
+                        "chatterbot.conversation.Statement.__str__",
+                        "chatterbot.conversation.Statement.__init__",
+                        "chatterbot.conversation.Statement"
+                    ],
+                    "chm": 0.08333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.logic.unit_conversion.UnitConversion",
+                    "operations": [
+                        "chatterbot.logic.unit_conversion.UnitConversion.__init__",
+                        "chatterbot.logic.unit_conversion.UnitConversion.process",
+                        "chatterbot.logic.unit_conversion.UnitConversion.can_process"
+                    ],
+                    "chm": 0.37222222222222223,
+                    "chd": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "id": "ser42",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 1.0,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.0017304560260586318,
+                "cluster_factor": 0.999,
+                "ifn": 2,
+                "opn": 4,
+                "scoh": 0.1875,
+                "scop": 0.03125,
+                "ccoh": 0.0625,
+                "ccop": 0.03125
+            },
+            "code_fragments": [
+                "chatterbot.trainers.Trainer",
+                "chatterbot.trainers.ChatterBotCorpusTrainer",
+                "chatterbot.trainers.ListTrainer",
+                "chatterbot.corpus"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.corpus",
+                    "operations": [
+                        "chatterbot.corpus.list_corpus_files",
+                        "chatterbot.corpus.load_corpus"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.5
+                },
+                {
+                    "name": "chatterbot.trainers.Trainer",
+                    "operations": [
+                        "chatterbot.trainers.Trainer.TrainerInitializationException.__init__",
+                        "chatterbot.trainers.Trainer.get_preprocessed_statement"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser43",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.058122964169381106,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.0007125407166123778,
+                "cluster_factor": 0.994,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.125,
+                "ccoh": 0.25,
+                "ccop": 0.125
+            },
+            "code_fragments": [
+                "chatterbot.comparisons.LevenshteinDistance",
+                "chatterbot.comparisons"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser44",
+            "statistics": {
+                "n_intra_edges": 4,
+                "total_weight_intra_edges": 1.4844258957654723,
+                "n_inter_edges": 7,
+                "total_weight_inter_edges": 0.8111767100977199,
+                "cluster_factor": 0.785,
+                "ifn": 2,
+                "opn": 3,
+                "scoh": 0.25,
+                "scop": 0.221875,
+                "ccoh": 0.0,
+                "ccop": 0.05625
+            },
+            "code_fragments": [
+                "chatterbot.trainers",
+                "chatterbot.preprocessors",
+                "chatterbot.tagging.PosLemmaTagger",
+                "chatterbot.trainers.UbuntuCorpusTrainer"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.preprocessors",
+                    "operations": [
+                        "chatterbot.preprocessors.clean_whitespace"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.tagging.PosLemmaTagger",
+                    "operations": [
+                        "chatterbot.tagging.PosLemmaTagger.__init__",
+                        "chatterbot.tagging.PosLemmaTagger.get_text_index_string"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser45",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.09700732899022801,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.0,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "chatterbot.search",
+                "chatterbot.comparisons.Comparator"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.comparisons.Comparator",
+                    "operations": [
+                        "chatterbot.comparisons.Comparator.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser46",
+            "statistics": {
+                "n_intra_edges": 6,
+                "total_weight_intra_edges": 0.6488192182410424,
+                "n_inter_edges": 4,
+                "total_weight_inter_edges": 0.0424470684039088,
+                "cluster_factor": 0.968,
+                "ifn": 2,
+                "opn": 2,
+                "scoh": 0.24,
+                "scop": 0.08750000000000001,
+                "ccoh": 0.12,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "chatterbot.search.TextSearch",
+                "chatterbot.chatterbot",
+                "chatterbot.chatterbot.ChatBot",
+                "chatterbot.utils",
+                "chatterbot.search.IndexedTextSearch"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.search.IndexedTextSearch",
+                    "operations": [
+                        "chatterbot.search.IndexedTextSearch.search"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.utils",
+                    "operations": [
+                        "chatterbot.utils.print_progress_bar"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser47",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.25,
+                "n_inter_edges": 3,
+                "total_weight_inter_edges": 0.029723127035830618,
+                "cluster_factor": 0.944,
+                "ifn": 2,
+                "opn": 3,
+                "scoh": 0.25,
+                "scop": 0.13125,
+                "ccoh": 0.25,
+                "ccop": 0.03125
+            },
+            "code_fragments": [
+                "chatterbot.filters",
+                "chatterbot.logic.best_match.BestMatch"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.filters",
+                    "operations": [
+                        "chatterbot.filters.get_recent_repeated_responses"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.logic.best_match.BestMatch",
+                    "operations": [
+                        "chatterbot.logic.best_match.BestMatch.__init__",
+                        "chatterbot.logic.best_match.BestMatch.process"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser48",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.02504071661237785,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "chatterbot.logic.logic_adapter",
+                "chatterbot.adapters.Adapter"
+            ],
+            "interfaces": []
+        }
+    ]
+}

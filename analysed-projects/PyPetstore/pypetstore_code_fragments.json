@@ -1,0 +1,1092 @@
+{
+    "program": "PyPetstore",
+    "path": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore",
+    "packages": [
+        "pypetstore"
+    ],
+    "modules": [
+        "pypetstore.util",
+        "pypetstore.main",
+        "pypetstore.__init__",
+        "pypetstore.order",
+        "pypetstore.customer",
+        "pypetstore.product",
+        "pypetstore.database",
+        "pypetstore.orderdetail"
+    ],
+    "statistics": {
+        "n_modules": 8,
+        "n_classes": 5,
+        "n_functions": 18,
+        "n_methods": 40
+    },
+    "code_fragments": [
+        {
+            "id": "cf0",
+            "name": "pypetstore.util",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\util.py",
+            "start_lineno": 1,
+            "end_lineno": 16,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": [
+                "pypetstore.util.print_main_menu"
+            ]
+        },
+        {
+            "id": "cf1",
+            "name": "pypetstore.util.print_main_menu",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\util.py",
+            "start_lineno": 8,
+            "end_lineno": 16,
+            "input_params": [],
+            "output_params": [
+                "input"
+            ],
+            "defined_in": "pypetstore.util",
+            "nested_functions": []
+        },
+        {
+            "id": "cf2",
+            "name": "pypetstore.main",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\main.py",
+            "start_lineno": 1,
+            "end_lineno": 73,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": []
+        },
+        {
+            "id": "cf3",
+            "name": "pypetstore.__init__",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\__init__.py",
+            "start_lineno": 1,
+            "end_lineno": 1,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": []
+        },
+        {
+            "id": "cf4",
+            "name": "pypetstore.order",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 1,
+            "end_lineno": 129,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": [
+                "pypetstore.order.view_orders",
+                "pypetstore.order.print_orders_menu",
+                "pypetstore.order.delete_order",
+                "pypetstore.order.create_order",
+                "pypetstore.order.view_order"
+            ]
+        },
+        {
+            "id": "cf5",
+            "name": "pypetstore.order.Order",
+            "type": "class",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 10,
+            "end_lineno": 78,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.order",
+            "nested_functions": [
+                "pypetstore.order.Order.search_order",
+                "pypetstore.order.Order.print_nicely",
+                "pypetstore.order.Order.to_db",
+                "pypetstore.order.Order.get_status",
+                "pypetstore.order.Order.set_status",
+                "pypetstore.order.Order.__init__",
+                "pypetstore.order.Order.get_id",
+                "pypetstore.order.Order.set_id"
+            ]
+        },
+        {
+            "id": "cf6",
+            "name": "pypetstore.order.Order.__init__",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 13,
+            "end_lineno": 18,
+            "input_params": [
+                "self",
+                "customer",
+                "status"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf7",
+            "name": "pypetstore.order.Order.set_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 21,
+            "end_lineno": 22,
+            "input_params": [
+                "self",
+                "id"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf8",
+            "name": "pypetstore.order.Order.get_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 25,
+            "end_lineno": 26,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf9",
+            "name": "pypetstore.order.Order.set_status",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 29,
+            "end_lineno": 30,
+            "input_params": [
+                "self",
+                "status"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf10",
+            "name": "pypetstore.order.Order.get_status",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 33,
+            "end_lineno": 34,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf11",
+            "name": "pypetstore.order.Order.to_db",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 37,
+            "end_lineno": 54,
+            "input_params": [
+                "self",
+                "action"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf12",
+            "name": "pypetstore.order.Order.print_nicely",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 57,
+            "end_lineno": 60,
+            "input_params": [
+                "self",
+                "header"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf13",
+            "name": "pypetstore.order.Order.search_order",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 64,
+            "end_lineno": 78,
+            "input_params": [
+                "order_id"
+            ],
+            "output_params": [
+                "order"
+            ],
+            "defined_in": "pypetstore.order.Order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf14",
+            "name": "pypetstore.order.view_orders",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 81,
+            "end_lineno": 92,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf15",
+            "name": "pypetstore.order.view_order",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 95,
+            "end_lineno": 100,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf16",
+            "name": "pypetstore.order.create_order",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 103,
+            "end_lineno": 109,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf17",
+            "name": "pypetstore.order.delete_order",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 112,
+            "end_lineno": 117,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf18",
+            "name": "pypetstore.order.print_orders_menu",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\order.py",
+            "start_lineno": 120,
+            "end_lineno": 129,
+            "input_params": [],
+            "output_params": [
+                "input"
+            ],
+            "defined_in": "pypetstore.order",
+            "nested_functions": []
+        },
+        {
+            "id": "cf19",
+            "name": "pypetstore.customer",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 1,
+            "end_lineno": 134,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": [
+                "pypetstore.customer.view_customers",
+                "pypetstore.customer.create_customer",
+                "pypetstore.customer.update_customer",
+                "pypetstore.customer.delete_customer",
+                "pypetstore.customer.print_customers_menu"
+            ]
+        },
+        {
+            "id": "cf20",
+            "name": "pypetstore.customer.Customer",
+            "type": "class",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 8,
+            "end_lineno": 81,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.customer",
+            "nested_functions": [
+                "pypetstore.customer.Customer.search_customer",
+                "pypetstore.customer.Customer.print_nicely",
+                "pypetstore.customer.Customer.get_email",
+                "pypetstore.customer.Customer.get_name",
+                "pypetstore.customer.Customer.set_name",
+                "pypetstore.customer.Customer.set_email",
+                "pypetstore.customer.Customer.get_id",
+                "pypetstore.customer.Customer.set_id",
+                "pypetstore.customer.Customer.to_db",
+                "pypetstore.customer.Customer.__init__"
+            ]
+        },
+        {
+            "id": "cf21",
+            "name": "pypetstore.customer.Customer.__init__",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 11,
+            "end_lineno": 15,
+            "input_params": [
+                "self",
+                "name",
+                "email"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf22",
+            "name": "pypetstore.customer.Customer.set_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 18,
+            "end_lineno": 19,
+            "input_params": [
+                "self",
+                "id"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf23",
+            "name": "pypetstore.customer.Customer.get_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 22,
+            "end_lineno": 23,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf24",
+            "name": "pypetstore.customer.Customer.set_name",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 26,
+            "end_lineno": 27,
+            "input_params": [
+                "self",
+                "name"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf25",
+            "name": "pypetstore.customer.Customer.get_name",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 30,
+            "end_lineno": 31,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf26",
+            "name": "pypetstore.customer.Customer.set_email",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 34,
+            "end_lineno": 35,
+            "input_params": [
+                "self",
+                "email"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf27",
+            "name": "pypetstore.customer.Customer.get_email",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 38,
+            "end_lineno": 39,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf28",
+            "name": "pypetstore.customer.Customer.to_db",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 42,
+            "end_lineno": 59,
+            "input_params": [
+                "self",
+                "action"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf29",
+            "name": "pypetstore.customer.Customer.print_nicely",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 62,
+            "end_lineno": 65,
+            "input_params": [
+                "self",
+                "header"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf30",
+            "name": "pypetstore.customer.Customer.search_customer",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 69,
+            "end_lineno": 81,
+            "input_params": [
+                "customer_id"
+            ],
+            "output_params": [
+                "customer"
+            ],
+            "defined_in": "pypetstore.customer.Customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf31",
+            "name": "pypetstore.customer.view_customers",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 84,
+            "end_lineno": 95,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf32",
+            "name": "pypetstore.customer.create_customer",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 98,
+            "end_lineno": 103,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf33",
+            "name": "pypetstore.customer.update_customer",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 106,
+            "end_lineno": 115,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf34",
+            "name": "pypetstore.customer.delete_customer",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 118,
+            "end_lineno": 123,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf35",
+            "name": "pypetstore.customer.print_customers_menu",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\customer.py",
+            "start_lineno": 126,
+            "end_lineno": 134,
+            "input_params": [],
+            "output_params": [
+                "input"
+            ],
+            "defined_in": "pypetstore.customer",
+            "nested_functions": []
+        },
+        {
+            "id": "cf36",
+            "name": "pypetstore.product",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 1,
+            "end_lineno": 143,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": [
+                "pypetstore.product.print_products_menu",
+                "pypetstore.product.create_product",
+                "pypetstore.product.update_product",
+                "pypetstore.product.delete_product",
+                "pypetstore.product.view_products"
+            ]
+        },
+        {
+            "id": "cf37",
+            "name": "pypetstore.product.Product",
+            "type": "class",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 8,
+            "end_lineno": 87,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.product",
+            "nested_functions": [
+                "pypetstore.product.Product.set_price",
+                "pypetstore.product.Product.get_price",
+                "pypetstore.product.Product.__init__",
+                "pypetstore.product.Product.set_stock",
+                "pypetstore.product.Product.set_id",
+                "pypetstore.product.Product.get_stock",
+                "pypetstore.product.Product.get_id",
+                "pypetstore.product.Product.to_db",
+                "pypetstore.product.Product.print_nicely",
+                "pypetstore.product.Product.search_product",
+                "pypetstore.product.Product.set_name",
+                "pypetstore.product.Product.get_name"
+            ]
+        },
+        {
+            "id": "cf38",
+            "name": "pypetstore.product.Product.__init__",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 11,
+            "end_lineno": 15,
+            "input_params": [
+                "self",
+                "name",
+                "price",
+                "stock"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf39",
+            "name": "pypetstore.product.Product.set_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 18,
+            "end_lineno": 19,
+            "input_params": [
+                "self",
+                "id"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf40",
+            "name": "pypetstore.product.Product.get_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 22,
+            "end_lineno": 23,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf41",
+            "name": "pypetstore.product.Product.set_name",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 26,
+            "end_lineno": 27,
+            "input_params": [
+                "self",
+                "name"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf42",
+            "name": "pypetstore.product.Product.get_name",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 30,
+            "end_lineno": 31,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf43",
+            "name": "pypetstore.product.Product.set_price",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 34,
+            "end_lineno": 35,
+            "input_params": [
+                "self",
+                "price"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf44",
+            "name": "pypetstore.product.Product.get_price",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 38,
+            "end_lineno": 39,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf45",
+            "name": "pypetstore.product.Product.set_stock",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 42,
+            "end_lineno": 43,
+            "input_params": [
+                "self",
+                "stock"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf46",
+            "name": "pypetstore.product.Product.get_stock",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 46,
+            "end_lineno": 47,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf47",
+            "name": "pypetstore.product.Product.to_db",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 50,
+            "end_lineno": 65,
+            "input_params": [
+                "self",
+                "action"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf48",
+            "name": "pypetstore.product.Product.print_nicely",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 68,
+            "end_lineno": 71,
+            "input_params": [
+                "self",
+                "header"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf49",
+            "name": "pypetstore.product.Product.search_product",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 75,
+            "end_lineno": 87,
+            "input_params": [
+                "product_id"
+            ],
+            "output_params": [
+                "product"
+            ],
+            "defined_in": "pypetstore.product.Product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf50",
+            "name": "pypetstore.product.view_products",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 90,
+            "end_lineno": 101,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf51",
+            "name": "pypetstore.product.create_product",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 104,
+            "end_lineno": 110,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf52",
+            "name": "pypetstore.product.update_product",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 113,
+            "end_lineno": 124,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf53",
+            "name": "pypetstore.product.delete_product",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 127,
+            "end_lineno": 132,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf54",
+            "name": "pypetstore.product.print_products_menu",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\product.py",
+            "start_lineno": 135,
+            "end_lineno": 143,
+            "input_params": [],
+            "output_params": [
+                "input"
+            ],
+            "defined_in": "pypetstore.product",
+            "nested_functions": []
+        },
+        {
+            "id": "cf55",
+            "name": "pypetstore.database",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\database.py",
+            "start_lineno": 1,
+            "end_lineno": 57,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": []
+        },
+        {
+            "id": "cf56",
+            "name": "pypetstore.database.Database",
+            "type": "class",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\database.py",
+            "start_lineno": 14,
+            "end_lineno": 56,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.database",
+            "nested_functions": [
+                "pypetstore.database.Database.__init__",
+                "pypetstore.database.Database.close_connection",
+                "pypetstore.database.Database.create_connection",
+                "pypetstore.database.Database.create_tables"
+            ]
+        },
+        {
+            "id": "cf57",
+            "name": "pypetstore.database.Database.__init__",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\database.py",
+            "start_lineno": 17,
+            "end_lineno": 21,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.database.Database",
+            "nested_functions": []
+        },
+        {
+            "id": "cf58",
+            "name": "pypetstore.database.Database.create_connection",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\database.py",
+            "start_lineno": 24,
+            "end_lineno": 33,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "conn"
+            ],
+            "defined_in": "pypetstore.database.Database",
+            "nested_functions": []
+        },
+        {
+            "id": "cf59",
+            "name": "pypetstore.database.Database.create_tables",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\database.py",
+            "start_lineno": 36,
+            "end_lineno": 50,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.database.Database",
+            "nested_functions": []
+        },
+        {
+            "id": "cf60",
+            "name": "pypetstore.database.Database.close_connection",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\database.py",
+            "start_lineno": 53,
+            "end_lineno": 56,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.database.Database",
+            "nested_functions": []
+        },
+        {
+            "id": "cf61",
+            "name": "pypetstore.orderdetail",
+            "type": "module",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 1,
+            "end_lineno": 98,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": null,
+            "nested_functions": [
+                "pypetstore.orderdetail.create_orderdetails",
+                "pypetstore.orderdetail.view_orderdetails"
+            ]
+        },
+        {
+            "id": "cf62",
+            "name": "pypetstore.orderdetail.Orderdetail",
+            "type": "class",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 10,
+            "end_lineno": 68,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.orderdetail",
+            "nested_functions": [
+                "pypetstore.orderdetail.Orderdetail.__init__",
+                "pypetstore.orderdetail.Orderdetail.set_id",
+                "pypetstore.orderdetail.Orderdetail.get_id",
+                "pypetstore.orderdetail.Orderdetail.to_db",
+                "pypetstore.orderdetail.Orderdetail.print_nicely",
+                "pypetstore.orderdetail.Orderdetail.search_orderdetail"
+            ]
+        },
+        {
+            "id": "cf63",
+            "name": "pypetstore.orderdetail.Orderdetail.__init__",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 13,
+            "end_lineno": 22,
+            "input_params": [
+                "self",
+                "order",
+                "product",
+                "quantity"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.orderdetail.Orderdetail",
+            "nested_functions": []
+        },
+        {
+            "id": "cf64",
+            "name": "pypetstore.orderdetail.Orderdetail.set_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 25,
+            "end_lineno": 26,
+            "input_params": [
+                "self",
+                "id"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.orderdetail.Orderdetail",
+            "nested_functions": []
+        },
+        {
+            "id": "cf65",
+            "name": "pypetstore.orderdetail.Orderdetail.get_id",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 29,
+            "end_lineno": 30,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [
+                "self"
+            ],
+            "defined_in": "pypetstore.orderdetail.Orderdetail",
+            "nested_functions": []
+        },
+        {
+            "id": "cf66",
+            "name": "pypetstore.orderdetail.Orderdetail.to_db",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 33,
+            "end_lineno": 41,
+            "input_params": [
+                "self"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.orderdetail.Orderdetail",
+            "nested_functions": []
+        },
+        {
+            "id": "cf67",
+            "name": "pypetstore.orderdetail.Orderdetail.print_nicely",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 44,
+            "end_lineno": 47,
+            "input_params": [
+                "self",
+                "header"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.orderdetail.Orderdetail",
+            "nested_functions": []
+        },
+        {
+            "id": "cf68",
+            "name": "pypetstore.orderdetail.Orderdetail.search_orderdetail",
+            "type": "method",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 51,
+            "end_lineno": 68,
+            "input_params": [
+                "orderdetail_id"
+            ],
+            "output_params": [
+                "orderdetail"
+            ],
+            "defined_in": "pypetstore.orderdetail.Orderdetail",
+            "nested_functions": []
+        },
+        {
+            "id": "cf69",
+            "name": "pypetstore.orderdetail.view_orderdetails",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 71,
+            "end_lineno": 84,
+            "input_params": [
+                "order_id"
+            ],
+            "output_params": [],
+            "defined_in": "pypetstore.orderdetail",
+            "nested_functions": []
+        },
+        {
+            "id": "cf70",
+            "name": "pypetstore.orderdetail.create_orderdetails",
+            "type": "function",
+            "filepath": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\PyPetstore\\pypetstore\\orderdetail.py",
+            "start_lineno": 87,
+            "end_lineno": 98,
+            "input_params": [],
+            "output_params": [],
+            "defined_in": "pypetstore.orderdetail",
+            "nested_functions": []
+        }
+    ]
+}

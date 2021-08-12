@@ -1,0 +1,2704 @@
+{
+    "program": "ChatterBot",
+    "path": "C:\\Users\\larsv\\SynologyDrive\\Repos\\analysed-projects\\ChatterBot\\chatterbot",
+    "statistics": {
+        "modules_covered": 12,
+        "module_coverage": 0.857,
+        "classes_covered": 21,
+        "class_coverage": 0.568
+    },
+    "code_fragments": [
+        {
+            "id": "cf0",
+            "name": "chatterbot.ext.sqlalchemy_app.models",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf1",
+            "name": "chatterbot.ext.sqlalchemy_app.models.ModelBase",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf2",
+            "name": "chatterbot.ext.sqlalchemy_app.models.ModelBase.__tablename__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf3",
+            "name": "chatterbot.ext.sqlalchemy_app.models.Tag",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf4",
+            "name": "chatterbot.ext.sqlalchemy_app.models.Statement",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf5",
+            "name": "chatterbot.ext.sqlalchemy_app.models.Statement.get_tags",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf6",
+            "name": "chatterbot.ext.sqlalchemy_app.models.Statement.add_tags",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf7",
+            "name": "chatterbot.ext.sqlalchemy_app.__init__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf8",
+            "name": "chatterbot.corpus",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.corpus.get_file_path",
+                    29
+                ],
+                [
+                    "chatterbot.corpus.read_corpus",
+                    345
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf9",
+            "name": "chatterbot.corpus.get_file_path",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf10",
+            "name": "chatterbot.corpus.read_corpus",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf11",
+            "name": "chatterbot.corpus.list_corpus_files",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.corpus.get_file_path",
+                    29
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf12",
+            "name": "chatterbot.corpus.load_corpus",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.corpus.read_corpus",
+                    345
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf13",
+            "name": "chatterbot.__main__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf14",
+            "name": "chatterbot.__main__.get_chatterbot_version",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf15",
+            "name": "chatterbot.filters",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                    61
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf15",
+                    "cf144",
+                    61.0
+                ]
+            ]
+        },
+        {
+            "id": "cf16",
+            "name": "chatterbot.filters.get_recent_repeated_responses",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf17",
+            "name": "chatterbot.tagging",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf18",
+            "name": "chatterbot.tagging.LowercaseTagger",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf19",
+            "name": "chatterbot.tagging.LowercaseTagger.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf20",
+            "name": "chatterbot.tagging.LowercaseTagger.get_text_index_string",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf21",
+            "name": "chatterbot.tagging.PosLemmaTagger",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf22",
+            "name": "chatterbot.tagging.PosLemmaTagger.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf23",
+            "name": "chatterbot.tagging.PosLemmaTagger.get_text_index_string",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf24",
+            "name": "chatterbot.chatterbot",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.utils.validate_adapter_class",
+                    369
+                ],
+                [
+                    "chatterbot.utils.initialize_class",
+                    370
+                ],
+                [
+                    "chatterbot.search.IndexedTextSearch.__init__",
+                    366
+                ],
+                [
+                    "chatterbot.utils.import_module",
+                    181
+                ],
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.get_object",
+                    120
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    119
+                ],
+                [
+                    "chatterbot.conversation.StatementMixin.add_tags",
+                    60
+                ],
+                [
+                    "chatterbot.preprocessors.clean_whitespace",
+                    58
+                ],
+                [
+                    "chatterbot.tagging.PosLemmaTagger.get_text_index_string",
+                    60
+                ],
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.can_process",
+                    60
+                ],
+                [
+                    "chatterbot.logic.best_match.BestMatch.process",
+                    52
+                ],
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.class_name",
+                    69
+                ],
+                [
+                    "chatterbot.chatterbot.ChatBot.generate_response",
+                    58
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                    83
+                ],
+                [
+                    "chatterbot.chatterbot.ChatBot.get_latest_response",
+                    55
+                ],
+                [
+                    "chatterbot.conversation.StatementMixin.serialize",
+                    118
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.create",
+                    115
+                ],
+                [
+                    "chatterbot.chatterbot.ChatBot.learn_response",
+                    57
+                ],
+                [
+                    "chatterbot.conversation.Statement.__str__",
+                    1
+                ],
+                [
+                    "chatterbot.chatterbot.ChatBot.generate_response.ResultOption.__init__",
+                    5
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.can_process",
+                    4
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.process",
+                    4
+                ],
+                [
+                    "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.can_process",
+                    4
+                ],
+                [
+                    "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.process",
+                    2
+                ],
+                [
+                    "chatterbot.logic.time_adapter.TimeLogicAdapter.process",
+                    4
+                ],
+                [
+                    "chatterbot.logic.specific_response.SpecificResponseAdapter.can_process",
+                    1
+                ],
+                [
+                    "chatterbot.logic.specific_response.SpecificResponseAdapter.process",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf24",
+                    "cf103",
+                    920.0
+                ],
+                [
+                    "cf24",
+                    "cf35",
+                    366.0
+                ],
+                [
+                    "cf24",
+                    "cf187",
+                    120.0
+                ],
+                [
+                    "cf24",
+                    "cf69",
+                    120.0
+                ],
+                [
+                    "cf24",
+                    "cf64",
+                    178.0
+                ],
+                [
+                    "cf24",
+                    "cf119",
+                    58.0
+                ],
+                [
+                    "cf24",
+                    "cf21",
+                    60.0
+                ],
+                [
+                    "cf24",
+                    "cf217",
+                    129.0
+                ],
+                [
+                    "cf24",
+                    "cf224",
+                    52.0
+                ],
+                [
+                    "cf24",
+                    "cf25",
+                    175.0
+                ],
+                [
+                    "cf24",
+                    "cf144",
+                    198.0
+                ],
+                [
+                    "cf24",
+                    "cf209",
+                    8.0
+                ],
+                [
+                    "cf24",
+                    "cf233",
+                    6.0
+                ],
+                [
+                    "cf24",
+                    "cf204",
+                    4.0
+                ],
+                [
+                    "cf24",
+                    "cf228",
+                    2.0
+                ]
+            ]
+        },
+        {
+            "id": "cf25",
+            "name": "chatterbot.chatterbot.ChatBot",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf26",
+            "name": "chatterbot.chatterbot.ChatBot.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf27",
+            "name": "chatterbot.chatterbot.ChatBot.get_response",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf28",
+            "name": "chatterbot.chatterbot.ChatBot.generate_response",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf29",
+            "name": "chatterbot.chatterbot.ChatBot.generate_response.ResultOption",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf30",
+            "name": "chatterbot.chatterbot.ChatBot.generate_response.ResultOption.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf31",
+            "name": "chatterbot.chatterbot.ChatBot.learn_response",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf32",
+            "name": "chatterbot.chatterbot.ChatBot.get_latest_response",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf33",
+            "name": "chatterbot.chatterbot.ChatBot.ChatBotException",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf34",
+            "name": "chatterbot.search",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.comparisons.Comparator.__init__",
+                    377
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                    72
+                ],
+                [
+                    "chatterbot.comparisons.Comparator.__call__",
+                    576
+                ],
+                [
+                    "chatterbot.tagging.PosLemmaTagger.get_text_index_string",
+                    19
+                ],
+                [
+                    "chatterbot.comparisons.SpacySimilarity.__init__",
+                    4
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf34",
+                    "cf75",
+                    953.0
+                ],
+                [
+                    "cf34",
+                    "cf144",
+                    72.0
+                ],
+                [
+                    "cf34",
+                    "cf21",
+                    19.0
+                ],
+                [
+                    "cf34",
+                    "cf81",
+                    4.0
+                ]
+            ]
+        },
+        {
+            "id": "cf35",
+            "name": "chatterbot.search.IndexedTextSearch",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf36",
+            "name": "chatterbot.search.IndexedTextSearch.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf37",
+            "name": "chatterbot.search.IndexedTextSearch.search",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf38",
+            "name": "chatterbot.search.TextSearch",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf39",
+            "name": "chatterbot.search.TextSearch.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf40",
+            "name": "chatterbot.search.TextSearch.search",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf41",
+            "name": "chatterbot.trainers",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.corpus.list_corpus_files",
+                    9
+                ],
+                [
+                    "chatterbot.corpus.load_corpus",
+                    8
+                ],
+                [
+                    "chatterbot.tagging.PosLemmaTagger.get_text_index_string",
+                    3596
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    3596
+                ],
+                [
+                    "chatterbot.conversation.StatementMixin.add_tags",
+                    3466
+                ],
+                [
+                    "chatterbot.preprocessors.clean_whitespace",
+                    3593
+                ],
+                [
+                    "chatterbot.trainers.Trainer.get_preprocessed_statement",
+                    3576
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.create_many",
+                    79
+                ],
+                [
+                    "chatterbot.utils.print_progress_bar",
+                    602
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                    1
+                ],
+                [
+                    "chatterbot.trainers.Trainer.TrainerInitializationException.__init__",
+                    1
+                ],
+                [
+                    "chatterbot.trainers.UbuntuCorpusTrainer.__init__",
+                    9
+                ],
+                [
+                    "chatterbot.trainers.UbuntuCorpusTrainer.is_downloaded",
+                    5
+                ],
+                [
+                    "chatterbot.trainers.UbuntuCorpusTrainer.extract.track_progress",
+                    5
+                ],
+                [
+                    "chatterbot.tagging.PosLemmaTagger.__init__",
+                    3
+                ],
+                [
+                    "chatterbot.trainers.UbuntuCorpusTrainer.download",
+                    3
+                ],
+                [
+                    "chatterbot.trainers.UbuntuCorpusTrainer.is_extracted",
+                    3
+                ],
+                [
+                    "chatterbot.trainers.UbuntuCorpusTrainer.extract",
+                    3
+                ],
+                [
+                    "chatterbot.trainers.UbuntuCorpusTrainer.train.chunks",
+                    3
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf41",
+                    "cf8",
+                    17.0
+                ],
+                [
+                    "cf41",
+                    "cf21",
+                    3599.0
+                ],
+                [
+                    "cf41",
+                    "cf69",
+                    3596.0
+                ],
+                [
+                    "cf41",
+                    "cf64",
+                    3466.0
+                ],
+                [
+                    "cf41",
+                    "cf119",
+                    3593.0
+                ],
+                [
+                    "cf41",
+                    "cf42",
+                    3577.0
+                ],
+                [
+                    "cf41",
+                    "cf144",
+                    80.0
+                ],
+                [
+                    "cf41",
+                    "cf103",
+                    602.0
+                ],
+                [
+                    "cf41",
+                    "cf54",
+                    23.0
+                ]
+            ]
+        },
+        {
+            "id": "cf42",
+            "name": "chatterbot.trainers.Trainer",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf43",
+            "name": "chatterbot.trainers.Trainer.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf44",
+            "name": "chatterbot.trainers.Trainer.get_preprocessed_statement",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf45",
+            "name": "chatterbot.trainers.Trainer.train",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf46",
+            "name": "chatterbot.trainers.Trainer.TrainerInitializationException",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf47",
+            "name": "chatterbot.trainers.Trainer.TrainerInitializationException.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf48",
+            "name": "chatterbot.trainers.Trainer._generate_export_data",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf49",
+            "name": "chatterbot.trainers.Trainer.export_for_training",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf50",
+            "name": "chatterbot.trainers.ListTrainer",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf51",
+            "name": "chatterbot.trainers.ListTrainer.train",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf52",
+            "name": "chatterbot.trainers.ChatterBotCorpusTrainer",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf53",
+            "name": "chatterbot.trainers.ChatterBotCorpusTrainer.train",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf54",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf55",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf56",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.is_downloaded",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf57",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.is_extracted",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf58",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.download",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf59",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.extract",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf60",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.extract.track_progress",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf61",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.train",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf62",
+            "name": "chatterbot.trainers.UbuntuCorpusTrainer.train.chunks",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf63",
+            "name": "chatterbot.conversation",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf64",
+            "name": "chatterbot.conversation.StatementMixin",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.conversation.StatementMixin.get_statement_field_names",
+                    5015
+                ],
+                [
+                    "chatterbot.conversation.StatementMixin.get_tags",
+                    3740
+                ],
+                [
+                    "chatterbot.ext.sqlalchemy_app.models.Statement.get_tags",
+                    1278
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf64",
+                    "cf4",
+                    1278.0
+                ]
+            ]
+        },
+        {
+            "id": "cf65",
+            "name": "chatterbot.conversation.StatementMixin.get_statement_field_names",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf66",
+            "name": "chatterbot.conversation.StatementMixin.get_tags",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf67",
+            "name": "chatterbot.conversation.StatementMixin.add_tags",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf68",
+            "name": "chatterbot.conversation.StatementMixin.serialize",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf69",
+            "name": "chatterbot.conversation.Statement",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf70",
+            "name": "chatterbot.conversation.Statement.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf71",
+            "name": "chatterbot.conversation.Statement.__str__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf72",
+            "name": "chatterbot.conversation.Statement.__repr__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf73",
+            "name": "chatterbot.conversation.Statement.save",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf74",
+            "name": "chatterbot.comparisons",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.comparisons.LevenshteinDistance.compare",
+                    571
+                ],
+                [
+                    "chatterbot.comparisons.Comparator.__init__",
+                    7
+                ],
+                [
+                    "chatterbot.comparisons.SpacySimilarity.compare",
+                    11
+                ],
+                [
+                    "chatterbot.comparisons.JaccardSimilarity.compare",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf74",
+                    "cf79",
+                    571.0
+                ],
+                [
+                    "cf74",
+                    "cf75",
+                    7.0
+                ],
+                [
+                    "cf74",
+                    "cf81",
+                    11.0
+                ],
+                [
+                    "cf74",
+                    "cf84",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf75",
+            "name": "chatterbot.comparisons.Comparator",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf76",
+            "name": "chatterbot.comparisons.Comparator.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf77",
+            "name": "chatterbot.comparisons.Comparator.__call__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf78",
+            "name": "chatterbot.comparisons.Comparator.compare",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf79",
+            "name": "chatterbot.comparisons.LevenshteinDistance",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf80",
+            "name": "chatterbot.comparisons.LevenshteinDistance.compare",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf81",
+            "name": "chatterbot.comparisons.SpacySimilarity",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf82",
+            "name": "chatterbot.comparisons.SpacySimilarity.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf83",
+            "name": "chatterbot.comparisons.SpacySimilarity.compare",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf84",
+            "name": "chatterbot.comparisons.JaccardSimilarity",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf85",
+            "name": "chatterbot.comparisons.JaccardSimilarity.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf86",
+            "name": "chatterbot.comparisons.JaccardSimilarity.compare",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf87",
+            "name": "chatterbot.__init__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf88",
+            "name": "chatterbot.constants",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf89",
+            "name": "chatterbot.parsing",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.parsing.date_from_adverb",
+                    9
+                ],
+                [
+                    "chatterbot.parsing.convert_string_to_number",
+                    16
+                ],
+                [
+                    "chatterbot.parsing.date_from_duration",
+                    6
+                ],
+                [
+                    "chatterbot.parsing.convert_time_to_hour_minute",
+                    38
+                ],
+                [
+                    "chatterbot.parsing.date_from_quarter",
+                    2
+                ],
+                [
+                    "chatterbot.parsing.date_from_relative_week_year",
+                    8
+                ],
+                [
+                    "chatterbot.parsing.next_week_day",
+                    10
+                ],
+                [
+                    "chatterbot.parsing.this_week_day",
+                    7
+                ],
+                [
+                    "chatterbot.parsing.previous_week_day",
+                    1
+                ],
+                [
+                    "chatterbot.parsing.date_from_relative_day",
+                    3
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf90",
+            "name": "chatterbot.parsing.convert_string_to_number",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf91",
+            "name": "chatterbot.parsing.convert_time_to_hour_minute",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf92",
+            "name": "chatterbot.parsing.date_from_quarter",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf93",
+            "name": "chatterbot.parsing.date_from_relative_day",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.parsing.previous_week_day",
+                    1
+                ],
+                [
+                    "chatterbot.parsing.next_week_day",
+                    1
+                ],
+                [
+                    "chatterbot.parsing.this_week_day",
+                    1
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf94",
+            "name": "chatterbot.parsing.date_from_relative_week_year",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.parsing.convert_string_to_number",
+                    8
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf95",
+            "name": "chatterbot.parsing.date_from_adverb",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf96",
+            "name": "chatterbot.parsing.date_from_duration",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.parsing.date_from_adverb",
+                    3
+                ],
+                [
+                    "chatterbot.parsing.convert_string_to_number",
+                    8
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf97",
+            "name": "chatterbot.parsing.this_week_day",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.parsing.next_week_day",
+                    9
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf98",
+            "name": "chatterbot.parsing.previous_week_day",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf99",
+            "name": "chatterbot.parsing.next_week_day",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf100",
+            "name": "chatterbot.parsing.datetime_parsing",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf101",
+            "name": "chatterbot.exceptions",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf102",
+            "name": "chatterbot.exceptions.OptionalDependencyImportError",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf103",
+            "name": "chatterbot.utils",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.utils.import_module",
+                    743
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.__init__",
+                    183
+                ],
+                [
+                    "chatterbot.logic.best_match.BestMatch.__init__",
+                    179
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.__init__",
+                    1
+                ],
+                [
+                    "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.__init__",
+                    4
+                ],
+                [
+                    "chatterbot.logic.time_adapter.TimeLogicAdapter.__init__",
+                    2
+                ],
+                [
+                    "chatterbot.logic.specific_response.SpecificResponseAdapter.__init__",
+                    1
+                ],
+                [
+                    "chatterbot.chatterbot.ChatBot.get_response",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf103",
+                    "cf144",
+                    183.0
+                ],
+                [
+                    "cf103",
+                    "cf224",
+                    179.0
+                ],
+                [
+                    "cf103",
+                    "cf209",
+                    1.0
+                ],
+                [
+                    "cf103",
+                    "cf233",
+                    4.0
+                ],
+                [
+                    "cf103",
+                    "cf204",
+                    2.0
+                ],
+                [
+                    "cf103",
+                    "cf228",
+                    1.0
+                ],
+                [
+                    "cf103",
+                    "cf25",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf104",
+            "name": "chatterbot.utils.import_module",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf105",
+            "name": "chatterbot.utils.initialize_class",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.utils.import_module",
+                    368
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.__init__",
+                    183
+                ],
+                [
+                    "chatterbot.logic.best_match.BestMatch.__init__",
+                    179
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.__init__",
+                    1
+                ],
+                [
+                    "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.__init__",
+                    4
+                ],
+                [
+                    "chatterbot.logic.time_adapter.TimeLogicAdapter.__init__",
+                    2
+                ],
+                [
+                    "chatterbot.logic.specific_response.SpecificResponseAdapter.__init__",
+                    1
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf106",
+            "name": "chatterbot.utils.validate_adapter_class",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.utils.import_module",
+                    375
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf107",
+            "name": "chatterbot.utils.get_response_time",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.chatterbot.ChatBot.get_response",
+                    1
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf108",
+            "name": "chatterbot.utils.print_progress_bar",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf109",
+            "name": "chatterbot.response_selection",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                    9
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf109",
+                    "cf144",
+                    9.0
+                ]
+            ]
+        },
+        {
+            "id": "cf110",
+            "name": "chatterbot.response_selection.get_most_frequent_response",
+            "type": "function",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                    9
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf111",
+            "name": "chatterbot.response_selection.get_first_response",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf112",
+            "name": "chatterbot.response_selection.get_random_response",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf113",
+            "name": "chatterbot.adapters",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf114",
+            "name": "chatterbot.adapters.Adapter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf115",
+            "name": "chatterbot.adapters.Adapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf116",
+            "name": "chatterbot.adapters.Adapter.AdapterMethodNotImplementedError",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf117",
+            "name": "chatterbot.adapters.Adapter.AdapterMethodNotImplementedError.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf118",
+            "name": "chatterbot.adapters.Adapter.InvalidAdapterTypeException",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf119",
+            "name": "chatterbot.preprocessors",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf120",
+            "name": "chatterbot.preprocessors.clean_whitespace",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf121",
+            "name": "chatterbot.preprocessors.unescape_html",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf122",
+            "name": "chatterbot.preprocessors.convert_to_ascii",
+            "type": "function",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf123",
+            "name": "chatterbot.ext.django_chatterbot.models",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf124",
+            "name": "chatterbot.ext.django_chatterbot.models.Statement",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf125",
+            "name": "chatterbot.ext.django_chatterbot.models.Tag",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf126",
+            "name": "chatterbot.ext.django_chatterbot.model_admin",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf127",
+            "name": "chatterbot.ext.django_chatterbot.model_admin.StatementAdmin",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf128",
+            "name": "chatterbot.ext.django_chatterbot.model_admin.TagAdmin",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf129",
+            "name": "chatterbot.ext.django_chatterbot.apps",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf130",
+            "name": "chatterbot.ext.django_chatterbot.apps.DjangoChatterBotConfig",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf131",
+            "name": "chatterbot.ext.django_chatterbot.__init__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf132",
+            "name": "chatterbot.ext.django_chatterbot.settings",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf133",
+            "name": "chatterbot.ext.django_chatterbot.admin",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf134",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf135",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseTag",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf136",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseTag.Meta",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf137",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseTag.__str__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf138",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseStatement",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf139",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseStatement.Meta",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf140",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseStatement.__str__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf141",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseStatement.get_tags",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf142",
+            "name": "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseStatement.add_tags",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf143",
+            "name": "chatterbot.storage.sql_storage",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf144",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.__init__",
+                    184
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.create_database",
+                    176
+                ],
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.get_model",
+                    1810
+                ],
+                [
+                    "chatterbot.conversation.StatementMixin.serialize",
+                    4900
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.count",
+                    33
+                ],
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.EmptyDatabaseException.__init__",
+                    22
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    1278
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.model_to_object",
+                    1278
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter._session_finish",
+                    208
+                ],
+                [
+                    "chatterbot.tagging.PosLemmaTagger.get_text_index_string",
+                    187
+                ],
+                [
+                    "chatterbot.conversation.StatementMixin.get_tags",
+                    12
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf144",
+                    "cf187",
+                    2016.0
+                ],
+                [
+                    "cf144",
+                    "cf64",
+                    4912.0
+                ],
+                [
+                    "cf144",
+                    "cf69",
+                    1278.0
+                ],
+                [
+                    "cf144",
+                    "cf21",
+                    187.0
+                ]
+            ]
+        },
+        {
+            "id": "cf145",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf146",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.get_statement_model",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf147",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.get_tag_model",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf148",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.model_to_object",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf149",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.count",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf150",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.remove",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf151",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf152",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.create",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf153",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.create_many",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf154",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.update",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf155",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.get_random",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf156",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.drop",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf157",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter.create_database",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf158",
+            "name": "chatterbot.storage.sql_storage.SQLStorageAdapter._session_finish",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf159",
+            "name": "chatterbot.storage.django_storage",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf160",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf161",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf162",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.get_statement_model",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf163",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.get_tag_model",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf164",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.count",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf165",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.filter",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf166",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.create",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf167",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.create_many",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf168",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.update",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf169",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.get_random",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf170",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.remove",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf171",
+            "name": "chatterbot.storage.django_storage.DjangoStorageAdapter.drop",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf172",
+            "name": "chatterbot.storage.__init__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf173",
+            "name": "chatterbot.storage.mongodb",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf174",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf175",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf176",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.get_statement_model",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf177",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.count",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf178",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.mongo_to_object",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf179",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.filter",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf180",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.create",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf181",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.create_many",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf182",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.update",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf183",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.get_random",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf184",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.remove",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf185",
+            "name": "chatterbot.storage.mongodb.MongoDatabaseAdapter.drop",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf186",
+            "name": "chatterbot.storage.storage_adapter",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf187",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.tagging.PosLemmaTagger.__init__",
+                    184
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.get_statement_model",
+                    1061
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.get_tag_model",
+                    870
+                ],
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.get_model",
+                    120
+                ],
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.get_statement_object",
+                    120
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf187",
+                    "cf21",
+                    184.0
+                ],
+                [
+                    "cf187",
+                    "cf144",
+                    1931.0
+                ]
+            ]
+        },
+        {
+            "id": "cf188",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.tagging.PosLemmaTagger.__init__",
+                    184
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf189",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.get_model",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.get_statement_model",
+                    1061
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.get_tag_model",
+                    870
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf190",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.get_object",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.get_statement_object",
+                    120
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf191",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.get_statement_object",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.storage.storage_adapter.StorageAdapter.get_model",
+                    120
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf192",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.count",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf193",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.remove",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf194",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.filter",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf195",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.create",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf196",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.create_many",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf197",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.update",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf198",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.get_random",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf199",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.drop",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf200",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.EmptyDatabaseException",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf201",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.EmptyDatabaseException.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf202",
+            "name": "chatterbot.storage.storage_adapter.StorageAdapter.AdapterMethodNotImplementedError",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf203",
+            "name": "chatterbot.logic.time_adapter",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf204",
+            "name": "chatterbot.logic.time_adapter.TimeLogicAdapter",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    4
+                ],
+                [
+                    "chatterbot.logic.time_adapter.TimeLogicAdapter.time_question_features",
+                    54
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    6
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf204",
+                    "cf217",
+                    4.0
+                ],
+                [
+                    "cf204",
+                    "cf69",
+                    6.0
+                ]
+            ]
+        },
+        {
+            "id": "cf205",
+            "name": "chatterbot.logic.time_adapter.TimeLogicAdapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    4
+                ],
+                [
+                    "chatterbot.logic.time_adapter.TimeLogicAdapter.time_question_features",
+                    48
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf206",
+            "name": "chatterbot.logic.time_adapter.TimeLogicAdapter.time_question_features",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf207",
+            "name": "chatterbot.logic.time_adapter.TimeLogicAdapter.process",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.time_adapter.TimeLogicAdapter.time_question_features",
+                    6
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    6
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf208",
+            "name": "chatterbot.logic.unit_conversion",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf209",
+            "name": "chatterbot.logic.unit_conversion.UnitConversion",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    17
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    53
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.get_unit",
+                    36
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.get_valid_units",
+                    18
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.handle_matches",
+                    18
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.process",
+                    20
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf209",
+                    "cf217",
+                    17.0
+                ],
+                [
+                    "cf209",
+                    "cf69",
+                    53.0
+                ]
+            ]
+        },
+        {
+            "id": "cf210",
+            "name": "chatterbot.logic.unit_conversion.UnitConversion.__init__",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    17
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.handle_matches",
+                    18
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf211",
+            "name": "chatterbot.logic.unit_conversion.UnitConversion.get_unit",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf212",
+            "name": "chatterbot.logic.unit_conversion.UnitConversion.get_valid_units",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.get_unit",
+                    36
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf213",
+            "name": "chatterbot.logic.unit_conversion.UnitConversion.handle_matches",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    18
+                ],
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.get_valid_units",
+                    18
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf214",
+            "name": "chatterbot.logic.unit_conversion.UnitConversion.can_process",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.unit_conversion.UnitConversion.process",
+                    20
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf215",
+            "name": "chatterbot.logic.unit_conversion.UnitConversion.process",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    35
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf216",
+            "name": "chatterbot.logic.logic_adapter",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.adapters.Adapter.__init__",
+                    245
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.get_random",
+                    10
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    1
+                ],
+                [
+                    "chatterbot.adapters.Adapter.AdapterMethodNotImplementedError.__init__",
+                    1
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf216",
+                    "cf114",
+                    246.0
+                ],
+                [
+                    "cf216",
+                    "cf144",
+                    10.0
+                ],
+                [
+                    "cf216",
+                    "cf69",
+                    1.0
+                ]
+            ]
+        },
+        {
+            "id": "cf217",
+            "name": "chatterbot.logic.logic_adapter.LogicAdapter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf218",
+            "name": "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf219",
+            "name": "chatterbot.logic.logic_adapter.LogicAdapter.can_process",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf220",
+            "name": "chatterbot.logic.logic_adapter.LogicAdapter.process",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf221",
+            "name": "chatterbot.logic.logic_adapter.LogicAdapter.get_default_response",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf222",
+            "name": "chatterbot.logic.logic_adapter.LogicAdapter.class_name",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf223",
+            "name": "chatterbot.logic.best_match",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    189
+                ],
+                [
+                    "chatterbot.search.IndexedTextSearch.search",
+                    61
+                ],
+                [
+                    "chatterbot.filters.get_recent_repeated_responses",
+                    61
+                ],
+                [
+                    "chatterbot.tagging.PosLemmaTagger.get_text_index_string",
+                    61
+                ],
+                [
+                    "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                    93
+                ],
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.get_default_response",
+                    31
+                ],
+                [
+                    "chatterbot.response_selection.get_first_response",
+                    30
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf223",
+                    "cf217",
+                    220.0
+                ],
+                [
+                    "cf223",
+                    "cf35",
+                    61.0
+                ],
+                [
+                    "cf223",
+                    "cf15",
+                    61.0
+                ],
+                [
+                    "cf223",
+                    "cf21",
+                    61.0
+                ],
+                [
+                    "cf223",
+                    "cf144",
+                    93.0
+                ],
+                [
+                    "cf223",
+                    "cf109",
+                    30.0
+                ]
+            ]
+        },
+        {
+            "id": "cf224",
+            "name": "chatterbot.logic.best_match.BestMatch",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf225",
+            "name": "chatterbot.logic.best_match.BestMatch.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf226",
+            "name": "chatterbot.logic.best_match.BestMatch.process",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf227",
+            "name": "chatterbot.logic.specific_response",
+            "type": "module",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    3
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    3
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf227",
+                    "cf217",
+                    3.0
+                ],
+                [
+                    "cf227",
+                    "cf69",
+                    3.0
+                ]
+            ]
+        },
+        {
+            "id": "cf228",
+            "name": "chatterbot.logic.specific_response.SpecificResponseAdapter",
+            "type": "class",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf229",
+            "name": "chatterbot.logic.specific_response.SpecificResponseAdapter.__init__",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf230",
+            "name": "chatterbot.logic.specific_response.SpecificResponseAdapter.can_process",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf231",
+            "name": "chatterbot.logic.specific_response.SpecificResponseAdapter.process",
+            "type": "method",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf232",
+            "name": "chatterbot.logic.mathematical_evaluation",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf233",
+            "name": "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation",
+            "type": "class",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    22
+                ],
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    22
+                ],
+                [
+                    "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.process",
+                    6
+                ]
+            ],
+            "outgoing_edges": [
+                [
+                    "cf233",
+                    "cf217",
+                    22.0
+                ],
+                [
+                    "cf233",
+                    "cf69",
+                    22.0
+                ]
+            ]
+        },
+        {
+            "id": "cf234",
+            "name": "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.__init__",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                    22
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf235",
+            "name": "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.can_process",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.process",
+                    6
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf236",
+            "name": "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.process",
+            "type": "method",
+            "dynamic_destinations": [
+                [
+                    "chatterbot.conversation.Statement.__init__",
+                    22
+                ]
+            ],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf237",
+            "name": "chatterbot.logic.__init__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        },
+        {
+            "id": "cf238",
+            "name": "chatterbot.ext.__init__",
+            "type": "module",
+            "dynamic_destinations": [],
+            "outgoing_edges": []
+        }
+    ]
+}

@@ -1,0 +1,1541 @@
+{
+    "name": "louvain clustering with static_dynamic data",
+    "microservice_metrics": {
+        "data": "static_dynamic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 0.4,
+        "degree_source_2": null,
+        "number_of_nodes": 389,
+        "coverage": 0.84,
+        "number_of_modules": 113,
+        "number_of_missing_modules": 3,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 3,
+        "number_of_classes": 350,
+        "number_of_missing_classes": 71,
+        "no_behavior_classes": 35,
+        "third_party_classes": 0,
+        "other_reason_classes": 36,
+        "number_of_edges": 803,
+        "number_of_services": 20,
+        "number_of_services_with_interface": 15,
+        "number_of_interfaces": 85,
+        "number_of_operations": 125,
+        "average_cohesion_at_domain_level": 0.808,
+        "average_cohesion_at_message_level": 0.872,
+        "average_interface_number": 5.667,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.654,
+        "structural_modularity_quality": 0.129,
+        "conceptual_modularity_quality": 0.107,
+        "max_service_size": 96
+    },
+    "services": [
+        {
+            "id": "ser87",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.0003081839972605867,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.util.__init__.LockableObject",
+                "picard.dataobj"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser88",
+            "statistics": {
+                "n_intra_edges": 171,
+                "total_weight_intra_edges": 4.0312219136154575,
+                "n_inter_edges": 100,
+                "total_weight_inter_edges": 2.29201892224378,
+                "cluster_factor": 0.779,
+                "ifn": 15,
+                "opn": 16,
+                "scoh": 0.0185546875,
+                "scop": 0.029936964902222824,
+                "ccoh": 0.009114583333333334,
+                "ccop": 0.01448396209045284
+            },
+            "code_fragments": [
+                "picard.ui.options.dialog.OptionsDialog",
+                "picard.ui.mainwindow.IgnoreSelectionContext",
+                "picard.ui.ui_options_metadata.Ui_MetadataOptionsPage",
+                "picard.ui.ui_options_fingerprinting.Ui_FingerprintingOptionsPage",
+                "picard.ui.options.scripting.ScriptingOptionsPage",
+                "picard.ui.ui_options_matching.Ui_MatchingOptionsPage",
+                "picard.config.FloatOption",
+                "picard.ui.util",
+                "picard.ui.ratingwidget.RatingWidget",
+                "picard.ui.options.matching.MatchingOptionsPage",
+                "picard.ui.options.advanced.AdvancedOptionsPage",
+                "picard.ui.metadatabox.MetadataBox",
+                "picard.ui.options.metadata",
+                "picard.ui.profileeditor.ProfileEditorDialog",
+                "picard.ui.mainwindow.MainWindow",
+                "picard.util.settingsoverride",
+                "picard.ui.options.tags_compatibility_id3.TagsCompatibilityID3OptionsPage",
+                "picard.ui.ui_options_tags_compatibility_ac3.Ui_TagsCompatibilityOptionsPage",
+                "picard.config.ListOption",
+                "picard.browser.browser",
+                "picard.ui.options.tags_compatibility_aac.TagsCompatibilityAACOptionsPage",
+                "picard.coverart.providers.caa.ProviderOptionsCaa",
+                "picard.ui.ui_options_network.Ui_NetworkOptionsPage",
+                "picard.ui.options.releases.RowColIter",
+                "picard.config",
+                "picard.ui.ui_passworddialog.Ui_PasswordDialog",
+                "picard.ui.widgets.profilelistwidget.ProfileListWidgetItem",
+                "picard.ui.options.network.NetworkOptionsPage",
+                "picard.ui.ui_options_tags_compatibility_aac.Ui_TagsCompatibilityOptionsPage",
+                "picard.ui.ui_options_cover.Ui_CoverOptionsPage",
+                "picard.ui.ui_options_ratings.Ui_RatingsOptionsPage",
+                "picard.ui.passworddialog.ProxyDialog",
+                "picard.ui.ui_profileeditor.Ui_ProfileEditorDialog",
+                "picard.ui.options.ratings.RatingsOptionsPage",
+                "picard.ui.options.releases.ReleaseTypeScore",
+                "picard.coverart.providers.local.ProviderOptionsLocal",
+                "picard.ui.ui_edittagdialog.Ui_EditTagDialog",
+                "picard.ui.theme.UiTheme",
+                "picard.ui.mainwindow",
+                "picard.browser.browser.RequestHandler",
+                "picard.ui.options.cdlookup.CDLookupOptionsPage",
+                "picard.ui.metadatabox.TagDiff",
+                "picard.util.webbrowser2",
+                "picard.ui.options.interface.AddActionDialog",
+                "picard.ui.ui_options_tags_compatibility_id3.Ui_TagsCompatibilityOptionsPage",
+                "picard.coverart.image.CaaCoverArtImage",
+                "picard.oauth.OAuthManager",
+                "picard.util.mbserver",
+                "picard.util.preservedtags.PreservedTags",
+                "picard.ui.ui_options_tags_compatibility_wave.Ui_TagsCompatibilityOptionsPage",
+                "picard.ui.ui_options.Ui_Dialog",
+                "picard.ui.options.interface_top_tags.InterfaceTopTagsOptionsPage",
+                "picard.util.time",
+                "picard.config.TextOption",
+                "picard.ui.options.releases.TipSlider",
+                "picard.ui.options.releases",
+                "picard.browser.addrelease",
+                "picard.ui.options.releases.ReleasesOptionsPage",
+                "picard.util.thread",
+                "picard.ui.options.cover.CoverOptionsPage",
+                "picard.ui.options.general.GeneralOptionsPage",
+                "picard.ui.logview.HistoryView",
+                "picard.ui.ui_options_releases.Ui_ReleasesOptionsPage",
+                "picard.ui.ui_options_general.Ui_GeneralOptionsPage",
+                "picard.ui.options.metadata.MetadataOptionsPage",
+                "picard.util.cdrom",
+                "picard.ui.options.fingerprinting.FingerprintingOptionsPage",
+                "picard.util.preservedtags",
+                "picard.ui.filebrowser.FileBrowser",
+                "picard.util.icontheme",
+                "picard.coverart.providers.caa",
+                "picard.coverart.providers.caa.CoverArtProviderCaa",
+                "picard.ui.options.interface.InterfaceOptionsPage",
+                "picard.ui.checkbox_list_item.CheckboxListItem",
+                "picard.ui.options.genres",
+                "picard.ui.options.tags.TagsOptionsPage",
+                "picard.ui.widgets.profilelistwidget.ProfileListWidget",
+                "picard.ui.options.tags_compatibility_ac3.TagsCompatibilityAC3OptionsPage",
+                "picard.ui.infostatus.InfoStatus",
+                "picard.ui.scripteditor.ScriptEditorExamples",
+                "picard.ui.options.tags_compatibility_wave.TagsCompatibilityWaveOptionsPage",
+                "picard.ui.ui_options_cdlookup.Ui_CDLookupOptionsPage",
+                "picard.ui.passworddialog.PasswordDialog",
+                "picard.ui.ui_options_cdlookup_select.Ui_CDLookupOptionsPage",
+                "picard.ui.metadatabox.TagCounter",
+                "picard.ui.ui_options_interface.Ui_InterfaceOptionsPage",
+                "picard.util.thread.ProxyToMainEvent",
+                "picard.config.IntOption",
+                "picard.ui.options.interface.ToolbarListItem",
+                "picard.ui.moveable_list_view.MoveableListView",
+                "picard.ui.util.MultiDirsSelectDialog",
+                "picard.util.settingsoverride.SettingsOverride",
+                "picard.ui.edittagdialog.EditTagDialog",
+                "picard.ui.options.genres.GenresOptionsPage",
+                "picard.ui.ui_options_genres.Ui_GenresOptionsPage",
+                "picard.config.BoolOption"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.scripteditor.ScriptEditorExamples",
+                    "operations": [
+                        "picard.ui.scripteditor.ScriptEditorExamples"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config.IntOption",
+                    "operations": [
+                        "picard.config.IntOption"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.theme.UiTheme",
+                    "operations": [
+                        "picard.ui.theme.UiTheme.__str__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.icontheme",
+                    "operations": [
+                        "picard.util.icontheme.lookup"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.mainwindow.MainWindow",
+                    "operations": [
+                        "picard.ui.mainwindow.MainWindow"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config.BoolOption",
+                    "operations": [
+                        "picard.config.BoolOption"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.webbrowser2",
+                    "operations": [
+                        "picard.util.webbrowser2.open"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config.TextOption",
+                    "operations": [
+                        "picard.config.TextOption"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.thread",
+                    "operations": [
+                        "picard.util.thread.run_task"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.ratingwidget.RatingWidget",
+                    "operations": [
+                        "picard.ui.ratingwidget.RatingWidget"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.oauth.OAuthManager",
+                    "operations": [
+                        "picard.oauth.OAuthManager.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config",
+                    "operations": [
+                        "picard.config.get_config",
+                        "picard.config.setup_config"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.6666666666666666
+                },
+                {
+                    "name": "picard.config.ListOption",
+                    "operations": [
+                        "picard.config.ListOption"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.preservedtags.PreservedTags",
+                    "operations": [
+                        "picard.util.preservedtags.PreservedTags"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.mbserver",
+                    "operations": [
+                        "picard.util.mbserver.build_submission_url"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser89",
+            "statistics": {
+                "n_intra_edges": 102,
+                "total_weight_intra_edges": 3.6677203684679998,
+                "n_inter_edges": 26,
+                "total_weight_inter_edges": 0.35418098728793845,
+                "cluster_factor": 0.954,
+                "ifn": 10,
+                "opn": 25,
+                "scoh": 0.048204158790170135,
+                "scop": 0.013554782576521708,
+                "ccoh": 0.031190926275992438,
+                "ccop": 0.009378101769406117
+            },
+            "code_fragments": [
+                "picard.formats.id3",
+                "picard.formats.mutagenext.compatid3.CompatID3",
+                "picard.file",
+                "picard.file.File",
+                "picard.track",
+                "picard.formats.apev2.OptimFROGFile",
+                "picard.formats.id3.NonCompatID3File",
+                "picard.formats.asf.ASFFile",
+                "picard.formats.vorbis.OggOpusFile",
+                "picard.formats.vorbis.VCommentFile",
+                "picard.util.__init__",
+                "picard.util.astrcmp",
+                "picard.util.textencoding",
+                "picard.formats.apev2.MusepackFile",
+                "picard.formats.apev2.AACFile",
+                "picard.formats.id3.TrueAudioFile",
+                "picard.metadata.Metadata",
+                "picard.util.tags",
+                "picard.formats.apev2",
+                "picard.formats.wav",
+                "picard.util.emptydir",
+                "picard.formats.__init__",
+                "picard.similarity",
+                "picard.formats.apev2.APEv2File",
+                "picard.formats.ac3",
+                "picard.formats.mutagenext.compatid3",
+                "picard.formats.midi.MIDIFile",
+                "picard.coverart.image.TagCoverArtImage",
+                "picard.formats.ac3.AC3File",
+                "picard.formats.asf",
+                "picard.ui.tablebaseddialog",
+                "picard.ui.searchdialog.__init__.SearchDialog",
+                "picard.util.imagelist.ImageList",
+                "picard.ui.__init__",
+                "picard.formats.mp4.MP4File",
+                "picard.formats.mutagenext.__init__",
+                "picard.formats.mp4",
+                "picard.formats.id3.MP3File",
+                "picard.formats.id3.ID3File",
+                "picard.formats.midi",
+                "picard.formats.vorbis",
+                "picard.formats.util",
+                "picard.util.scripttofilename",
+                "picard.util.filenaming",
+                "picard.formats.apev2.WavPackFile",
+                "picard.metadata.MultiMetadataProxy"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.similarity",
+                    "operations": [
+                        "picard.similarity.similarity"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.imagelist.ImageList",
+                    "operations": [
+                        "picard.util.imagelist.ImageList.__init__",
+                        "picard.util.imagelist.ImageList.hash_dict"
+                    ],
+                    "chm": 0.5,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.util.__init__",
+                    "operations": [
+                        "picard.util.__init__.load_json",
+                        "picard.util.__init__.build_qurl",
+                        "picard.util.__init__.throttle.decorator",
+                        "picard.util.__init__.uniqify",
+                        "picard.util.__init__.throttle",
+                        "picard.util.__init__.translate_from_sortname",
+                        "picard.util.__init__.restore_method"
+                    ],
+                    "chm": 0.047619047619047616,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.formats.id3.ID3File",
+                    "operations": [
+                        "picard.formats.id3.ID3File.supports_tag"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.file",
+                    "operations": [
+                        "picard.file.run_file_post_addition_to_track_processors",
+                        "picard.file.run_file_post_removal_from_track_processors"
+                    ],
+                    "chm": 1.0,
+                    "chd": 1.1111111111111112
+                },
+                {
+                    "name": "picard.file.File",
+                    "operations": [
+                        "picard.file.File.update",
+                        "picard.file.File"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.util.scripttofilename",
+                    "operations": [
+                        "picard.util.scripttofilename.script_to_filename"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.metadata.Metadata",
+                    "operations": [
+                        "picard.metadata.Metadata.getall",
+                        "picard.metadata.Metadata.add_unique",
+                        "picard.metadata.Metadata.get",
+                        "picard.metadata.Metadata",
+                        "picard.metadata.Metadata.__getitem__",
+                        "picard.metadata.Metadata.__init__",
+                        "picard.metadata.Metadata.__setitem__"
+                    ],
+                    "chm": 0.3203514739229024,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.metadata.MultiMetadataProxy",
+                    "operations": [
+                        "picard.metadata.MultiMetadataProxy"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.tags",
+                    "operations": [
+                        "picard.util.tags.display_tag_name"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser90",
+            "statistics": {
+                "n_intra_edges": 25,
+                "total_weight_intra_edges": 0.5185185185185187,
+                "n_inter_edges": 11,
+                "total_weight_inter_edges": 0.1794043044299864,
+                "cluster_factor": 0.853,
+                "ifn": 5,
+                "opn": 6,
+                "scoh": 0.04725897920604915,
+                "scop": 0.010418938732974649,
+                "ccoh": 0.035916824196597356,
+                "ccop": 0.008256688963210702
+            },
+            "code_fragments": [
+                "picard.ui.ui_scripting_documentation_dialog.Ui_ScriptingDocumentationDialog",
+                "picard.ui.scripteditor",
+                "picard.ui.widgets.scriptdocumentation.ScriptingDocumentationWidget",
+                "picard.ui.widgets.scripttextedit.VariableScriptToken",
+                "picard.ui.widgets.scripttextedit",
+                "picard.ui.widgets.scriptlistwidget.ScriptListWidget",
+                "picard.ui.widgets.scripttextedit.ScriptCompleter",
+                "picard.ui.ui_options_script.Ui_ScriptingOptionsPage",
+                "picard.ui.ui_scripteditor_details.Ui_ScriptDetails",
+                "picard.ui.widgets.scripttextedit.FunctionScriptToken",
+                "picard.ui.scripteditor.ScriptEditorDialog",
+                "picard.ui.options.scripting.ScriptingDocumentationDialog",
+                "picard.ui.options.scripting.ScriptCheckError",
+                "picard.ui.widgets.scripttextedit.UnicodeEscapeScriptToken",
+                "picard.ui.options.renaming.RenamingOptionsPage",
+                "picard.ui.widgets.scripttextedit.DocumentedScriptToken",
+                "picard.ui.widgets.scripttextedit.ScriptTextEdit",
+                "picard.ui.ui_scripteditor.Ui_ScriptEditor",
+                "picard.script.serializer.FileNamingScript",
+                "picard.ui.scripteditor.ScriptDetailsEditor",
+                "picard.ui.ui_options_renaming.Ui_RenamingOptionsPage",
+                "picard.ui.widgets.scriptlistwidget.ScriptListWidgetItem",
+                "picard.ui.widgets.scripttextedit.TaggerScriptSyntaxHighlighter"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.scripteditor.ScriptEditorDialog",
+                    "operations": [
+                        "picard.ui.scripteditor.ScriptEditorDialog.show_instance"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.script.serializer.FileNamingScript",
+                    "operations": [
+                        "picard.script.serializer.FileNamingScript",
+                        "picard.script.serializer.FileNamingScript.description"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.ui.scripteditor",
+                    "operations": [
+                        "picard.ui.scripteditor.user_script_title"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.widgets.scriptlistwidget.ScriptListWidgetItem",
+                    "operations": [
+                        "picard.ui.widgets.scriptlistwidget.ScriptListWidgetItem"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.ui_options_script.Ui_ScriptingOptionsPage",
+                    "operations": [
+                        "picard.ui.ui_options_script.Ui_ScriptingOptionsPage"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser91",
+            "statistics": {
+                "n_intra_edges": 43,
+                "total_weight_intra_edges": 0.7270071064101427,
+                "n_inter_edges": 29,
+                "total_weight_inter_edges": 0.1915507277623475,
+                "cluster_factor": 0.884,
+                "ifn": 14,
+                "opn": 25,
+                "scoh": 0.02827087442472058,
+                "scop": 0.014693482880935207,
+                "ccoh": 0.009861932938856016,
+                "ccop": 0.0014091350142074782
+            },
+            "code_fragments": [
+                "picard.ui.options.ratings",
+                "picard.ui.options.interface",
+                "picard.ui.cdlookup",
+                "picard.config.Option",
+                "picard.ui.options.tags_compatibility_wave",
+                "picard.ui.options.network",
+                "picard.ui.options.renaming",
+                "picard.config.ConfigSection",
+                "picard.coverart.providers.local",
+                "picard.ui.searchdialog.album.CoverCell",
+                "picard.webservice.api_helpers.MBAPIHelper",
+                "picard.ui.tagsfromfilenames",
+                "picard.mbjson",
+                "picard.ui.options.fingerprinting",
+                "picard.ui.searchdialog.album",
+                "picard.config.Memovar",
+                "picard.webservice.api_helpers",
+                "picard.ui.options.cdlookup",
+                "picard.coverart.image.CaaThumbnailCoverArtImage",
+                "picard.ui.filebrowser",
+                "picard.profile.UserProfileGroups",
+                "picard.ui.searchdialog.track.TrackSearchDialog",
+                "picard.ui.cdlookup.CDLookupDialog",
+                "picard.releasegroup.ReleaseGroup",
+                "picard.ui.options.advanced",
+                "picard.ui.options.interface_top_tags",
+                "picard.ui.searchdialog.artist.ArtistSearchDialog",
+                "picard.config_upgrade",
+                "picard.ui.profileeditor",
+                "picard.webservice.api_helpers.APIHelper",
+                "picard.config.SettingConfigSection",
+                "picard.webservice.api_helpers.AcoustIdAPIHelper",
+                "picard.ui.searchdialog.album.CoverWidget",
+                "picard.ui.logview",
+                "picard.ui.searchdialog.album.AlbumSearchDialog",
+                "picard.webservice.ratecontrol",
+                "picard.ui.options.general",
+                "picard.ui.options.dialog",
+                "picard.ui.ui_cdlookup.Ui_Dialog"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.profile.UserProfileGroups",
+                    "operations": [
+                        "picard.profile.UserProfileGroups.get_setting_groups_list"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config.Option",
+                    "operations": [
+                        "picard.config.Option.get",
+                        "picard.config.Option.__init__",
+                        "picard.config.Option"
+                    ],
+                    "chm": 0.13333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.config.SettingConfigSection",
+                    "operations": [
+                        "picard.config.SettingConfigSection.__init__",
+                        "picard.config.SettingConfigSection.__getitem__"
+                    ],
+                    "chm": 0.6666666666666666,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.ui.searchdialog.album.AlbumSearchDialog",
+                    "operations": [
+                        "picard.ui.searchdialog.album.AlbumSearchDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.webservice.api_helpers.AcoustIdAPIHelper",
+                    "operations": [
+                        "picard.webservice.api_helpers.AcoustIdAPIHelper"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config_upgrade",
+                    "operations": [
+                        "picard.config_upgrade.upgrade_config"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.coverart.image.CaaThumbnailCoverArtImage",
+                    "operations": [
+                        "picard.coverart.image.CaaThumbnailCoverArtImage"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config.ConfigSection",
+                    "operations": [
+                        "picard.config.ConfigSection.__init__",
+                        "picard.config.ConfigSection.value",
+                        "picard.config.ConfigSection.key"
+                    ],
+                    "chm": 0.5222222222222223,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.mbjson",
+                    "operations": [
+                        "picard.mbjson.artist_credit_from_node",
+                        "picard.mbjson.medium_to_metadata",
+                        "picard.mbjson.get_score",
+                        "picard.mbjson.release_to_metadata",
+                        "picard.mbjson.release_group_to_metadata",
+                        "picard.mbjson.track_to_metadata",
+                        "picard.mbjson.recording_to_metadata"
+                    ],
+                    "chm": 0.4761904761904763,
+                    "chd": 0.47142857142857153
+                },
+                {
+                    "name": "picard.webservice.api_helpers.MBAPIHelper",
+                    "operations": [
+                        "picard.webservice.api_helpers.MBAPIHelper"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.searchdialog.track.TrackSearchDialog",
+                    "operations": [
+                        "picard.ui.searchdialog.track.TrackSearchDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.cdlookup.CDLookupDialog",
+                    "operations": [
+                        "picard.ui.cdlookup.CDLookupDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.releasegroup.ReleaseGroup",
+                    "operations": [
+                        "picard.releasegroup.ReleaseGroup"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.webservice.ratecontrol",
+                    "operations": [
+                        "picard.webservice.ratecontrol.current_delay"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser92",
+            "statistics": {
+                "n_intra_edges": 49,
+                "total_weight_intra_edges": 1.1900256608623239,
+                "n_inter_edges": 34,
+                "total_weight_inter_edges": 0.478457135368447,
+                "cluster_factor": 0.833,
+                "ifn": 10,
+                "opn": 14,
+                "scoh": 0.04499540863177227,
+                "scop": 0.017392336948019633,
+                "ccoh": 0.03489439853076217,
+                "ccop": 0.004489182156516253
+            },
+            "code_fragments": [
+                "picard.cluster.ClusterDict",
+                "picard.cluster",
+                "picard.util.progresscheckpoints.ProgressCheckpoints",
+                "picard.track.TrackArtist",
+                "picard.disc.Disc",
+                "picard.util.imagelist",
+                "picard.acoustid.manager.AcoustIDManager",
+                "picard.ui.item.FileListItem",
+                "picard.metadata",
+                "picard.browser.filelookup.FileLookup",
+                "picard.track.TagGenreFilter",
+                "picard.cluster.UnclusteredFiles",
+                "picard.ui.theme.BaseTheme",
+                "picard.cluster.ClusterList",
+                "picard.util.imagelist.ImageListState",
+                "picard.collection.Collection",
+                "picard.album",
+                "picard.dataobj.DataObject",
+                "picard.ui.theme",
+                "picard.cluster.ClusterEngine",
+                "picard.collection",
+                "picard.cluster.Cluster",
+                "picard.album.AlbumArtist",
+                "picard.album.Album",
+                "picard.acoustid.manager.Submission",
+                "picard.cluster.FileList",
+                "picard.coverart.__init__",
+                "picard.track.NonAlbumTrack",
+                "picard.track.Track",
+                "picard.album.NatAlbum",
+                "picard.tagger.Tagger",
+                "picard.i18n",
+                "picard.browser.browser.BrowserIntegration"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.track.TrackArtist",
+                    "operations": [
+                        "picard.track.TrackArtist.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.dataobj.DataObject",
+                    "operations": [
+                        "picard.dataobj.DataObject.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.item.FileListItem",
+                    "operations": [
+                        "picard.ui.item.FileListItem.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.track.Track",
+                    "operations": [
+                        "picard.track.Track.append_track_artist"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.cluster.FileList",
+                    "operations": [
+                        "picard.cluster.FileList"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.metadata",
+                    "operations": [
+                        "picard.metadata.weights_from_preferred_countries",
+                        "picard.metadata.weights_from_preferred_formats",
+                        "picard.metadata.weights_from_release_type_scores"
+                    ],
+                    "chm": 0.4222222222222222,
+                    "chd": 0.7809523809523808
+                },
+                {
+                    "name": "picard.collection",
+                    "operations": [
+                        "picard.collection.load_user_collections"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.track.TagGenreFilter",
+                    "operations": [
+                        "picard.track.TagGenreFilter",
+                        "picard.track.TagGenreFilter.skip"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.tagger.Tagger",
+                    "operations": [
+                        "picard.tagger.Tagger.__init__",
+                        "picard.tagger.Tagger.run"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.browser.filelookup.FileLookup",
+                    "operations": [
+                        "picard.browser.filelookup.FileLookup"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser93",
+            "statistics": {
+                "n_intra_edges": 15,
+                "total_weight_intra_edges": 0.43621648129124446,
+                "n_inter_edges": 2,
+                "total_weight_inter_edges": 0.030143269625063942,
+                "cluster_factor": 0.967,
+                "ifn": 4,
+                "opn": 5,
+                "scoh": 0.07653061224489796,
+                "scop": 0.0018315018315018315,
+                "ccoh": 0.061224489795918366,
+                "ccop": 0.0009157509157509158
+            },
+            "code_fragments": [
+                "picard.ui.aboutdialog.AboutDialog",
+                "picard.config.Config",
+                "picard.plugin.PluginData",
+                "picard.version",
+                "picard.version.Version",
+                "picard.plugin.PluginWrapper",
+                "picard.pluginmanager.PluginManager",
+                "picard.util.versions",
+                "picard.util.checkupdate.UpdateCheckManager",
+                "picard.__init__",
+                "picard.plugin",
+                "picard.tagger",
+                "picard.ui.ui_aboutdialog.Ui_AboutDialog",
+                "picard.pluginmanager"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.util.checkupdate.UpdateCheckManager",
+                    "operations": [
+                        "picard.util.checkupdate.UpdateCheckManager"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.pluginmanager.PluginManager",
+                    "operations": [
+                        "picard.pluginmanager.PluginManager"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.util.versions",
+                    "operations": [
+                        "picard.util.versions.as_string"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.config.Config",
+                    "operations": [
+                        "picard.config.Config.from_app",
+                        "picard.config.Config.from_file"
+                    ],
+                    "chm": 1.6666666666666665,
+                    "chd": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "id": "ser94",
+            "statistics": {
+                "n_intra_edges": 7,
+                "total_weight_intra_edges": 0.13545637864779517,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 2,
+                "opn": 2,
+                "scoh": 0.14285714285714285,
+                "scop": 0.0,
+                "ccoh": 0.14285714285714285,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.ui.logview.LogView",
+                "picard.log.TailLogHandler",
+                "picard.ui.logview.Highlighter",
+                "picard.ui.logview.LogViewCommon",
+                "picard.log.TailLogger",
+                "picard.log",
+                "picard.ui.logview.VerbosityMenu"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.logview.LogView",
+                    "operations": [
+                        "picard.ui.logview.LogView"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.log",
+                    "operations": [
+                        "picard.log.set_level"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser95",
+            "statistics": {
+                "n_intra_edges": 27,
+                "total_weight_intra_edges": 0.5629629629629632,
+                "n_inter_edges": 2,
+                "total_weight_inter_edges": 0.01534557614343027,
+                "cluster_factor": 0.987,
+                "ifn": 2,
+                "opn": 2,
+                "scoh": 0.07479224376731301,
+                "scop": 0.0008462051868802441,
+                "ccoh": 0.0664819944598338,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.ui.itemviews.AlbumItem",
+                "picard.util.natsort",
+                "picard.ui.itemviews.TrackItem",
+                "picard.ui.itemviews.ClusterItem",
+                "picard.ui.collectionmenu.CollectionCheckBox",
+                "picard.ui.itemviews.MainPanel",
+                "picard.ui.collectionmenu.CollectionMenu",
+                "picard.ui.tablebaseddialog.SortableTableWidgetItem",
+                "picard.ui.itemviews.FileItem",
+                "picard.ui.itemviews.BaseTreeView",
+                "picard.ui.itemviews.ConfigurableColumnsHeader",
+                "picard.ui.itemviews",
+                "picard.ui.tablebaseddialog.TableBasedDialog",
+                "picard.ui.tablebaseddialog.ResultTable",
+                "picard.ui.scriptsmenu.ScriptsMenu",
+                "picard.ui.collectionmenu.CollectionMenuItem",
+                "picard.ui.itemviews.AlbumTreeView",
+                "picard.ui.itemviews.FileTreeView",
+                "picard.ui.itemviews.TreeItem"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.itemviews.BaseTreeView",
+                    "operations": [
+                        "picard.ui.itemviews.BaseTreeView.drop_urls"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.itemviews.MainPanel",
+                    "operations": [
+                        "picard.ui.itemviews.MainPanel"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser96",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.015157241478437689,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.00023969866453601188,
+                "cluster_factor": 0.992,
+                "ifn": 1,
+                "opn": 2,
+                "scoh": 0.1875,
+                "scop": 0.005952380952380952,
+                "ccoh": 0.125,
+                "ccop": 0.005952380952380952
+            },
+            "code_fragments": [
+                "picard.util.bitreader.LSBBitReader",
+                "picard.util.imageinfo.IdentifyWebP",
+                "picard.util.bitreader._BitReader",
+                "picard.util.bitreader"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.util.imageinfo.IdentifyWebP",
+                    "operations": [
+                        "picard.util.imageinfo.IdentifyWebP.match",
+                        "picard.util.imageinfo.IdentifyWebP._read"
+                    ],
+                    "chm": 1.0,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser97",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.030280240290513093,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.3333333333333333,
+                "scop": 0.0,
+                "ccoh": 0.1111111111111111,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.script.serializer",
+                "picard.script.serializer.PicardScript",
+                "picard.script.serializer.ScriptImportError"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser98",
+            "statistics": {
+                "n_intra_edges": 5,
+                "total_weight_intra_edges": 0.2074074074074074,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.0005307613286154549,
+                "cluster_factor": 0.999,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.2,
+                "scop": 0.003703703703703704,
+                "ccoh": 0.2,
+                "ccop": 0.003703703703703704
+            },
+            "code_fragments": [
+                "picard.ui.ui_options_plugins.Ui_PluginsOptionsPage",
+                "picard.ui.options.plugins.PluginsOptionsPage",
+                "picard.ui.options.plugins.PluginTreeWidgetItem",
+                "picard.ui.options.plugins",
+                "picard.ui.options.plugins.PluginActionButton"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser99",
+            "statistics": {
+                "n_intra_edges": 40,
+                "total_weight_intra_edges": 0.7404524259449495,
+                "n_inter_edges": 16,
+                "total_weight_inter_edges": 0.03982908259246574,
+                "cluster_factor": 0.974,
+                "ifn": 6,
+                "opn": 10,
+                "scoh": 0.05486968449931413,
+                "scop": 0.008973998164024862,
+                "ccoh": 0.038408779149519894,
+                "ccop": 0.007045748273818449
+            },
+            "code_fragments": [
+                "picard.plugin.PluginFunctions",
+                "picard.script.parser.ScriptExpression",
+                "picard.script.__init__",
+                "picard.ui.options.matching",
+                "picard.ui.options.scripting",
+                "picard.script.parser.ScriptFunction",
+                "picard.ui.options.__init__",
+                "picard.script.parser",
+                "picard.script.parser.ScriptRuntimeError",
+                "picard.script.functions",
+                "picard.script.parser.StackItem",
+                "picard.ui.options.cover",
+                "picard.script.parser.ScriptVariable",
+                "picard.script.parser.ScriptText",
+                "picard.script.parser.ScriptEndOfFile",
+                "picard.coverart.providers.__init__",
+                "picard.ui.options.tags",
+                "picard.script.parser.MultiValue",
+                "picard.ui.options.tags_compatibility_ac3",
+                "picard.script.functions.FunctionRegistryItem",
+                "picard.coverart.providers.provider.CoverArtProviderMetaClass",
+                "picard.plugin.ExtensionPoint",
+                "picard.script.parser.ScriptParser",
+                "picard.ui.options.tags_compatibility_aac",
+                "picard.script.parser.ScriptUnknownFunction",
+                "picard.script.parser.ScriptParseError",
+                "picard.ui.options.tags_compatibility_id3"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.options.__init__",
+                    "operations": [
+                        "picard.ui.options.__init__.register_options_page"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.script.__init__",
+                    "operations": [
+                        "picard.script.__init__.get_file_naming_script"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.plugin.PluginFunctions",
+                    "operations": [
+                        "picard.plugin.PluginFunctions.__init__",
+                        "picard.plugin.PluginFunctions.register"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.script.parser",
+                    "operations": [
+                        "picard.script.parser.normalize_tagname"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.script.parser.ScriptParser",
+                    "operations": [
+                        "picard.script.parser.ScriptParser.__init__",
+                        "picard.script.parser.ScriptParser.eval"
+                    ],
+                    "chm": 0.25,
+                    "chd": 0.0
+                },
+                {
+                    "name": "picard.plugin.ExtensionPoint",
+                    "operations": [
+                        "picard.plugin.ExtensionPoint.register",
+                        "picard.plugin.ExtensionPoint.__iter__",
+                        "picard.plugin.ExtensionPoint.__init__"
+                    ],
+                    "chm": 0.3611111111111111,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser100",
+            "statistics": {
+                "n_intra_edges": 8,
+                "total_weight_intra_edges": 0.1185185185185185,
+                "n_inter_edges": 2,
+                "total_weight_inter_edges": 0.02962962962962963,
+                "cluster_factor": 0.889,
+                "ifn": 3,
+                "opn": 3,
+                "scoh": 0.09876543209876543,
+                "scop": 0.0011574074074074073,
+                "ccoh": 0.07407407407407407,
+                "ccop": 0.0011574074074074073
+            },
+            "code_fragments": [
+                "picard.ui.widgets.editablelistview.EditableListModel",
+                "picard.ui.widgets.taglisteditor.TagListEditor",
+                "picard.ui.ui_options_advanced.Ui_AdvancedOptionsPage",
+                "picard.ui.widgets.editablelistview.EditableListView",
+                "picard.ui.ui_options_tags.Ui_TagsOptionsPage",
+                "picard.ui.ui_options_interface_top_tags.Ui_InterfaceTopTagsOptionsPage",
+                "picard.ui.widgets.editablelistview.AutocompleteItemDelegate",
+                "picard.ui.ui_widget_taglisteditor.Ui_TagListEditor",
+                "picard.ui.widgets.editablelistview.UniqueEditableListView"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.ui_options_advanced.Ui_AdvancedOptionsPage",
+                    "operations": [
+                        "picard.ui.ui_options_advanced.Ui_AdvancedOptionsPage"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.ui_options_tags.Ui_TagsOptionsPage",
+                    "operations": [
+                        "picard.ui.ui_options_tags.Ui_TagsOptionsPage"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.ui_options_interface_top_tags.Ui_InterfaceTopTagsOptionsPage",
+                    "operations": [
+                        "picard.ui.ui_options_interface_top_tags.Ui_InterfaceTopTagsOptionsPage"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser101",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.02962962962962963,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.util.xml.XmlNode",
+                "picard.util.xml"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser102",
+            "statistics": {
+                "n_intra_edges": 9,
+                "total_weight_intra_edges": 0.19259259259259257,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.ui.playertoolbar.VolumeControlButton",
+                "picard.ui.playertoolbar.PlayerToolbar",
+                "picard.ui.playertoolbar",
+                "picard.ui.playertoolbar.PlaybackRateButton",
+                "picard.ui.playertoolbar.PlaybackProgressSlider",
+                "picard.ui.playertoolbar.Player"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.playertoolbar.Player",
+                    "operations": [
+                        "picard.ui.playertoolbar.Player"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser103",
+            "statistics": {
+                "n_intra_edges": 24,
+                "total_weight_intra_edges": 0.521306970707724,
+                "n_inter_edges": 4,
+                "total_weight_inter_edges": 0.0015066773199406461,
+                "cluster_factor": 0.999,
+                "ifn": 3,
+                "opn": 5,
+                "scoh": 0.05442176870748299,
+                "scop": 0.002070393374741201,
+                "ccoh": 0.045351473922902494,
+                "ccop": 0.0010351966873706005
+            },
+            "code_fragments": [
+                "picard.coverart.providers.caa.ArrowButton",
+                "picard.util.imageinfo.IdentifyGIF",
+                "picard.coverart.providers.caa.CAATypesSelectorDialog",
+                "picard.coverart.providers.caa.ListBox",
+                "picard.util.imageinfo",
+                "picard.coverart.providers.caa.ArrowsColumn",
+                "picard.ui.coverartbox.CoverArtBox",
+                "picard.util.lrucache.LRUCache",
+                "picard.coverart.utils",
+                "picard.ui.coverartbox.CoverArtThumbnail",
+                "picard.util.imageinfo.IdentifyPDF",
+                "picard.coverart.providers.urlrels.CoverArtProviderUrlRelationships",
+                "picard.util.imageinfo.IdentifyTiff",
+                "picard.ui.coverartbox",
+                "picard.util.imageinfo.IdentifyJPEG",
+                "picard.coverart.image",
+                "picard.util.imageinfo.IdentifyImageType",
+                "picard.util.lrucache",
+                "picard.coverart.image.DataHash",
+                "picard.coverart.image.CoverArtImage",
+                "picard.util.imageinfo.IdentifyPNG"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.coverartbox.CoverArtBox",
+                    "operations": [
+                        "picard.ui.coverartbox.CoverArtBox"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.coverart.providers.caa.CAATypesSelectorDialog",
+                    "operations": [
+                        "picard.coverart.providers.caa.CAATypesSelectorDialog.run"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.coverart.image.CoverArtImage",
+                    "operations": [
+                        "picard.coverart.image.CoverArtImage.maintype",
+                        "picard.coverart.image.CoverArtImage.is_front_image",
+                        "picard.coverart.image.CoverArtImage.data"
+                    ],
+                    "chm": 1.3333333333333333,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser104",
+            "statistics": {
+                "n_intra_edges": 31,
+                "total_weight_intra_edges": 0.35915103552359573,
+                "n_inter_edges": 3,
+                "total_weight_inter_edges": 0.015037392146169684,
+                "cluster_factor": 0.979,
+                "ifn": 8,
+                "opn": 8,
+                "scoh": 0.05381944444444445,
+                "scop": 0.0020604395604395605,
+                "ccoh": 0.029513888888888888,
+                "ccop": 0.0020604395604395605
+            },
+            "code_fragments": [
+                "picard.ui.ui_options_attached_profiles.Ui_AttachedProfilesDialog",
+                "picard.webservice.__init__.WSDeleteRequest",
+                "picard.ui.infodialog.ArtworkCoverWidget",
+                "picard.webservice.__init__.WSRequest",
+                "picard.ui.options.dialog.AttachedProfilesDialog",
+                "picard.ui.infodialog.ClusterInfoDialog",
+                "picard.ui.tagsfromfilenames.TagMatchExpression",
+                "picard.ui.ui_infodialog.Ui_InfoDialog",
+                "picard.ui.ui_tagsfromfilenames.Ui_TagsFromFileNamesDialog",
+                "picard.ui.infodialog.InfoDialog",
+                "picard.webservice.__init__",
+                "picard.webservice.__init__.WSPostRequest",
+                "picard.ui.infodialog.FileInfoDialog",
+                "picard.ui.infodialog.ArtworkTable",
+                "picard.ui.tagsfromfilenames.TagsFromFileNamesDialog",
+                "picard.ui.infodialog.AlbumInfoDialog",
+                "picard.ui.infodialog",
+                "picard.webservice.__init__.WSGetRequest",
+                "picard.util.bytes2human",
+                "picard.ui.infodialog.TrackInfoDialog",
+                "picard.ui.util.StandardButton",
+                "picard.webservice.__init__.UnknownResponseParserError",
+                "picard.webservice.__init__.WebService",
+                "picard.webservice.__init__.WSPutRequest"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.ui.infodialog.ClusterInfoDialog",
+                    "operations": [
+                        "picard.ui.infodialog.ClusterInfoDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.options.dialog.AttachedProfilesDialog",
+                    "operations": [
+                        "picard.ui.options.dialog.AttachedProfilesDialog.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.util.StandardButton",
+                    "operations": [
+                        "picard.ui.util.StandardButton"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.tagsfromfilenames.TagsFromFileNamesDialog",
+                    "operations": [
+                        "picard.ui.tagsfromfilenames.TagsFromFileNamesDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.tagsfromfilenames.TagMatchExpression",
+                    "operations": [
+                        "picard.ui.tagsfromfilenames.TagMatchExpression._parse"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.infodialog.AlbumInfoDialog",
+                    "operations": [
+                        "picard.ui.infodialog.AlbumInfoDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.infodialog.FileInfoDialog",
+                    "operations": [
+                        "picard.ui.infodialog.FileInfoDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "picard.ui.infodialog.TrackInfoDialog",
+                    "operations": [
+                        "picard.ui.infodialog.TrackInfoDialog"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser105",
+            "statistics": {
+                "n_intra_edges": 6,
+                "total_weight_intra_edges": 0.17173415853931775,
+                "n_inter_edges": 1,
+                "total_weight_inter_edges": 0.0005307613286154549,
+                "cluster_factor": 0.998,
+                "ifn": 0,
+                "opn": 0,
+                "scoh": 0.12244897959183673,
+                "scop": 0.0026455026455026454,
+                "ccoh": 0.12244897959183673,
+                "ccop": 0.0026455026455026454
+            },
+            "code_fragments": [
+                "picard.ui.colors.DefaultColor",
+                "picard.ui.colors",
+                "picard.ui.options.interface_colors.InterfaceColorsOptionsPage",
+                "picard.ui.options.interface_colors",
+                "picard.ui.ui_options_interface_colors.Ui_InterfaceColorsOptionsPage",
+                "picard.ui.colors.InterfaceColors",
+                "picard.ui.options.interface_colors.ColorButton"
+            ],
+            "interfaces": []
+        },
+        {
+            "id": "ser106",
+            "statistics": {
+                "n_intra_edges": 1,
+                "total_weight_intra_edges": 0.014814814814814815,
+                "n_inter_edges": 0,
+                "total_weight_inter_edges": 0,
+                "cluster_factor": 0,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.25,
+                "scop": 0.0,
+                "ccoh": 0.25,
+                "ccop": 0.0
+            },
+            "code_fragments": [
+                "picard.coverart.image.LocalFileCoverArtImage",
+                "picard.coverart.providers.local.CoverArtProviderLocal"
+            ],
+            "interfaces": [
+                {
+                    "name": "picard.coverart.image.LocalFileCoverArtImage",
+                    "operations": [
+                        "picard.coverart.image.LocalFileCoverArtImage.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        }
+    ]
+}

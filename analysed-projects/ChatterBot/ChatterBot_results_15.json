@@ -1,0 +1,438 @@
+{
+    "name": "louvain clustering with static_semantic data",
+    "microservice_metrics": {
+        "data": "static_semantic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 0.8,
+        "degree_source_2": null,
+        "number_of_nodes": 50,
+        "coverage": 0.98,
+        "number_of_modules": 14,
+        "number_of_missing_modules": 1,
+        "no_behavior_modules": 1,
+        "third_party_modules": 0,
+        "other_reason_modules": 0,
+        "number_of_classes": 37,
+        "number_of_missing_classes": 0,
+        "no_behavior_classes": 0,
+        "third_party_classes": 0,
+        "other_reason_classes": 0,
+        "number_of_edges": 372,
+        "number_of_services": 7,
+        "number_of_services_with_interface": 7,
+        "number_of_interfaces": 22,
+        "number_of_operations": 57,
+        "average_cohesion_at_domain_level": 0.492,
+        "average_cohesion_at_message_level": 0.517,
+        "average_interface_number": 3.143,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.759,
+        "structural_modularity_quality": 0.092,
+        "conceptual_modularity_quality": 0.104,
+        "max_service_size": 16
+    },
+    "services": [
+        {
+            "id": "ser99",
+            "statistics": {
+                "n_intra_edges": 9,
+                "total_weight_intra_edges": 1.5133231320030276,
+                "n_inter_edges": 14,
+                "total_weight_inter_edges": 1.268373202921011,
+                "cluster_factor": 0.705,
+                "ifn": 3,
+                "opn": 5,
+                "scoh": 0.1111111111111111,
+                "scop": 0.05208333333333333,
+                "ccoh": 0.19444444444444445,
+                "ccop": 0.11516203703703703
+            },
+            "code_fragments": [
+                "chatterbot.comparisons",
+                "chatterbot.exceptions.OptionalDependencyImportError",
+                "chatterbot.comparisons.JaccardSimilarity",
+                "chatterbot.logic.time_adapter.TimeLogicAdapter",
+                "chatterbot.adapters.Adapter",
+                "chatterbot.comparisons.SpacySimilarity"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.logic.time_adapter.TimeLogicAdapter",
+                    "operations": [
+                        "chatterbot.logic.time_adapter.TimeLogicAdapter.__init__",
+                        "chatterbot.logic.time_adapter.TimeLogicAdapter.process"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.exceptions.OptionalDependencyImportError",
+                    "operations": [
+                        "chatterbot.exceptions.OptionalDependencyImportError"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.adapters.Adapter",
+                    "operations": [
+                        "chatterbot.adapters.Adapter.AdapterMethodNotImplementedError.__init__",
+                        "chatterbot.adapters.Adapter.__init__"
+                    ],
+                    "chm": 0.25,
+                    "chd": 2.0
+                }
+            ]
+        },
+        {
+            "id": "ser100",
+            "statistics": {
+                "n_intra_edges": 9,
+                "total_weight_intra_edges": 2.5639667380502775,
+                "n_inter_edges": 69,
+                "total_weight_inter_edges": 3.660698246862275,
+                "cluster_factor": 0.583,
+                "ifn": 6,
+                "opn": 23,
+                "scoh": 0.16666666666666666,
+                "scop": 0.14525462962962962,
+                "ccoh": 0.19444444444444445,
+                "ccop": 0.7303240740740741
+            },
+            "code_fragments": [
+                "chatterbot.logic.specific_response.SpecificResponseAdapter",
+                "chatterbot.storage.sql_storage.SQLStorageAdapter",
+                "chatterbot.conversation.Statement",
+                "chatterbot.logic.logic_adapter.LogicAdapter",
+                "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation",
+                "chatterbot.logic.unit_conversion.UnitConversion"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.conversation.Statement",
+                    "operations": [
+                        "chatterbot.conversation.Statement.__str__",
+                        "chatterbot.conversation.Statement.__init__",
+                        "chatterbot.conversation.Statement"
+                    ],
+                    "chm": 0.08333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.logic.logic_adapter.LogicAdapter",
+                    "operations": [
+                        "chatterbot.logic.logic_adapter.LogicAdapter.class_name",
+                        "chatterbot.logic.logic_adapter.LogicAdapter.get_default_response",
+                        "chatterbot.logic.logic_adapter.LogicAdapter.__init__",
+                        "chatterbot.logic.logic_adapter.LogicAdapter.can_process"
+                    ],
+                    "chm": 0.3611111111111111,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.logic.specific_response.SpecificResponseAdapter",
+                    "operations": [
+                        "chatterbot.logic.specific_response.SpecificResponseAdapter.__init__",
+                        "chatterbot.logic.specific_response.SpecificResponseAdapter.can_process",
+                        "chatterbot.logic.specific_response.SpecificResponseAdapter.process"
+                    ],
+                    "chm": 0.37222222222222223,
+                    "chd": 0.3333333333333333
+                },
+                {
+                    "name": "chatterbot.logic.unit_conversion.UnitConversion",
+                    "operations": [
+                        "chatterbot.logic.unit_conversion.UnitConversion.__init__",
+                        "chatterbot.logic.unit_conversion.UnitConversion.process",
+                        "chatterbot.logic.unit_conversion.UnitConversion.can_process"
+                    ],
+                    "chm": 0.37222222222222223,
+                    "chd": 0.3333333333333333
+                },
+                {
+                    "name": "chatterbot.storage.sql_storage.SQLStorageAdapter",
+                    "operations": [
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.filter",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.get_random",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.__init__",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.get_statement_model",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.get_tag_model",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.create",
+                        "chatterbot.storage.sql_storage.SQLStorageAdapter.create_many"
+                    ],
+                    "chm": 0.619047619047619,
+                    "chd": 0.14285714285714285
+                },
+                {
+                    "name": "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation",
+                    "operations": [
+                        "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.can_process",
+                        "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.__init__",
+                        "chatterbot.logic.mathematical_evaluation.MathematicalEvaluation.process"
+                    ],
+                    "chm": 0.7055555555555556,
+                    "chd": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "id": "ser101",
+            "statistics": {
+                "n_intra_edges": 10,
+                "total_weight_intra_edges": 1.9905996307811724,
+                "n_inter_edges": 46,
+                "total_weight_inter_edges": 1.170771850249074,
+                "cluster_factor": 0.773,
+                "ifn": 3,
+                "opn": 8,
+                "scoh": 0.08333333333333333,
+                "scop": 0.020833333333333332,
+                "ccoh": 0.2222222222222222,
+                "ccop": 0.4930555555555555
+            },
+            "code_fragments": [
+                "chatterbot.trainers.ChatterBotCorpusTrainer",
+                "chatterbot.corpus",
+                "chatterbot.trainers.ListTrainer",
+                "chatterbot.utils",
+                "chatterbot.trainers.Trainer",
+                "chatterbot.__main__"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.corpus",
+                    "operations": [
+                        "chatterbot.corpus.list_corpus_files",
+                        "chatterbot.corpus.load_corpus"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.5
+                },
+                {
+                    "name": "chatterbot.trainers.Trainer",
+                    "operations": [
+                        "chatterbot.trainers.Trainer.TrainerInitializationException.__init__",
+                        "chatterbot.trainers.Trainer.get_preprocessed_statement"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "chatterbot.utils",
+                    "operations": [
+                        "chatterbot.utils.validate_adapter_class",
+                        "chatterbot.utils.import_module",
+                        "chatterbot.utils.print_progress_bar",
+                        "chatterbot.utils.initialize_class"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.08333333333333333
+                }
+            ]
+        },
+        {
+            "id": "ser102",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 1.2330042063842301,
+                "n_inter_edges": 36,
+                "total_weight_inter_edges": 0.9623877150352609,
+                "cluster_factor": 0.719,
+                "ifn": 1,
+                "opn": 2,
+                "scoh": 0.125,
+                "scop": 0.028645833333333332,
+                "ccoh": 0.0625,
+                "ccop": 0.4861111111111111
+            },
+            "code_fragments": [
+                "chatterbot.trainers",
+                "chatterbot.parsing",
+                "chatterbot.tagging.PosLemmaTagger",
+                "chatterbot.trainers.UbuntuCorpusTrainer"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.tagging.PosLemmaTagger",
+                    "operations": [
+                        "chatterbot.tagging.PosLemmaTagger.__init__",
+                        "chatterbot.tagging.PosLemmaTagger.get_text_index_string"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser103",
+            "statistics": {
+                "n_intra_edges": 24,
+                "total_weight_intra_edges": 1.768442563277573,
+                "n_inter_edges": 23,
+                "total_weight_inter_edges": 0.5295797230736748,
+                "cluster_factor": 0.87,
+                "ifn": 1,
+                "opn": 1,
+                "scoh": 0.024691358024691357,
+                "scop": 0.009259259259259259,
+                "ccoh": 0.2962962962962963,
+                "ccop": 0.1863425925925926
+            },
+            "code_fragments": [
+                "chatterbot.ext.django_chatterbot.model_admin.StatementAdmin",
+                "chatterbot.filters",
+                "chatterbot.chatterbot",
+                "chatterbot.logic.specific_response",
+                "chatterbot.ext.django_chatterbot.apps.DjangoChatterBotConfig",
+                "chatterbot.logic.logic_adapter",
+                "chatterbot.ext.django_chatterbot.model_admin.TagAdmin",
+                "chatterbot.logic.best_match",
+                "chatterbot.logic.best_match.BestMatch"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.logic.best_match.BestMatch",
+                    "operations": [
+                        "chatterbot.logic.best_match.BestMatch.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        },
+        {
+            "id": "ser104",
+            "statistics": {
+                "n_intra_edges": 3,
+                "total_weight_intra_edges": 0.9120208304565818,
+                "n_inter_edges": 40,
+                "total_weight_inter_edges": 0.7271533085717355,
+                "cluster_factor": 0.715,
+                "ifn": 2,
+                "opn": 7,
+                "scoh": 0.2222222222222222,
+                "scop": 0.018518518518518517,
+                "ccoh": 0.3333333333333333,
+                "ccop": 0.5590277777777777
+            },
+            "code_fragments": [
+                "chatterbot.search.TextSearch",
+                "chatterbot.chatterbot.ChatBot",
+                "chatterbot.search.IndexedTextSearch"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.chatterbot.ChatBot",
+                    "operations": [
+                        "chatterbot.chatterbot.ChatBot.get_latest_response",
+                        "chatterbot.chatterbot.ChatBot.generate_response.ResultOption.__init__",
+                        "chatterbot.chatterbot.ChatBot.get_response",
+                        "chatterbot.chatterbot.ChatBot.generate_response",
+                        "chatterbot.chatterbot.ChatBot.learn_response"
+                    ],
+                    "chm": 0.41,
+                    "chd": 0.4333333333333333
+                },
+                {
+                    "name": "chatterbot.search.IndexedTextSearch",
+                    "operations": [
+                        "chatterbot.search.IndexedTextSearch.search",
+                        "chatterbot.search.IndexedTextSearch.__init__"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser105",
+            "statistics": {
+                "n_intra_edges": 76,
+                "total_weight_intra_edges": 2.7353983797957695,
+                "n_inter_edges": 10,
+                "total_weight_inter_edges": 0.3118061313115704,
+                "cluster_factor": 0.946,
+                "ifn": 6,
+                "opn": 11,
+                "scoh": 0.00390625,
+                "scop": 0.0,
+                "ccoh": 0.296875,
+                "ccop": 0.0390625
+            },
+            "code_fragments": [
+                "chatterbot.response_selection",
+                "chatterbot.ext.sqlalchemy_app.models.Statement",
+                "chatterbot.comparisons.LevenshteinDistance",
+                "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseStatement",
+                "chatterbot.ext.sqlalchemy_app.models.Tag",
+                "chatterbot.storage.django_storage.DjangoStorageAdapter",
+                "chatterbot.storage.mongodb.MongoDatabaseAdapter",
+                "chatterbot.ext.sqlalchemy_app.models.ModelBase",
+                "chatterbot.ext.django_chatterbot.models.Statement",
+                "chatterbot.conversation.StatementMixin",
+                "chatterbot.ext.django_chatterbot.abstract_models.AbstractBaseTag",
+                "chatterbot.ext.django_chatterbot.models.Tag",
+                "chatterbot.preprocessors",
+                "chatterbot.tagging.LowercaseTagger",
+                "chatterbot.storage.storage_adapter.StorageAdapter",
+                "chatterbot.comparisons.Comparator"
+            ],
+            "interfaces": [
+                {
+                    "name": "chatterbot.comparisons.Comparator",
+                    "operations": [
+                        "chatterbot.comparisons.Comparator.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.storage.storage_adapter.StorageAdapter",
+                    "operations": [
+                        "chatterbot.storage.storage_adapter.StorageAdapter.get_object",
+                        "chatterbot.storage.storage_adapter.StorageAdapter.__init__",
+                        "chatterbot.storage.storage_adapter.StorageAdapter.EmptyDatabaseException.__init__",
+                        "chatterbot.storage.storage_adapter.StorageAdapter.get_model"
+                    ],
+                    "chm": 0.4583333333333333,
+                    "chd": 0.4444444444444444
+                },
+                {
+                    "name": "chatterbot.conversation.StatementMixin",
+                    "operations": [
+                        "chatterbot.conversation.StatementMixin.serialize",
+                        "chatterbot.conversation.StatementMixin.get_tags",
+                        "chatterbot.conversation.StatementMixin.add_tags"
+                    ],
+                    "chm": 0.6666666666666666,
+                    "chd": 0.2222222222222222
+                },
+                {
+                    "name": "chatterbot.comparisons.LevenshteinDistance",
+                    "operations": [
+                        "chatterbot.comparisons.LevenshteinDistance.compare"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.preprocessors",
+                    "operations": [
+                        "chatterbot.preprocessors.clean_whitespace"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "chatterbot.response_selection",
+                    "operations": [
+                        "chatterbot.response_selection.get_first_response"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        }
+    ]
+}

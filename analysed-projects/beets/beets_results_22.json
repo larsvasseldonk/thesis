@@ -1,0 +1,1196 @@
+{
+    "name": "louvain clustering with dynamic_semantic data",
+    "microservice_metrics": {
+        "data": "dynamic_semantic",
+        "algorithm": "louvain",
+        "param": 1,
+        "degree_source_1": 0.8,
+        "degree_source_2": null,
+        "number_of_nodes": 156,
+        "coverage": 1.0,
+        "number_of_modules": 23,
+        "number_of_missing_modules": 0,
+        "no_behavior_modules": 0,
+        "third_party_modules": 0,
+        "other_reason_modules": 0,
+        "number_of_classes": 133,
+        "number_of_missing_classes": 0,
+        "no_behavior_classes": 0,
+        "third_party_classes": 0,
+        "other_reason_classes": 0,
+        "number_of_edges": 2597,
+        "number_of_services": 7,
+        "number_of_services_with_interface": 7,
+        "number_of_interfaces": 83,
+        "number_of_operations": 282,
+        "average_cohesion_at_domain_level": 0.422,
+        "average_cohesion_at_message_level": 0.607,
+        "average_interface_number": 11.857,
+        "number_of_singleton_services": 0,
+        "average_cluster_factor": 0.743,
+        "structural_modularity_quality": 0.04,
+        "conceptual_modularity_quality": 0.188,
+        "max_service_size": 37
+    },
+    "services": [
+        {
+            "id": "ser161",
+            "statistics": {
+                "n_intra_edges": 155,
+                "total_weight_intra_edges": 5.380356954835134,
+                "n_inter_edges": 133,
+                "total_weight_inter_edges": 2.110710225327591,
+                "cluster_factor": 0.836,
+                "ifn": 14,
+                "opn": 30,
+                "scoh": 0.008875739644970414,
+                "scop": 0.010606454356454357,
+                "ccoh": 0.22928994082840237,
+                "ccop": 0.09713953463953465
+            },
+            "code_fragments": [
+                "beets.ui.__init__.UserError",
+                "beets.util.__init__.MoveOperation",
+                "beets.util.bluelet.ReadEvent",
+                "beets.util.bluelet.Connection",
+                "beets.dbcore.db.Database",
+                "beets.dbcore.db.DBAccessError",
+                "beets.util.__init__.HumanReadableException",
+                "beets.__init__.IncludeLazyConfig",
+                "beets.library.ReadError",
+                "beets.util.functemplate.ParseError",
+                "beets.util.bluelet.WaitableEvent",
+                "beets.vfs",
+                "beets.util.bluelet.ExceptionEvent",
+                "beets.util.bluelet.Listener",
+                "beets.util.bluelet.WriteEvent",
+                "beets.plugins.PluginConflictException",
+                "beets.library.FileOperationError",
+                "beets.util.bluelet.SendEvent",
+                "beets.dbcore.db.Transaction",
+                "beets.util.bluelet.ThreadException",
+                "beets.util.bluelet.AcceptEvent",
+                "beets.util.hidden",
+                "beets.util.bluelet.ReceiveEvent",
+                "beets.util.bluelet.SocketClosedError",
+                "beets.importer.ImportAbort",
+                "beets.library.WriteError"
+            ],
+            "interfaces": [
+                {
+                    "name": "beets.util.bluelet.Connection",
+                    "operations": [
+                        "beets.util.bluelet.Connection.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.importer.ImportAbort",
+                    "operations": [
+                        "beets.importer.ImportAbort"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.bluelet.WriteEvent",
+                    "operations": [
+                        "beets.util.bluelet.WriteEvent.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.bluelet.ReadEvent",
+                    "operations": [
+                        "beets.util.bluelet.ReadEvent.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.bluelet.ExceptionEvent",
+                    "operations": [
+                        "beets.util.bluelet.ExceptionEvent.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.bluelet.Listener",
+                    "operations": [
+                        "beets.util.bluelet.Listener.accept",
+                        "beets.util.bluelet.Listener.__init__",
+                        "beets.util.bluelet.Listener.close"
+                    ],
+                    "chm": 0.5555555555555556,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.hidden",
+                    "operations": [
+                        "beets.util.hidden.is_hidden"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.db.Transaction",
+                    "operations": [
+                        "beets.dbcore.db.Transaction.__exit__",
+                        "beets.dbcore.db.Transaction.query",
+                        "beets.dbcore.db.Transaction.__enter__",
+                        "beets.dbcore.db.Transaction.script",
+                        "beets.dbcore.db.Transaction.__init__",
+                        "beets.dbcore.db.Transaction.mutate"
+                    ],
+                    "chm": 0.33222222222222225,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.plugins.PluginConflictException",
+                    "operations": [
+                        "beets.plugins.PluginConflictException"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.library.FileOperationError",
+                    "operations": [
+                        "beets.library.FileOperationError.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.__init__.HumanReadableException",
+                    "operations": [
+                        "beets.util.__init__.HumanReadableException._reasonstr",
+                        "beets.util.__init__.HumanReadableException.__init__",
+                        "beets.util.__init__.HumanReadableException._gerund"
+                    ],
+                    "chm": 0.5,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.bluelet.ThreadException",
+                    "operations": [
+                        "beets.util.bluelet.ThreadException.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.library.ReadError",
+                    "operations": [
+                        "beets.library.ReadError.__str__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.db.Database",
+                    "operations": [
+                        "beets.dbcore.db.Database.transaction",
+                        "beets.dbcore.db.Database._make_table",
+                        "beets.dbcore.db.Database._create_connection",
+                        "beets.dbcore.db.Database._connection",
+                        "beets.dbcore.db.Database.__init__",
+                        "beets.dbcore.db.Database._make_attribute_table",
+                        "beets.dbcore.db.Database._fetch",
+                        "beets.dbcore.db.Database._get"
+                    ],
+                    "chm": 0.3944444444444445,
+                    "chd": 0.08333333333333333
+                }
+            ]
+        },
+        {
+            "id": "ser162",
+            "statistics": {
+                "n_intra_edges": 20,
+                "total_weight_intra_edges": 0.7795008530708983,
+                "n_inter_edges": 80,
+                "total_weight_inter_edges": 0.937816559559979,
+                "cluster_factor": 0.624,
+                "ifn": 8,
+                "opn": 20,
+                "scoh": 0.07,
+                "scop": 0.015304054054054054,
+                "ccoh": 0.2,
+                "ccop": 0.13815714315714314
+            },
+            "code_fragments": [
+                "beets.dbcore.query.Period",
+                "beets.ui.commands.HelpCommand",
+                "beets.util.functemplate.Symbol",
+                "beets.util.functemplate.Parser",
+                "beets.ui.__init__.SubcommandsOptionParser",
+                "beets.util.functemplate.Expression",
+                "beets.util.functemplate.Call",
+                "beets.ui.__init__.Subcommand",
+                "beets.dbcore.query.DateInterval",
+                "beets.dbcore.query"
+            ],
+            "interfaces": [
+                {
+                    "name": "beets.ui.__init__.SubcommandsOptionParser",
+                    "operations": [
+                        "beets.ui.__init__.SubcommandsOptionParser.parse_subcommand",
+                        "beets.ui.__init__.SubcommandsOptionParser.add_subcommand",
+                        "beets.ui.__init__.SubcommandsOptionParser.parse_global_options",
+                        "beets.ui.__init__.SubcommandsOptionParser.__init__"
+                    ],
+                    "chm": 0.5833333333333334,
+                    "chd": 0.19444444444444442
+                },
+                {
+                    "name": "beets.dbcore.query",
+                    "operations": [
+                        "beets.dbcore.query.FieldSort.sort.key",
+                        "beets.dbcore.query._parse_periods",
+                        "beets.dbcore.query._to_epoch_time"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.functemplate.Expression",
+                    "operations": [
+                        "beets.util.functemplate.Expression.__init__",
+                        "beets.util.functemplate.Expression.translate",
+                        "beets.util.functemplate.Expression.evaluate"
+                    ],
+                    "chm": 0.4444444444444444,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.ui.commands.HelpCommand",
+                    "operations": [
+                        "beets.ui.commands.HelpCommand.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.DateInterval",
+                    "operations": [
+                        "beets.dbcore.query.DateInterval.contains",
+                        "beets.dbcore.query.DateInterval.from_periods"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.ui.__init__.Subcommand",
+                    "operations": [
+                        "beets.ui.__init__.Subcommand.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.functemplate.Symbol",
+                    "operations": [
+                        "beets.util.functemplate.Symbol.translate",
+                        "beets.util.functemplate.Symbol.__init__"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.functemplate.Parser",
+                    "operations": [
+                        "beets.util.functemplate.Parser.parse_expression",
+                        "beets.util.functemplate.Parser.parse_symbol",
+                        "beets.util.functemplate.Parser._parse_ident",
+                        "beets.util.functemplate.Parser.__init__"
+                    ],
+                    "chm": 0.6666666666666666,
+                    "chd": 0.3333333333333333
+                }
+            ]
+        },
+        {
+            "id": "ser163",
+            "statistics": {
+                "n_intra_edges": 114,
+                "total_weight_intra_edges": 1.6295760563236281,
+                "n_inter_edges": 180,
+                "total_weight_inter_edges": 1.5422259810577343,
+                "cluster_factor": 0.679,
+                "ifn": 7,
+                "opn": 40,
+                "scoh": 0.07118055555555555,
+                "scop": 0.052992619659286325,
+                "ccoh": 0.16666666666666666,
+                "ccop": 0.10467440050773384
+            },
+            "code_fragments": [
+                "beets.importer.ImportTaskFactory",
+                "beets.importer.ArchiveImportTask",
+                "beets.ui.commands.TerminalImportSession",
+                "beets.importer.ImportSession",
+                "beets.importer.BaseImportTask",
+                "beets.autotag.hooks",
+                "beets.util.__init__",
+                "beets.autotag.match",
+                "beets.ui.commands",
+                "beets.art",
+                "beets.autotag.mb",
+                "beets.importer.ImportTask",
+                "beets.autotag.__init__",
+                "beets.util.artresizer",
+                "beets.autotag.hooks.TrackInfo",
+                "beets.importer.SingletonImportTask",
+                "beets.importer",
+                "beets.library.Album",
+                "beets.ui.__init__.CommonOptionsParser",
+                "beets.random",
+                "beets.importer.SentinelImportTask",
+                "beets.autotag.hooks.AlbumInfo",
+                "beets.plugins.MetadataSourcePlugin",
+                "beets.util.artresizer.ArtResizer"
+            ],
+            "interfaces": [
+                {
+                    "name": "beets.ui.commands",
+                    "operations": [
+                        "beets.ui.commands.config_edit",
+                        "beets.ui.commands.config_func"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.6666666666666666
+                },
+                {
+                    "name": "beets.library.Album",
+                    "operations": [
+                        "beets.library.Album.store",
+                        "beets.library.Album._getters",
+                        "beets.library.Album.items",
+                        "beets.library.Album.remove",
+                        "beets.library.Album.move_art",
+                        "beets.library.Album.item_dir"
+                    ],
+                    "chm": 0.29999999999999993,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.__init__",
+                    "operations": [
+                        "beets.util.__init__.mkdirall",
+                        "beets.util.__init__.shlex_split",
+                        "beets.util.__init__.prune_dirs",
+                        "beets.util.__init__.case_sensitive",
+                        "beets.util.__init__.bytestring_path",
+                        "beets.util.__init__.displayable_path",
+                        "beets.util.__init__.lazy_property",
+                        "beets.util.__init__.syspath",
+                        "beets.util.__init__.samefile",
+                        "beets.util.__init__.remove",
+                        "beets.util.__init__.copy",
+                        "beets.util.__init__.reflink",
+                        "beets.util.__init__.unique_path",
+                        "beets.util.__init__.legalize_path",
+                        "beets.util.__init__.py3_path",
+                        "beets.util.__init__.str2bool",
+                        "beets.util.__init__.as_string",
+                        "beets.util.__init__.normpath",
+                        "beets.util.__init__.ancestry",
+                        "beets.util.__init__.max_filename_length"
+                    ],
+                    "chm": 0.2744423558897245,
+                    "chd": 0.0350877192982456
+                },
+                {
+                    "name": "beets.autotag.mb",
+                    "operations": [
+                        "beets.autotag.mb.configure"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.importer",
+                    "operations": [
+                        "beets.importer.plugin_stage",
+                        "beets.importer.manipulate_files",
+                        "beets.importer.log_files",
+                        "beets.importer.lookup_candidates",
+                        "beets.importer.user_query",
+                        "beets.importer.import_asis"
+                    ],
+                    "chm": 0.888888888888889,
+                    "chd": 0.04444444444444444
+                },
+                {
+                    "name": "beets.autotag.hooks",
+                    "operations": [
+                        "beets.autotag.hooks.item_candidates",
+                        "beets.autotag.hooks.string_dist",
+                        "beets.autotag.hooks.album_candidates"
+                    ],
+                    "chm": 0.047619047619047616,
+                    "chd": 0.2222222222222222
+                },
+                {
+                    "name": "beets.ui.__init__.CommonOptionsParser",
+                    "operations": [
+                        "beets.ui.__init__.CommonOptionsParser.add_format_option",
+                        "beets.ui.__init__.CommonOptionsParser.__init__"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser164",
+            "statistics": {
+                "n_intra_edges": 256,
+                "total_weight_intra_edges": 6.744868540264207,
+                "n_inter_edges": 262,
+                "total_weight_inter_edges": 3.868070191439154,
+                "cluster_factor": 0.777,
+                "ifn": 19,
+                "opn": 54,
+                "scoh": 0.00823045267489712,
+                "scop": 0.02209633876300543,
+                "ccoh": 0.3511659807956104,
+                "ccop": 0.17593158426491762
+            },
+            "code_fragments": [
+                "beets.util.pipeline",
+                "beets.dbcore.types.Integer",
+                "beets.library.LibModel",
+                "beets.dbcore.types.Boolean",
+                "beets.library.PathType",
+                "beets.dbcore.types.Default",
+                "beets.util.functemplate.Template",
+                "beets.library.DurationType",
+                "beets.dbcore.types.Float",
+                "beets.util.pipeline.MultiMessage",
+                "beets.dbcore.types.Id",
+                "beets.dbcore.types",
+                "beets.dbcore.types.NullPaddedInt",
+                "beets.autotag.hooks.AttrDict",
+                "beets.util.functemplate.Environment",
+                "beets.dbcore.types.String",
+                "beets.util.enumeration.OrderedEnum",
+                "beets.library.DateType",
+                "beets.dbcore.query.DurationQuery",
+                "beets.autotag.hooks.LazyClassProperty",
+                "beets.dbcore.db.FormattedMapping",
+                "beets.dbcore.query.NumericQuery",
+                "beets.dbcore.types.NullFloat",
+                "beets.util.bluelet.ValueEvent",
+                "beets.dbcore.types.PaddedInt",
+                "beets.dbcore.types.ScaledInt",
+                "beets.dbcore.types.Type"
+            ],
+            "interfaces": [
+                {
+                    "name": "beets.autotag.hooks.AttrDict",
+                    "operations": [
+                        "beets.autotag.hooks.AttrDict.__setattr__",
+                        "beets.autotag.hooks.AttrDict.__hash__",
+                        "beets.autotag.hooks.AttrDict.__getattr__"
+                    ],
+                    "chm": 0.3611111111111111,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.enumeration.OrderedEnum",
+                    "operations": [
+                        "beets.util.enumeration.OrderedEnum.__le__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.types.Boolean",
+                    "operations": [
+                        "beets.dbcore.types.Boolean.format"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.types.Type",
+                    "operations": [
+                        "beets.dbcore.types.Type.normalize",
+                        "beets.dbcore.types.Type.from_sql",
+                        "beets.dbcore.types.Type.to_sql",
+                        "beets.dbcore.types.Type.null",
+                        "beets.dbcore.types.Type.format",
+                        "beets.dbcore.types.Type.parse"
+                    ],
+                    "chm": 0.4333333333333334,
+                    "chd": 0.04444444444444444
+                },
+                {
+                    "name": "beets.dbcore.types.Integer",
+                    "operations": [
+                        "beets.dbcore.types.Integer.normalize"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.types.PaddedInt",
+                    "operations": [
+                        "beets.dbcore.types.PaddedInt",
+                        "beets.dbcore.types.PaddedInt.__init__",
+                        "beets.dbcore.types.PaddedInt.format"
+                    ],
+                    "chm": 0.1111111111111111,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.library.DateType",
+                    "operations": [
+                        "beets.library.DateType.format"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.types.Float",
+                    "operations": [
+                        "beets.dbcore.types.Float.__init__",
+                        "beets.dbcore.types.Float.format"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.pipeline",
+                    "operations": [
+                        "beets.util.pipeline.mutator_stage",
+                        "beets.util.pipeline._invalidate_queue._get",
+                        "beets.util.pipeline.stage.coro",
+                        "beets.util.pipeline._allmsgs",
+                        "beets.util.pipeline.mutator_stage.coro",
+                        "beets.util.pipeline._invalidate_queue",
+                        "beets.util.pipeline.multiple",
+                        "beets.util.pipeline.stage"
+                    ],
+                    "chm": 0.10714285714285714,
+                    "chd": 0.10714285714285714
+                },
+                {
+                    "name": "beets.dbcore.types.NullPaddedInt",
+                    "operations": [
+                        "beets.dbcore.types.NullPaddedInt"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.bluelet.ValueEvent",
+                    "operations": [
+                        "beets.util.bluelet.ValueEvent.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.types.String",
+                    "operations": [
+                        "beets.dbcore.types.String.normalize"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.db.FormattedMapping",
+                    "operations": [
+                        "beets.dbcore.db.FormattedMapping._get_formatted",
+                        "beets.dbcore.db.FormattedMapping.__getitem__",
+                        "beets.dbcore.db.FormattedMapping.get",
+                        "beets.dbcore.db.FormattedMapping.__init__"
+                    ],
+                    "chm": 0.4333333333333334,
+                    "chd": 0.16666666666666666
+                },
+                {
+                    "name": "beets.library.LibModel",
+                    "operations": [
+                        "beets.library.LibModel._template_funcs",
+                        "beets.library.LibModel.store",
+                        "beets.library.LibModel.remove",
+                        "beets.library.LibModel.add",
+                        "beets.library.LibModel.__format__"
+                    ],
+                    "chm": 0.5000000000000001,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.types.ScaledInt",
+                    "operations": [
+                        "beets.dbcore.types.ScaledInt.__init__",
+                        "beets.dbcore.types.ScaledInt"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.query.NumericQuery",
+                    "operations": [
+                        "beets.dbcore.query.NumericQuery.col_clause",
+                        "beets.dbcore.query.NumericQuery.__init__"
+                    ],
+                    "chm": 0.25,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.functemplate.Template",
+                    "operations": [
+                        "beets.util.functemplate.Template.translate",
+                        "beets.util.functemplate.Template.__init__",
+                        "beets.util.functemplate.Template.substitute"
+                    ],
+                    "chm": 0.3611111111111111,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.library.PathType",
+                    "operations": [
+                        "beets.library.PathType.__init__",
+                        "beets.library.PathType.null",
+                        "beets.library.PathType.format",
+                        "beets.library.PathType.normalize",
+                        "beets.library.PathType.from_sql",
+                        "beets.library.PathType.to_sql"
+                    ],
+                    "chm": 0.5555555555555556,
+                    "chd": 0.04444444444444444
+                },
+                {
+                    "name": "beets.autotag.hooks.LazyClassProperty",
+                    "operations": [
+                        "beets.autotag.hooks.LazyClassProperty.__get__",
+                        "beets.autotag.hooks.LazyClassProperty",
+                        "beets.autotag.hooks.LazyClassProperty.__init__"
+                    ],
+                    "chm": 0.08333333333333333,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser165",
+            "statistics": {
+                "n_intra_edges": 434,
+                "total_weight_intra_edges": 12.495792241773197,
+                "n_inter_edges": 392,
+                "total_weight_inter_edges": 5.320460694540937,
+                "cluster_factor": 0.824,
+                "ifn": 19,
+                "opn": 41,
+                "scoh": 0.027757487216946677,
+                "scop": 0.025365137865137867,
+                "ccoh": 0.3148283418553689,
+                "ccop": 0.2101046851046851
+            },
+            "code_fragments": [
+                "beets.dbcore.query.SlowFieldSort",
+                "beets.dbcore.query.NotQuery",
+                "beets.dbcore.query.FieldQuery",
+                "beets.dbcore.query.RegexpQuery",
+                "beets.library.PathQuery",
+                "beets.library.SmartArtistSort",
+                "beets.autotag.mb.MusicBrainzAPIError",
+                "beets.dbcore.query.FieldSort",
+                "beets.library",
+                "beets.library.Library",
+                "beets.autotag.match.Recommendation",
+                "beets.dbcore.query.BytesQuery",
+                "beets.dbcore.query.FalseQuery",
+                "beets.dbcore.query.NullSort",
+                "beets.dbcore.query.MultipleSort",
+                "beets.dbcore.query.MutableCollectionQuery",
+                "beets.dbcore.queryparse",
+                "beets.dbcore.query.MatchQuery",
+                "beets.dbcore.query.SubstringQuery",
+                "beets.dbcore.query.InvalidQueryArgumentValueError",
+                "beets.dbcore.query.Query",
+                "beets.dbcore.query.AndQuery",
+                "beets.util.__init__.FilesystemError",
+                "beets.dbcore.query.ParsingError",
+                "beets.dbcore.query.FixedFieldSort",
+                "beets.dbcore.query.TrueQuery",
+                "beets.dbcore.query.CollectionQuery",
+                "beets.dbcore.query.DateQuery",
+                "beets.dbcore.query.OrQuery",
+                "beets.dbcore.query.BooleanQuery",
+                "beets.dbcore.query.Sort",
+                "beets.dbcore.query.NoneQuery",
+                "beets.dbcore.db.Results",
+                "beets.dbcore.query.InvalidQueryError",
+                "beets.dbcore.query.AnyFieldQuery",
+                "beets.dbcore.query.StringFieldQuery",
+                "beets.util.artresizer.Shareable"
+            ],
+            "interfaces": [
+                {
+                    "name": "beets.library.Library",
+                    "operations": [
+                        "beets.library.Library.add",
+                        "beets.library.Library.add_album",
+                        "beets.library.Library._fetch",
+                        "beets.library.Library.albums",
+                        "beets.library.Library.items",
+                        "beets.library.Library.get_album",
+                        "beets.library.Library._create_connection"
+                    ],
+                    "chm": 0.48407029478458047,
+                    "chd": 0.07936507936507936
+                },
+                {
+                    "name": "beets.dbcore.query.FalseQuery",
+                    "operations": [
+                        "beets.dbcore.query.FalseQuery.clause"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.TrueQuery",
+                    "operations": [
+                        "beets.dbcore.query.TrueQuery",
+                        "beets.dbcore.query.TrueQuery.clause"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.db.Results",
+                    "operations": [
+                        "beets.dbcore.db.Results.get",
+                        "beets.dbcore.db.Results._get_indexed_flex_attrs",
+                        "beets.dbcore.db.Results.__init__",
+                        "beets.dbcore.db.Results._get_objects",
+                        "beets.dbcore.db.Results.__iter__",
+                        "beets.dbcore.db.Results.__bool__",
+                        "beets.dbcore.db.Results.__len__",
+                        "beets.dbcore.db.Results._make_model"
+                    ],
+                    "chm": 0.6417233560090704,
+                    "chd": 0.06785714285714285
+                },
+                {
+                    "name": "beets.dbcore.query.MultipleSort",
+                    "operations": [
+                        "beets.dbcore.query.MultipleSort.order_clause",
+                        "beets.dbcore.query.MultipleSort.is_slow"
+                    ],
+                    "chm": 1.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.autotag.mb.MusicBrainzAPIError",
+                    "operations": [
+                        "beets.autotag.mb.MusicBrainzAPIError.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.InvalidQueryArgumentValueError",
+                    "operations": [
+                        "beets.dbcore.query.InvalidQueryArgumentValueError.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.BytesQuery",
+                    "operations": [
+                        "beets.dbcore.query.BytesQuery",
+                        "beets.dbcore.query.BytesQuery.__init__"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.query.AnyFieldQuery",
+                    "operations": [
+                        "beets.dbcore.query.AnyFieldQuery.match"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.CollectionQuery",
+                    "operations": [
+                        "beets.dbcore.query.CollectionQuery.__len__",
+                        "beets.dbcore.query.CollectionQuery.__init__"
+                    ],
+                    "chm": 0.5,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.query.NullSort",
+                    "operations": [
+                        "beets.dbcore.query.NullSort"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.FieldSort",
+                    "operations": [
+                        "beets.dbcore.query.FieldSort.sort"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.MatchQuery",
+                    "operations": [
+                        "beets.dbcore.query.MatchQuery"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.dbcore.query.FieldQuery",
+                    "operations": [
+                        "beets.dbcore.query.FieldQuery.clause",
+                        "beets.dbcore.query.FieldQuery.__init__"
+                    ],
+                    "chm": 0.25,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.query.Sort",
+                    "operations": [
+                        "beets.dbcore.query.Sort.is_slow",
+                        "beets.dbcore.query.Sort.order_clause"
+                    ],
+                    "chm": 1.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.library",
+                    "operations": [
+                        "beets.library.parse_query_string",
+                        "beets.library._int_arg"
+                    ],
+                    "chm": 0.5,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.query.SlowFieldSort",
+                    "operations": [
+                        "beets.dbcore.query.SlowFieldSort.is_slow"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.util.__init__.FilesystemError",
+                    "operations": [
+                        "beets.util.__init__.FilesystemError.__init__",
+                        "beets.util.__init__.FilesystemError.get_message"
+                    ],
+                    "chm": 0.2,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.query.AndQuery",
+                    "operations": [
+                        "beets.dbcore.query.AndQuery.clause",
+                        "beets.dbcore.query.AndQuery.match"
+                    ],
+                    "chm": 0.75,
+                    "chd": 0.0
+                }
+            ]
+        },
+        {
+            "id": "ser166",
+            "statistics": {
+                "n_intra_edges": 28,
+                "total_weight_intra_edges": 2.2236702832403163,
+                "n_inter_edges": 199,
+                "total_weight_inter_edges": 2.4824753710896474,
+                "cluster_factor": 0.642,
+                "ifn": 9,
+                "opn": 70,
+                "scoh": 0.15,
+                "scop": 0.11607245357245358,
+                "ccoh": 0.16,
+                "ccop": 0.2791360678860679
+            },
+            "code_fragments": [
+                "beets.library.DefaultTemplateFunctions",
+                "beets.dbcore.db.LazyConvertDict",
+                "beets.library.FormattedItemMapping",
+                "beets.plugins",
+                "beets.library.Item",
+                "beets.dbcore.db.Model",
+                "beets.autotag.hooks.Distance",
+                "beets.library.MusicalKey",
+                "beets.ui.__init__",
+                "beets.dbcore.db"
+            ],
+            "interfaces": [
+                {
+                    "name": "beets.ui.__init__",
+                    "operations": [
+                        "beets.ui.__init__._colordiff",
+                        "beets.ui.__init__.input_options",
+                        "beets.ui.__init__.print_",
+                        "beets.ui.__init__._colorize"
+                    ],
+                    "chm": 0.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.dbcore.db.Model",
+                    "operations": [
+                        "beets.dbcore.db.Model.store",
+                        "beets.dbcore.db.Model.__getitem__",
+                        "beets.dbcore.db.Model.keys",
+                        "beets.dbcore.db.Model._get",
+                        "beets.dbcore.db.Model.__contains__",
+                        "beets.dbcore.db.Model._type",
+                        "beets.dbcore.db.Model.update",
+                        "beets.dbcore.db.Model.evaluate_template",
+                        "beets.dbcore.db.Model.__getattr__",
+                        "beets.dbcore.db.Model.add",
+                        "beets.dbcore.db.Model.__setattr__",
+                        "beets.dbcore.db.Model.remove",
+                        "beets.dbcore.db.Model.__init__",
+                        "beets.dbcore.db.Model.load"
+                    ],
+                    "chm": 0.37271062271062283,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.plugins",
+                    "operations": [
+                        "beets.plugins.album_for_id",
+                        "beets.plugins.album_field_getters",
+                        "beets.plugins.BeetsPlugin._set_log_level_and_params.wrapper",
+                        "beets.plugins.item_candidates",
+                        "beets.plugins.candidates",
+                        "beets.plugins.find_plugins",
+                        "beets.plugins.import_stages",
+                        "beets.plugins.early_import_stages",
+                        "beets.plugins.album_distance",
+                        "beets.plugins.track_distance",
+                        "beets.plugins.commands",
+                        "beets.plugins.queries",
+                        "beets.plugins.notify_info_yielded.decorator.decorated",
+                        "beets.plugins.notify_info_yielded",
+                        "beets.plugins.get_distance",
+                        "beets.plugins.notify_info_yielded.decorator",
+                        "beets.plugins.send",
+                        "beets.plugins.template_funcs",
+                        "beets.plugins.track_for_id"
+                    ],
+                    "chm": 0.04845446950710109,
+                    "chd": 0.042300194931773866
+                },
+                {
+                    "name": "beets.library.MusicalKey",
+                    "operations": [
+                        "beets.library.MusicalKey.normalize",
+                        "beets.library.MusicalKey.parse"
+                    ],
+                    "chm": 1.0,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.library.DefaultTemplateFunctions",
+                    "operations": [
+                        "beets.library.DefaultTemplateFunctions.functions",
+                        "beets.library.DefaultTemplateFunctions.__init__"
+                    ],
+                    "chm": 0.3333333333333333,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.library.Item",
+                    "operations": [
+                        "beets.library.Item.move",
+                        "beets.library.Item.from_path",
+                        "beets.library.Item.try_write",
+                        "beets.library.Item.__setitem__",
+                        "beets.library.Item.try_sync",
+                        "beets.library.Item.__getitem__",
+                        "beets.library.Item.get",
+                        "beets.library.Item.update",
+                        "beets.library.Item.remove",
+                        "beets.library.Item._cached_album"
+                    ],
+                    "chm": 0.2268253968253967,
+                    "chd": 0.014814814814814814
+                },
+                {
+                    "name": "beets.dbcore.db.LazyConvertDict",
+                    "operations": [
+                        "beets.dbcore.db.LazyConvertDict.keys"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.library.FormattedItemMapping",
+                    "operations": [
+                        "beets.library.FormattedItemMapping.album_keys",
+                        "beets.library.FormattedItemMapping.__getitem__"
+                    ],
+                    "chm": 0.5,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.autotag.hooks.Distance",
+                    "operations": [
+                        "beets.autotag.hooks.Distance._weights",
+                        "beets.autotag.hooks.Distance.add_expr",
+                        "beets.autotag.hooks.Distance",
+                        "beets.autotag.hooks.Distance.distance",
+                        "beets.autotag.hooks.Distance.__rsub__",
+                        "beets.autotag.hooks.Distance.__str__",
+                        "beets.autotag.hooks.Distance.add_ratio",
+                        "beets.autotag.hooks.Distance.__iter__",
+                        "beets.autotag.hooks.Distance.add_string",
+                        "beets.autotag.hooks.Distance.__init__",
+                        "beets.autotag.hooks.Distance.keys",
+                        "beets.autotag.hooks.Distance.update",
+                        "beets.autotag.hooks.Distance.__lt__",
+                        "beets.autotag.hooks.Distance.add",
+                        "beets.autotag.hooks.Distance.__sub__",
+                        "beets.autotag.hooks.Distance.add_equality"
+                    ],
+                    "chm": 0.392777777777778,
+                    "chd": 0.06666666666666667
+                }
+            ]
+        },
+        {
+            "id": "ser167",
+            "statistics": {
+                "n_intra_edges": 143,
+                "total_weight_intra_edges": 6.726213087914328,
+                "n_inter_edges": 201,
+                "total_weight_inter_edges": 2.958788153445634,
+                "cluster_factor": 0.82,
+                "ifn": 7,
+                "opn": 27,
+                "scoh": 0.0371900826446281,
+                "scop": 0.042375679875679875,
+                "ccoh": 0.29545454545454547,
+                "ccop": 0.19702342202342202
+            },
+            "code_fragments": [
+                "beets.util.bluelet.Delegated",
+                "beets.util.pipeline.MiddlePipelineThread",
+                "beets.util.bluelet.JoinEvent",
+                "beets.util.functemplate",
+                "beets.util.bluelet.Event",
+                "beets.logging.ThreadLocalLevelLogger",
+                "beets.util.bluelet",
+                "beets.util.pipeline.FirstPipelineThread",
+                "beets.logging.StrFormatLogger",
+                "beets.util.pipeline.LastPipelineThread",
+                "beets.util.bluelet.ReturnEvent",
+                "beets.util.pipeline.Pipeline",
+                "beets.logging.BeetsLogger",
+                "beets.util.pipeline.PipelineThread",
+                "beets.util.pipeline.CountedQueue",
+                "beets.util.bluelet.SpawnEvent",
+                "beets.plugins.BeetsPlugin",
+                "beets.util.bluelet.DelegationEvent",
+                "beets.plugins.PluginLogFilter",
+                "beets.util.bluelet.SleepEvent",
+                "beets.logging",
+                "beets.util.bluelet.KillEvent"
+            ],
+            "interfaces": [
+                {
+                    "name": "beets.util.pipeline.Pipeline",
+                    "operations": [
+                        "beets.util.pipeline.Pipeline.__init__",
+                        "beets.util.pipeline.Pipeline",
+                        "beets.util.pipeline.Pipeline.run_sequential"
+                    ],
+                    "chm": 0.16666666666666666,
+                    "chd": 0.0
+                },
+                {
+                    "name": "beets.util.functemplate",
+                    "operations": [
+                        "beets.util.functemplate",
+                        "beets.util.functemplate.template",
+                        "beets.util.functemplate._parse",
+                        "beets.util.functemplate.ex_rvalue",
+                        "beets.util.functemplate.ex_literal",
+                        "beets.util.functemplate.ex_call",
+                        "beets.util.functemplate.compile_func",
+                        "beets.util.functemplate.Template.translate.wrapper_func"
+                    ],
+                    "chm": 0.038690476190476185,
+                    "chd": 0.09523809523809523
+                },
+                {
+                    "name": "beets.plugins.BeetsPlugin",
+                    "operations": [
+                        "beets.plugins.BeetsPlugin.track_distance",
+                        "beets.plugins.BeetsPlugin.item_candidates",
+                        "beets.plugins.BeetsPlugin.get_import_stages",
+                        "beets.plugins.BeetsPlugin.get_early_import_stages",
+                        "beets.plugins.BeetsPlugin._set_stage_log_level",
+                        "beets.plugins.BeetsPlugin.commands",
+                        "beets.plugins.BeetsPlugin.candidates",
+                        "beets.plugins.BeetsPlugin.queries",
+                        "beets.plugins.BeetsPlugin._set_log_level_and_params",
+                        "beets.plugins.BeetsPlugin.track_for_id",
+                        "beets.plugins.BeetsPlugin.album_distance"
+                    ],
+                    "chm": 0.4044588744588747,
+                    "chd": 0.08484848484848484
+                },
+                {
+                    "name": "beets.logging.ThreadLocalLevelLogger",
+                    "operations": [
+                        "beets.logging.ThreadLocalLevelLogger.level",
+                        "beets.logging.ThreadLocalLevelLogger.set_global_level"
+                    ],
+                    "chm": 0.5,
+                    "chd": 0.6666666666666666
+                },
+                {
+                    "name": "beets.util.bluelet.ReturnEvent",
+                    "operations": [
+                        "beets.util.bluelet.ReturnEvent.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.logging",
+                    "operations": [
+                        "beets.logging.getLogger"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                },
+                {
+                    "name": "beets.plugins.PluginLogFilter",
+                    "operations": [
+                        "beets.plugins.PluginLogFilter.__init__"
+                    ],
+                    "chm": 1,
+                    "chd": 1
+                }
+            ]
+        }
+    ]
+}
