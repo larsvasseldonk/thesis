@@ -1,10 +1,10 @@
 # Thesis
 
-Title: **From a Monolith to Microservices: The Effect of Multi-view Clustering**
-University: Utrecht University
-Year: 2021
-Author: Lars van Asseldonk
-Supervisor: Dr. J. (Jurriaan) Hage
+Title: **From a Monolith to Microservices: The Effect of Multi-view Clustering**  
+University: Utrecht University  
+Year: 2021  
+Author: Lars van Asseldonk  
+Supervisor: Dr. J. (Jurriaan) Hage  
 
 ## Abstract
 
