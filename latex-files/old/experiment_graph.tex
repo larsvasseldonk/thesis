@@ -1,0 +1,53 @@
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{.33\textwidth}
+    \centering
+    \begin{tikzpicture}
+        % Vertices
+        \Vertex[x=1.1,y=3,shape=ellipse, style={minimum width=2cm},opacity=.5,label=customer,fontscale=0.9]{A}
+        \Vertex[x=0,y=1.6,opacity=.5,label=Customer]{B}
+        \Vertex[x=1.8,y=2,opacity=.5,label=c]{C}
+        \Vertex[x=.8,y=.5, opacity=.5,label=d]{D}
+        \Vertex[x=2.8,y=1, opacity=.5,label=e]{E}
+        \Vertex[x=1.8,y=0, opacity=.5,label=f]{F}
+        
+        % Edges
+        \Edge[Direct,bend=-30](A)(B)
+        \Edge[Direct,bend=-30](B)(D)
+        \Edge[Direct,bend=10](D)(A)
+        \Edge[Direct,bend=10](D)(C)
+        \Edge[Direct,bend=30](C)(E)
+        \Edge[Direct,bend=30](E)(F)
+        \Edge[Direct,bend=10](F)(C)
+    \end{tikzpicture}
+    \caption{After static analysis.}
+    \label{fig:A}
+    \end{subfigure}
+    \begin{subfigure}{.33\textwidth}
+    \centering
+    \begin{tikzpicture}
+        % Vertices
+        \Vertex[x=1.1,y=3,opacity=.5,label=a]{A}
+        \Vertex[x=0,y=1.6,opacity=.5,label=b]{B}
+        \Vertex[x=1.8,y=2,opacity=.5,label=c]{C}
+        \Vertex[x=.8,y=.5, opacity=.5,label=d]{D}
+        \Vertex[x=2.8,y=1, opacity=.5,label=e]{E}
+        \Vertex[x=1.8,y=0, opacity=.5,label=f]{F}
+        
+        % Edges
+        \Edge[Direct,label=1.2,fontsize=\tiny,bend=-30](A)(B)
+        \Edge[Direct,label=1.8,fontsize=\tiny,bend=-30](B)(D)
+        \Edge[Direct,label=0.7,fontsize=\tiny,bend=10](D)(A)
+        \Edge[Direct,label=0.2,fontsize=\tiny,bend=10](D)(C)
+        \Edge[Direct,label=3.2,fontsize=\tiny,bend=30](C)(E)
+        \Edge[Direct,label=2.4,fontsize=\tiny,bend=30](E)(F)
+        \Edge[Direct,label=1.3,fontsize=\tiny,bend=10](F)(C)
+    \end{tikzpicture}
+    \caption{After dynamic analysis.}
+    \label{fig:B}
+    \end{subfigure}
+    
+\end{figure}
+
+
+% MANUAL: http://ctan.math.washington.edu/tex-archive/graphics/pgf/contrib/tikz-network/tikz-network.pdf

@@ -1,0 +1,133 @@
+\begin{tikzpicture}
+\footnotesize
+\begin{axis}[
+    width=1.0\textwidth,
+    height=1.0\textwidth,
+    title={},
+    xlabel={Static weight in ($SLX$)},
+    ylabel={SMQ},
+    xmin=0, xmax=1,
+    ymin=0, ymax=0.25,
+    xtick={0,0.2,0.4,0.6,0.8,1},
+    ytick={0.05,0.1,0.15,0.2,0.25,0.3},
+    legend columns=-1,
+    legend entries={PyPetstore, Twitter, ChatterBot, asreview, Beets, Picard, Mu},
+    legend to name=named,
+    ymajorgrids=true,
+    xmajorgrids=true,
+    grid style=dashed,
+    ticklabel style = {font=\tiny}
+]
+
+% PyPetstore
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    coordinates {
+    (0,0.221)(0.2,0.234)(0.4,0.234)(0.6,0.189)(0.8,0.189)(1,0.149)
+    };
+
+% Twitter
+\addplot[
+    color=red,
+    mark=diamond,
+    ]
+    coordinates {
+    (0,0.021)(0.2,0.043)(0.4,0.036)(0.6,0.035)(0.8,0.035)(1,0.062)
+    };
+    
+% ChatterBot
+\addplot[
+    color=green,
+    mark=triangle,
+    ]
+    coordinates {
+    (0,0.015)(0.2,0.024)(0.4,0.034)(0.6,0.041)(0.8,0.034)(1,0.092)
+    };
+
+% asreview
+\addplot[
+    color=purple,
+    mark=otimes,
+    ]
+    coordinates {
+    (0,0.02)(0.2,0.02)(0.4,0.02)(0.6,0.039)(0.8,0.034)(1,0.033)
+    };  
+
+% Beets
+\addplot[
+    color=orange,
+    mark=+,
+    ]
+    coordinates {
+    (0,0.028)(0.2,0.045)(0.4,0.045)(0.6,0.045)(0.8,0.045)(1,0.045)
+    };
+
+% Picard
+\addplot[
+    color=teal,
+    mark=Mercedes star,
+    ]
+    coordinates {
+    (0,0.004)(0.2,0.005)(0.4,0.006)(0.6,0.006)(0.8,0.006)(1,0.011)
+    };
+
+% Mu
+\addplot[
+    color=yellow,
+    mark=halfcircle,
+    ]
+    coordinates {
+    (0,0.034)(0.2,0.056)(0.4,0.06)(0.6,0.06)(0.8,0.084)(1,0.101)
+    };
+    
+\end{axis}
+\end{tikzpicture}
+
+% Data
+
+% Y = [0, 0.2, 0.4, 0.6, 0.8, 1]
+
+% Use this to zip them together, where x is e.g. CHD
+% print([x for x in zip(x, y)])
+
+% Only static -> only dynamic
+
+% PyPetstore
+% CHM: [0.369, 0.369, 0.25, 0.25, 0.333, 0.756]
+% CHD: [0.528, 0.528, 0.479, 0.479, 0.417, 0.511]
+% SMQ: [0.167, 0.182, 0.211, 0.211, 0.188, 0.125]
+% CMQ: [0.086, 0.101, 0.127, 0.127, 0.125, 0.125]
+
+% Twitter
+% CHM: [0.667, 0.636, 0.636, 0.5, 0.5, 0.5]
+% CHD: [0.704, 0.486, 0.486, 0.293, 0.293, 0.293]
+% SMQ: [0.11, 0.133, 0.142, 0.132, 0.132, 0.149]
+% CMQ: [0.077, 0.082, 0.09, 0.097, 0.097, 0.114]
+
+% ChatterBot
+% CHM: [0.673, 0.549, 0.563, 0.559, 0.559, 0.752]
+% CHD: [0.517, 0.412, 0.463, 0.463, 0.463, 0.767]
+% SMQ: [0.138, 0.099, 0.149, 0.148, 0.148, 0.19]
+% CMQ: [0.03, 0.02, 0.027, 0.027, 0.027, 0,027, 0.044]
+
+% asreview
+% CHM: [0.696, 0.656, 0.672, 0.707, 0.795, 0.747]
+% CHD: [0.599, 0.618, 0.616, 0.665, 0.765, 0.73]
+% SMQ: [0.175, 0.195, 0.197, 0.192, 0.18, 0.179]
+% CMQ: [0.054, 0.127, 0.13, 0.132, 0.115, 0.169]
+
+% Beets
+% CHM: [0.57, 0.618, 0.604, 0.626, 0.602, 0.627]
+% CHD: [0.45, 0.503, 0.51, 0.51, 0.535, 0.461, 0.365]
+% SMQ: [0.082, 0.111, 0.128, 0.129, 0.134, 0.152]
+% CMQ: [0.045, 0.084, 0.106, 0.107, 0.107, 0.141]
+
+% Picard
+
+% Mu
+% CHM: [0.537, 0.737, 0.784, 0.76, 0.77, 0.72]
+% CHD: [0.359, 0.472, 0.522, 0.497, 0.518, 0.472]
+% SMQ: [0.132, 0.173, 0.154, 0.157, 0.145, 0.154]
+% CMQ: [0.032, 0.109, 0.107, 0.104, 0.092, 0.115]

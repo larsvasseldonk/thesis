@@ -1,0 +1,217 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage[style=numeric]{biblatex}
+\usepackage{hyperref}
+
+\addbibresource{references/clustering_algorithms.bib}
+\addbibresource{references/research_methods.bib}
+\addbibresource{references/reviewed_papers.bib}
+\addbibresource{references/microservices_soa_general.bib}
+\addbibresource{references/software_clustering.bib}
+\addbibresource{references/static_analysis.bib}
+\addbibresource{references/other.bib}
+\addbibresource{references/semantic_analysis.bib}
+
+% For setting the page layout
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=10mm]{geometry}
+% For spacing
+\usepackage{setspace}
+%\singlespacing
+\onehalfspacing
+%\doublespacing
+% For the style of the pages
+\usepackage{fancyhdr}
+\newcommand{\changefont}{%
+    \fontsize{9}{11}\selectfont
+}
+\fancyhf{}
+\fancyhead[LE]{\slshape \rightmark} %section
+\fancyhead[RE]{\thepage}
+\fancyhead[RO]{\slshape \leftmark} % chapter
+\fancyfoot[C]{\changefont \thepage} %footer
+\pagestyle{fancy}
+% To color table cells
+\usepackage[table]{xcolor}
+% For plots
+\usepackage{pgfplots}
+% For boxplot
+\usepgfplotslibrary{statistics}
+% To adjust the width of tables:
+\usepackage{array}
+% To get the commands \toprule and \cmidrule:
+\usepackage{booktabs}
+% To control captions, e.g. centering them:
+\usepackage{caption}
+% To make network graphs
+\usepackage{tikz-network}
+% For subfigures
+\usepackage{subcaption}
+% To turn a page to landscape mode
+\usepackage{rotating}
+% For code snippets
+\usepackage{listings}
+% For matrices and vector notation
+\usepackage{amsmath}
+% For defining algorithms
+\usepackage{algorithm2e}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+% For creating subtables and subfigures
+\usepackage{caption}
+\usepackage{subcaption}
+% For shapes in graphs
+\usepackage{tikz}
+% for multi rows in tables
+\usepackage{multirow}
+% For table positioning
+\usepackage{float}
+% For tree
+\usepackage{qtree}
+% For centering overfull tables
+\usepackage{adjustbox}
+
+\setcounter{tocdepth}{1} % Show sections
+%\setcounter{tocdepth}{2} % + subsections
+%\setcounter{tocdepth}{3} % + subsubsections
+%\setcounter{tocdepth}{4} % + paragraphs
+%\setcounter{tocdepth}{5} % + subparagraphs
+
+\definecolor{CellGray}{HTML}{C0C0C0}
+\definecolor{LightGray}{HTML}{f6f6f6}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeorange}{HTML}{b5722f}
+
+\lstdefinestyle{code_snipped_style}{
+    backgroundcolor=\color{LightGray},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codeorange},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=10pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=code_snipped_style}
+
+\captionsetup{format=plain, font=small, labelfont=bf, margin={2.5cm,0cm}}
+%\captionsetup{justification=normal, margin={2.5cm, 1.5cm}, labelfont=bf, font=footnotesize}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+    
+    \vspace*{2cm}
+    UTRECHT UNIVERSITY
+    
+    \vspace*{2.5cm}
+    
+    {\Huge \textbf{From a Monolith to Microservices:}}
+    
+    \vspace{0.6cm}
+    
+    {\Huge \textbf{the Effect of Multi-view Clustering}}
+    
+    \vspace{0.5cm}
+    
+    {\small \textit{FINAL VERSION}}
+    
+    
+    \vspace{1.5cm}
+    
+    {\Large By}
+    
+    \vspace{0.4cm}
+    
+    {\Large Lars M.A. van Asseldonk}
+    
+    \vspace{1cm}
+    
+    6970907\\
+    \href{mailto:l.m.a.vanasseldonk@students.uu.nl}{l.m.a.vanasseldonk@students.uu.nl}
+    
+    \vfill
+    
+    1st Supervisor: Dr. J. (Jurriaan) Hage \\
+    2nd Supervisor: Dr. ir. J.M.E.M. (Jan Martijn) van der Werf
+    
+    \vspace{2cm}
+    
+    Business Informatics\\
+    Graduate School of Natural Sciences\\
+    
+    \vspace{1cm}
+    
+    \today
+    
+    \end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+
+\input{chapters/00_abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+\tableofcontents
+\clearpage
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\clearpage
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\clearpage
+
+\pagenumbering{arabic}
+
+\chapter{Introduction}\label{c:introduction}
+\input{chapters/01.0_introduction}
+\input{chapters/01.1_problem}
+\input{chapters/01.2_method}
+
+\chapter{Background}\label{c:background}
+\input{chapters/02_background}
+
+\chapter{Related work}\label{c:related_work}
+\input{chapters/03_related_work}
+
+\chapter{Multi-view software clustering}\label{c:multi-view_clustering}
+\input{chapters/04_multi-view_clustering}
+
+\chapter{Verification}\label{c:verification}
+\input{chapters/05_verification}
+
+\chapter{Evaluation}\label{c:results}\label{c:results}
+\input{chapters/06_results}
+
+\chapter{Discussion}\label{c:discussion}
+\input{chapters/07_discussion}
+
+\chapter{Conclusions}\label{c:conclusions}
+\input{chapters/08_conclusions}
+
+\appendix
+%\input{chapters/00_appendix}
+
+\newpage
+\printbibliography
+
+\end{document}
+
+
+% CITE STYLES:
+% \cite{Doval1999}          [1]
+% \citeauthor{Doval1999}    Doval, Mancoridis, and Michell
+% \citeauthor*{Doval1999}   Doval et al.

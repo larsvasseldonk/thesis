@@ -1,0 +1,130 @@
+This chapter presents the results of the main experiment and is structured as follows. At first, we describe the design of the experiment. This is done by discussing the different groups that are tested against each other, the algorithm that is used to obtain the decomposition, and the input projects used for experimentation. After the experimental design, we present the results of the experiment. 
+
+\section{Experimental design}
+To understand the effect of the utilised information stream on the microservice decomposition, we make seven different decompositions of the system with our proposed tool. Each decomposition is constructed with a unique stream of data. The different input data streams are listed below. Each input stream gets an identifier of three letters based on the data it incorporates. The first letter $S$ represents static data, the second one $L$ lexical data, and the third one $D$ dynamic data. When a data source is not included, the letter $X$ is given.
+
+\begin{itemize}
+    \item[$SXX$] \textbf{Static.} The candidate microservices that are obtained by only considering static dependencies as input.
+    \item[$XLX$] \textbf{Lexical.} The decompositions obtained when only considering semantic information. This means the graph only consists of semantic edges.
+    \item[$XXD$] \textbf{Dynamic.} The decompositions constructed with only dynamic dependencies.
+    \item[$SXD$] \textbf{Static and dynamic.} These decompositions are constructed with static and dynamic data as input. This means that both the static and dynamic edges are given in the graph. When an edge has both a static and a dynamic dependency, the edge weights are combined by taking 50 percent of each weight.
+    \item[$SLX$] \textbf{Static and semantic.} The fifth group of decompositions combines static with semantic information as input. The edges are combined the same way as before.
+    \item[$XLD$] \textbf{Dynamic and semantic.} These decompositions are constructed with dynamic and semantic information as input.
+    \item[$SLD$] \textbf{Static, dynamic and semantic.} This group of decompositions takes all three streams of data as input. This means, the edges in the graph can either represent a static, semantic or dynamic edge, or a combination of those. When an edge is combined, each information source counts for 33 percent. This way the maximum weight of the combined edge can never exceed a value of 1. 
+\end{itemize}
+
+\subsection{Algorithm and parameters}
+The aim of this thesis is the understand how the quality of the microservices changes when different streams of data are used. To make sure the change in the quality of the decomposition is caused by the selected stream of data, it is important to understand how the clustering algorithm influences the result. In the next section, we therefore analyse the impact of the clustering algorithm on the quality of the resulting decomposition.
+
+\subsubsection{The effect of the clustering algorithm}
+To measure the effect of the clustering algorithm, we apply the three clustering algorithms selected in Section \ref{step3:graphs} on three graphs created with static, semantic and the two combined as input. Since the Clauset-Newman-Moore algorithm gave strange results for the CHM and CHD metric, we incorporated a fourth clustering algorithm called Label Propogation. The Label Propogation algorithm (LPA), introduced by \citeauthor{raghavan2007near} \cite{raghavan2007near}, is hierarchical based and has an agglomerative character.\par
+The three graphs are constructed for two monolithic projects of different sizes. We then observe the change in the results in terms of CHD, CHM, SMQ, and CMQ. When the change in the results are the same direction (all positive or negative) for each clustering algorithm, we assume the algorithm does not affect the change of the results. The results of this experiment are given in Table \ref{tab:effect_algorithm}. \par
+
+\input{tables/results_effect_algorithm}
+
+The Louvain algorithm is tested with different resolution parameters ranging between the values 0.3 and 1. The resolution value with the best performance is chosen and given in the table. The same applies for the input parameter for the Girvan-Newman algorithm. We tried different cutting values ranging between 0 and 5 and selected the best performing one. \par
+The row under the double line shows the most frequent type of change that occurs in the results when comparing it to previous column. The greater than ($>$) symbol indicates that the value of the former is bigger than the latter and the less than ($<$) symbol the opposite. The number in the brackets shows how many times the change happens. When the change is equal, the $=$ symbol is used. \par
+The table above (Table \ref{tab:effect_algorithm}) shows that most of the times the change in the results is the same for the algorithms. From the 106 observed changes, 96 appear to have the same direction. This means that 91 percent of the changes are the same regardless of the clustering algorithm. For this reason, we decided to select only one algorithm for the main experiment. We decided to go for the Louvain algorithm with a resolution parameter of 1, as it gave the most satisfying and consistent results. For the tf-idf threshold value, we selected a value of 0.05. Increasing this value results in a lower coverage of the semantic constructed graph. A value of 0.05 gave satisfying results during verification and will therefore be used in the remaining experiment.
+
+\subsection{Project collection}
+Table \ref{tab:projects_statistics} shows the projects that are used for experimentation. Each monolithic project $M$ is enriched with some descriptive statistics, such as the source lines of code (SLOC) and the number of classes, modules, methods and functions. Below, we give a short description of each project. The projects are ordered by its complexity (in terms of SLOC), starting with the smallest project.
+
+\begin{enumerate}
+    \item[$M_1$]\textbf{PyPystore.} PyPetstore\footnote{\href{https://github.com/larsvasseldonk/PyPetstore}{https://github.com/larsvasseldonk/PyPetstore}} is a minimal working command-line tool, inspired by JPetstore, that supports the process of selling pets. PyPetstore serves as an 'toy' example in which we can verify the working of our proposed technique.
+    \item[$M_2$] \textbf{twitter} The twitter\footnote{\href{https://github.com/python-twitter-tools/twitter}{https://github.com/python-twitter-tools/twitter}} project includes a set of Python tools such as a Twitter API, command-line tool, and IRC bot. The command-line tool allows you to, e.g., get friends' tweets and setting your own tweet. The IRC bot announces Twitter updates to an IRC channel. 
+    \item[$M_3$] \textbf{ChatterBot.} ChatterBot\footnote{\href{https://github.com/gunthercox/ChatterBot}{https://github.com/gunthercox/ChatterBot}} is a machine-learning based conversational dialog engine build in Python which makes it possible to generate responses based on collections of known conversations.
+    \item[$M_4$] \textbf{asreview.} ASReview\footnote{\href{https://github.com/asreview/asreview}{https://github.com/asreview/asreview}} (Active learning for Systematic Reviews) implements machine learning algorithms that interactively query the researcher. The project is developed and maintained by Utrecht University and is designed to accelerate the step of screening abstracts and titles with a minimum of papers to be read by a human.
+    \item[$M_5$] \textbf{beets.} Beets\footnote{\href{https://github.com/beetbox/beets}{https://github.com/beetbox/beets}} is the media library management system for obsessive music geeks. The project enables users manage music collections by, e.g., automatically improving metadata. It also provides a set of tools to manipulate and access music.
+    \item[$M_6$] \textbf{Picard.} MusicBrainz Picard\footnote{\href{https://github.com/metabrainz/picard}{https://github.com/metabrainz/picard}} is a cross-platform (Linux/Mac OS X/Windows) application written in Python and is the official MusicBrainz tagger. The project's public facing website is \href{https://picard.musicbrainz.org/}{https://picard.musicbrainz.org/}. MusicBrainz is an open music encyclopedia that collects music metadata and makes it available to the public.
+    \item[$M_7$] \textbf{mu.} Mu\footnote{\href{https://github.com/mu-editor/mu}{https://github.com/mu-editor/mu}} is a simple code editor for beginner programmers based on extensive feedback from teachers and learners. The project's public facing website is \href{https://codewith.mu/}{https://codewith.mu/}.
+\end{enumerate}
+
+\input{tables/projects}
+
+\section{Results}
+Each of the aforementioned project is analysed with our multi-view clustering tool. Out of this tool, a set of static, semantic and dynamic edges derives. These edges are then used to construct seven different graphs. Subsequently, the Louvain algorithm is used to find communities (microservices) in the graph such that nodes within a community are highly connected, and nodes between communities have low connections. The nodes in the graph represent top-level code fragments, where each top-level code fragment can either be a module (with its inner functions) or a class (with its inner methods). The quality of the candidate micoservices are then measured with the functional independence and modularity metrics. To understand what the effect of the input data is, we rigorously test if the quality of a decomposition resulting from a given information stream outperforms another. We use the paired t-test to validate whether the quality of two decomposition made with different streams of information are significantly different. Two groups are significantly different when the paired t-test results in a p-value lower than 0.05. In the next sections, we give the results of the experiment for each quality metric. \par
+
+\subsection{Functional independence}
+As described in Section \ref{s:quality_computation}, we measure the quality of the resulting candidate microservices in terms of its functional independence. The functional independence is measured according to four metrics, namely, CHD, CHM, IFN and OPN. Table \ref{tab:results_chd}, \ref{tab:results_chm}, \ref{tab:results_ifn}, and \ref{tab:results_opn} show the result of each metric respectively when applying our tool with different input data. The last row of each table gives the mean value of each experiment. The experiment with the best mean score is marked with a grey cell colour.
+
+\paragraph{Cohesion at domain level} The CHD metrics aims to measure the cohesiveness of services at domain level. The higher the CHD, the more functional cohesive the services are \cite{jin2018functionality}. Table \ref{tab:results_chd} shows the CHD scores for each input information stream. On average, the highest score for CHD is achieved when all three information streams are used for the decomposition ($SLD$). This makes sense since the algorithm has more information to make a suitable decomposition. However, it is not always that more information results in higher CHD scores. When static and dynamic is combined as input ($SXD$), the average CHD score lies somewhere between the two CHD scores achieved when both streams are used individually ($SXX$ and $XXD$). However, this is on average. When we look at the data again, we note that bigger applications ($M_5$, $M_6$, and $M_7$) always get a higher CHD score when static and dynamic data are combined as input than when they are used individually. The same pattern applies when static and lexical data streams ($SLX$) are combined as input. On average, this again results in a higher CHD score (0.615) than when only static (0.544) or only lexical (0.598) are used. This pattern is in line with our expectations that more views of the system result in a higher quality of the decomposition. When lexical and dynamic information ($XLD$) are combined as input, we see a small decrease in the average CHD score (0.591) compared to the average CHD score achieved when lexical data ($XLX$) is used only (0.598). However, the score is still higher than only using dynamic information ($XXD$) as input (0.537). Each combination of input streams is tested with a paired t-test, but none of them are significantly different. 
+
+\input{tables/results/results_chd}
+
+\paragraph{Cohesion at message level}
+The cohesion at message level (CHM) metric, explained in Section \ref{sss:step4_chm}, measures how cohesive services are based on the similarity of the input and output parameters of the operations in a service that communicate with other services. A higher score for CHM means a more cohesive decomposition and is preferred. Table \ref{tab:results_chm} gives the CHM results of the main experiment. The highest average CHM value is reached when static and lexical ($SLX$) information are combined as input (0.663). When also dynamic information is included ($SLD$), the CHM slightly decreases to a value of 0.643. However, the score of $SLD$ is for all projects at least as good as the worst performing individual score. For the bigger projects $M_5$, $M_6$ and $M_7$, the CHM score always outperforms two individual streams of data.
+Another pattern that we observe in the CHM results is that on average the CHM value increases when static ($SXX$) and dynamic graphs ($XXD$) are supplemented with semantic data ($SLX$ and $XLD$). Moreover, we see that combining static and dynamic ($SXD$) data streams does not result in an increase in score when comparing it to their individual scores. On average, the result of $SXD$ (0.574) appears to be lower than the two individual scores of $SXX$ (0.643) and $XXD$ (0.578). The changes in the score are small and after running the statistical tests it appears that there is not a significant difference between them.
+
+\input{tables/results/results_chm}
+
+\paragraph{Number of interfaces}
+The third metric to measure how functional independent the decomposition is, is the average number of interfaces a service provides. The aim is to get the lowest IFN rate as possible. Table \ref{tab:results_ifn} shows that the lowest average IFN rate (3.06) is achieved for graphs that only include static dependencies while the highest average IFN rate (10.26) is achieved for graphs that only include lexical data. We also observe that whenever lexical information is added to a static or dynamic graph, the IFN rate increases compared to using static or dynamic information individually. When a static graph is supplemented with semantic data, the IFN rate increases from 3.06 to 8.75 on average. The IFN rate of the dynamic graph increases from 3.99 to 9.31 on average when semantic data is added. In general, we observe that whenever semantic information is included as input for the decomposition ($XLX$, $SLX$, $XLD$, and $SLD$), the IFN rate is much higher compared to decomposition made with static and/or dynamic information. The differences between the input streams are not statistically different according to the paired t-test. 
+
+\input{tables/results/results_ifn}
+
+\paragraph{Number of operations}
+The number of operations should be as low as possible, as it indicates how loosely coupled services are. A higher OPN means that more communication between services is required, which is not desirable. Table \ref{tab:results_opn} gives the results of the OPN scores on the different input data streams. The table shows a similar pattern as the IFN scores. This because again the lowest average OPN value (52.6) is achieved in graphs that only have static edges ($SXX$) while the highest is score (135.7) is given to decompositions that take only semantic information as input ($XLX$). We also observe that whenever semantic data is used as input for the decomposition, the number of operations is much higher than when only static and/or dynamic information is used as input. A potential reason for this could be that the semantic input results in much more dependencies in the graph. Since the dependencies do not only reflect calling relations anymore, the algorithm cannot consider this for the decomposition. This way, classes that have a very different lexicon but invoke each other are easier clustered in different services than when only the calling relationships are used. \par
+After running the statistical tests, no combination of input streams appear to be statistically different from each other. 
+
+\input{tables/results/results_opn}
+
+\subsection{Modularity}
+The modularity of the decompositions is measured by two metrics: the structural modularity quality (SMQ) and the conceptual modularity quality (CMQ). The two metrics are explained in Section \ref{ss:step4_mq}.
+
+\paragraph{Structural modularity quality}
+The structural modularity quality values obtained for the different input streams are given in Table \ref{tab:results_smq}. The highest average SMQ value (0.164) is obtained for the decompositions that are made with static and dynamic information ($SXD$). The table also shows that the involvement of semantic information decreases the value of SMQ, which is inline with the results that we see for the IFN and the OPN scores. We can see this by comparing the results of the decompositions made with static and/or dynamic data ($SXX$, $XXD$, and $SXD$) to the remaining ones. These three decompositions do not rely on semantic information and all have a higher SMQ value on average. This statement is also supported by a paired t-test. The decompositions $SXX$, $XXD$ and $SXD$ all significantly outperform the decomposition made with semantic information as input ($XLX$, $SLX$, $XLD$ and $SLD$) with a p-value lower than 0.05. This means that we can say that including semantic information as input for the decomposition significantly decreases the structural modularity quality of the decomposition.
+
+\input{tables/results/results_smq}
+
+\paragraph{Conceptual modularity quality}
+The conceptual modularity quality (CMQ) measures the modularity of a graph based on semantic edges. The higher the CMQ, the better the decomposition is. The highest average CMQ score (0.229) is achieved for the decomposition made with only semantic data ($XLX$). The decompositions made with only dynamic data ($XXD$) as input show the lowest rate of SMQ (0.096). When comparing the CMQ scores with the SMQ scores, we see an opposite pattern. Where in terms of SMQ, the static and dynamic input streams outperform the ones with semantic involvement, the opposite occurs for the CMQ score. This means that whenever semantic information is used as input for the decomposition ($XLX$, $SLX$, $XLD$ and $SLD$), the CMQ score is significantly higher compared to decompositions where semantics are not used. This means that the decompositions $XLX$, $SLX$, $XLD$, and $SLD$ all significantly outperform the others with a p-value lower than 0.05. \par
+To better understand how semantic input affects the SMQ and CMQ rates compared to static or dynamic decompositions, we gradually increase the strength of the static and dynamic edges when combining them with semantic data ($SLX$ and $XLD$). We do the same for the static weight in the $SXD$ decompositions. Figure \ref{tab:project_results}, shows the results when gradually increasing the strength of one information source. Note that when the x-as is zero or one, only a single source of information is used while with a weight of 0.33 both information sources are used equally. 
+The CMQ scores are given on the right side of the figure while the SMQ scores on the left side. In these plots, we see that more involvement of static and dynamic input streams relates to a lower degree of CMQ for almost all projects. On the other hand, when we increase the static and dynamic weight, we see a small increase in the SMQ score, except for PyPetstore.  \par
+Figure \ref{tab:project_results} also shows how the SMQ and CMQ values changes when static and dynamic are combined. The plots shows that increasing the weight of the static data source in $SXD$ results in a better decomposition in terms of SMQ and CMQ. However, the changes are very small and appear not to be significant.
+
+\input{tables/results/results_cmq}
+
+\begin{figure}[h]
+    \caption[The change in SMQ and CMQ when varying the weight of the input sources.]{The change in SMQ and CMQ when gradually increasing the weight of the static (for first four plots) or dynamic (for the last two plots) information sources. In the middle of the plot, both information sources are used equally. }\label{tab:project_results}
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \input{plots/static_dynamic_smq}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \input{plots/static_dynamic_cmq}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \input{plots/static_semantic_smq}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \input{plots/static_semantic_cmq}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \input{plots/dynamic_semantic_smq}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \input{plots/dynamic_semantic_cmq}
+    \end{subfigure}
+    \ref{named}
+\end{figure}
+
+\paragraph{Coverage}
+The coverage is the only metric that follows a clear pattern. The decompositions made with semantic data as input give the highest coverage rate on average (0.971). When combining different graph with each other, the coverage rate increases. As expected, the highest coverage rate is achieved when all information sources are combined. 
+
+\input{tables/results/results_coverage}
+% MANUAL: http://ctan.math.washington.edu/tex-archive/graphics/pgf/contrib/tikz-network/tikz-network.pdf
+
+\subsection{Summary}
+Table \ref{tab:results_all} gives the mean and standard deviation for each metric applied on the seven different input streams. The grey cell colour indicates the best value obtained for a particular metric. The highest coverage and CHD rates are obtained when incorporating all sources of information ($SLD$). The highest CHM and CMQ rates are achieved when only semantic data is used as input. Decompositions obtained with static information as main source obtain the highest IFN and OPN score. Lastly, the highest SMQ score is achieved for decompositions that combine static and dynamic sources of information.
+
+\input{tables/results/results_all}

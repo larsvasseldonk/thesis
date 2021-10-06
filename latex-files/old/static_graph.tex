@@ -1,0 +1,28 @@
+\begin{figure}[ht]
+    \centering
+    \captionsetup{justification=centering ,margin=1.5cm, labelfont=bf, font=footnotesize}
+    \caption{Graph obtained for the running example after collecting static dependencies.}\label{fig:static_graph}
+    \begin{tikzpicture}
+        % Vertices
+        \Vertex[x=1.1,y=5,shape=ellipse, style={minimum width=2cm},opacity=.5,label=customer,fontscale=0.9]{A}
+        \Vertex[x=0,y=3.6,shape=ellipse, style={minimum width=2cm},opacity=.5,label=Customer,fontscale=0.9]{B}
+        \Vertex[x=0.2,y=1.8,shape=ellipse, style={minimum width=2cm},opacity=.5,label=Order,fontscale=0.9]{C}
+        \Vertex[x=1.1,y=0.3,shape=ellipse, style={minimum width=2cm},opacity=.5,label=order,fontscale=0.9]{D}
+        \Vertex[x=3,y=2.4,shape=ellipse, style={minimum width=2cm},opacity=.5,label=orderdetail,fontscale=0.9]{E}
+        \Vertex[x=4.4,y=1.2,shape=ellipse, style={minimum width=2cm},opacity=.5,label=Orderdetail,fontscale=0.9]{F}
+        \Vertex[x=5.5,y=3.2,shape=ellipse, style={minimum width=2cm},opacity=.5,label=Product,fontscale=0.9]{G}
+        \Vertex[x=4,y=4.2,shape=ellipse, style={minimum width=2cm},opacity=.5,label=product,fontscale=0.9]{H}
+        
+        % Edges
+        \Edge[bend=-30,label=\textbf{0.86}](A)(B)
+        \Edge[bend=50,label=0.07](B)(D)
+        \Edge[bend=-20,label=0.07](B)(C)
+        \Edge[bend=-20,label=\textbf{0.71}](C)(D)
+        \Edge[bend=-10,label=0.07](D)(E)
+        \Edge[bend=-10,label=\textbf{0.29}](E)(F)
+        \Edge[bend=-10,label=0.07](E)(H)
+        \Edge[bend=-10,label=0.07](E)(G)
+        \Edge[bend=-10,label=0.07](F)(G)
+        \Edge[bend=-10,label=\textbf{1.0}](G)(H)
+    \end{tikzpicture}
+\end{figure}

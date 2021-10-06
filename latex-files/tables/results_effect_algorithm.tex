@@ -1,0 +1,34 @@
+\begin{table}[h]
+    \footnotesize
+    \caption[The effect of the clustering algorithm.]{Results on the effect of the clustering algorithm.}\label{tab:effect_algorithm}
+    %This table gives the results of four clustering algorithms applied on three experiments. The best results for Louvain were found with a resolution value of 1. Girvan-Newman gave the best resolution with a cutting value of 5. The last row shows the most frequent change in the results when comparing it to previous column. $>$ indicates the value of the former is bigger than the latter and $<$ vice versa. The number in the brackets shows how many times the change happens. When the change is equal, the $=$ symbol is used. 
+    \begin{adjustbox}{center}
+    \begin{tabular}{>{\raggedright}m{20pt}>{\raggedright}m{75pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright}m{18pt}>{\raggedright\arraybackslash}m{18pt}}
+        \toprule
+        Mono
+        & Algo
+        & \multicolumn{3}{c}{CHM} 
+        & \multicolumn{3}{c}{CHD}
+        & \multicolumn{3}{c}{SMQ}
+        & \multicolumn{3}{c}{CMQ} \\
+        & & $SXX$ & $XLX$ & $SLX$ & $SXX$ & $XLX$ & $SLX$ & $SXX$ & $XLX$ & $SLX$ & $SXX$ & $XLX$ & $SLX$ \\
+        \midrule
+        \multirow{4}*{$M_2$} & Louvain & 0.667 & 0.609 & 0.750 & 0.701 & 0.742 & 0.813 & 0.124 & 0.033 & 0.048 & 0.060 & 0.226 & 0.137 \\
+        & Girvan-Newman & 0.498 & 0.586 & 0.619 & 0.562 & 0.753 & 0.754 & 0.092 & 0.021 & 0.012 & 0.039 & 0.199 & 0.197 \\
+        & Clauset & 0.440 & 0 & 0 & 0.519 & 0 & 0 & 0.090 & 0.009 & 0.019 & 0.033 & 0.050 & 0.043 \\
+        & LPA & 0.667 & 0.620 & 0.657 & 0.695 & 0.745 & 0.783 & 0.170 & 0.039 & 0.056 & 0.081 & 0.254 & 0.188 \\
+        \midrule
+        \midrule
+        & Change & - & (3)$>$ & (3)$<$ & - & (3)$<$ & (3)$<$ & - & (4)$>$ & (4)$<$ & - & (4)$<$ & (4)$>$ \\
+        \midrule
+        \multirow{4}*{$M_4$} & Louvain & 0.762 & 0.600 & 0.661 & 0.792 & 0.665 & 0.708 & 0.180 & 0.032 & 0.039 & 0.160 & 0.225 & 0.221 \\
+        & Girvan-Newman & 0.619 & 0.788 & 0.812 & 0.613 & 0.846 & 0.886 & 0.160 & 0.015 & 0.010 & 0.148 & 0.266 & 0.199 \\
+        & Clauset & 1 & 0 & 0 & 1 & 0 & 0 & 0.204 & 0.009 & 0.012 & 0.202 & 0.083 & 0.079 \\
+        & LPA & 0.799 & 0.712 & 0.814 & 0.792 & 0.733 & 0.798 & 0.211 & 0.069 & 0.076 & 0.162 & 0.232 & 0.228 \\
+        \midrule
+        \midrule
+        & Change & - & (3)$>$ & (3)$<$ & - & (3)$>$ & (3)$<$ & - & (4)$>$ & (3)$<$ & - & (3)$<$ & (4)$>$ \\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+\end{table}

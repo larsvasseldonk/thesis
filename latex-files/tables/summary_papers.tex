@@ -1,0 +1,120 @@
+\begin{table}[ht]
+    \tiny
+    \caption[Literature review summary]{Literature review summary.}\label{tab:summary_papers}
+    \begin{tabular}{>{\centering}m{7pt} >{\raggedright}m{55pt} >{\raggedright}m{30pt} >{\raggedright}m{80pt} >{\raggedright}m{80pt} >{\raggedright\arraybackslash}m{40pt}}
+        \toprule
+        \textbf{\#}
+        & \textbf{Input} 
+        & \textbf{Coupling data}
+        & \textbf{Decomposition method}
+        & \textbf{Validation type}
+        & \textbf{Supported languages} \\
+        \midrule
+        \cite{al2021microservice} 
+        & Source code
+        & SD, FO
+        & Graph clustering with Affinity Propagation
+        & MS metrics \& compared to \cite{jin2018functionality} \cite{saidani2019towards}
+        & Java\\
+        \midrule
+        \cite{brito2021identification} 
+        & Source code
+        & SD, SS
+        & Graph clustering with Louvain \cite{blondel2008fast}
+        & MS metrics
+        & Java\\
+        \midrule
+        \cite{de2018function} 
+        & Source code, Database \& Log files
+        & SD, DC
+        & Graph clustering
+        & Performance comparison of old and new architecture
+        & Language independent \\
+        \midrule
+        \cite{eski2018automatic}
+        & Source code \& Commits
+        & SD, EC
+        & Graph clustering with Fast Community \cite{newman2004finding}
+        & Compared to expert decomposition
+        & Java \\
+        \midrule
+        \cite{jin2018functionality}
+        & Log files
+        & SD, DC
+        & Hierarchical clustering
+        & MS metrics \& compared to \cite{mazlami2017extraction}  \cite{andritsos2005information} \cite{chatterjee2002wca}
+        & Java \\
+        \midrule
+        \cite{jin2019service}
+        & Execution traces
+        & SD, SS, DC
+        & Genetic search algorithm (NSGA-II) \cite{deb2002fast}
+        & 8 MS metrics \& compared to \cite{mazlami2017extraction}  \cite{andritsos2005information} \cite{chatterjee2002wca} 
+        & Java \\
+        \midrule
+        \cite{kamimura2018extracting}
+        & Source code
+        & SD
+        & Graph clustering with SArF \cite{kobayashi2012feature}
+        & Compared to expert decomposition
+        & Java, Cobol \\
+        \midrule
+        \cite{lohnertz2020steinmetz}
+        & Source code \& Version control
+        & SD, EC, SS
+        & 7 graph clustering algorithms
+        & MS metrics
+        & Java \\
+        \midrule
+        \cite{matias2020determining}
+        & Source code \& Log files
+        & SD, DC
+        & Graph clustering with Girvan-Newman 
+        & Compared to \cite{gysel2016service}
+        & Python (Django) \\
+        \midrule
+        \cite{mazlami2017extraction}
+        & Source code \& Version control
+        & SD, EC, CO, SS
+        & Minimal Spanning Tree (MST) clustering 
+        & MS metrics
+        & Java, Python \& Ruby \\
+        \midrule
+        \cite{nunes2019monolith}
+        & Source code
+        & SD
+        & Hierarchical clustering
+        & Metrics \& compared to expert decomposition (Structure101) 
+        & Java \\
+        \midrule
+        \cite{saidani2019towards}
+        & Source code
+        & SD
+        & Genetic search algorithm (NSGA-II) \cite{deb2002fast}
+        & MS metrics and compared to \cite{jin2018functionality} \cite{mazlami2017extraction} \cite{andritsos2005information}
+        & Java \\
+        \midrule
+        \cite{selmadji2018re}
+        & Source code
+        & SD
+        & Hierarchical clustering
+        & Compared to expert decomposition
+        & Java \\
+        \midrule
+        \cite{selmadji2020monolithic}
+        & Source code \& Expert recommendations
+        & SD
+        & Hierarchical clustering \cite{johnson1967hierarchical}
+        & Compared to expert decomposition
+        & Java \\
+        \midrule
+        \cite{zhang2020automated}
+        & Log files
+        & SD, DC
+        & Genetic search algorithm (NSGA-II) \cite{deb2002fast}
+        & Compared to \cite{jin2018functionality} and expert decomposition
+        & Java \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+

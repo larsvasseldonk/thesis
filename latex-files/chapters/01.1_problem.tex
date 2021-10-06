@@ -1,0 +1,27 @@
+\section{Problem statement}\label{s:problem}
+Refactoring the monolith into microservices is a daunting and costly task that takes a lot of time and effort from the organisation \cite{kalske2017challenges}. One of the biggest challenges is to find the right service cuts in the software \cite{fritzsch2019microservices}, as many variations are possible. Over the years, the scientific community has published many decomposition techniques that help organisations automatically identify microservice boundaries. Most of these approaches only rely on one viewpoint of the system, such as the source code, runtime environment, or design elements. Even though it is feasible to combine different sources of information without any problems. A literature review by \citeauthor{ponce2019migrating} \cite{ponce2019migrating} also states that \textit{more evidence of mixed proposals is needed}. In this research, we will build upon this observation. \par
+To the best of our knowledge, we have not found any decomposition approach that collects structural dependencies and semantic information hidden in the source code and runtime information to identify suitable microservices. This research fills that gap and contributes to the academic community by building a framework that combines these three information sources. Furthermore, we want to discover the relationship between the availability of different sources of information and the quality of the decomposition. 
+In terms of contribution to practice, we give organisations insights into the use of different information sources incorporated in the decomposition process. For example, if an organisation only has dynamic information at its disposal, we give an understanding of how this probably will affect the quality of the decomposition.
+
+\section{Aim}
+The goal of this research is to understand the effect of incorporating multiple sources of information on the quality of the microservice decomposition. The rationale behind this is that extra information results in a better decomposition. We also aim to find out which source is most informative and which combinations are most powerful. 
+%If time allows, we want to expand the experiment by applying different classes of clustering algorithms to understand how this is associated with the incorporated degree of information. 
+
+\section{Research questions}
+Following the two aforementioned research objectives, we have constructed the following Main Research Question (MRQ). The MRQ is subsequently divided into several Sub Questions (SQ).
+
+\begin{itemize}
+    \item[$MRQ$] What is the effect of combining static, dynamic and semantic sources of information extracted from monolithic software on the quality of the discovered microservices?
+\end{itemize}
+\begin{itemize}
+    \item[$SQ_1$] What is currently known about static, dynamic and semantic data extracted from monolithic software?
+    \item[$SQ_2$] What algorithms are commonly used for the task of microservice identification?
+    \item[$SQ_3$] What measures are used in the literature to define the quality of a decomposition?
+    \item[$SQ_4$] What is the decomposition quality when incorporating only a single source of information? 
+    \item[$SQ_5$] How does the quality of the decomposition change when incorporating multiple sources of information?
+\end{itemize}
+
+\subsection{Research context}
+For the reader, it is important to know in which context the research is conducted. Therefore, we briefly discuss some design decisions that are made throughout this research.\par
+Firstly, the technology stack in which the approach is implemented. Due to personal experiences, we have chosen to implement the approach in a Python context. This means the approach will only be compatible with applications that are written purely in Python. An advantage of executing the research in a Python context is that we differentiate ourselves from others, as most of the existing work presented in the literature review (Section \ref{s:literature_results}) is based on Java applications. However, the downside of this decision is that we are not able to compare the results of our approach to state-of-the-art techniques, as none of them uses Python. \par
+Secondly, we will validate our approach with open-source applications. This way, everyone has access to the source code leading to results that are easier to replicate. The risk of this decision is that we only validate the technique on relatively small applications. Also, the results cannot be validated with expert opinions. 

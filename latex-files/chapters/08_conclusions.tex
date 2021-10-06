@@ -1,0 +1,43 @@
+This research studied the effect of different input data streams on the quality of resulting microservice decompositions. In order to do this, we first conducted a literature review to analyse related work. Next, we developed a multi-view clustering tool that takes Python repositories as input, extracts the relevant data, and uses it to decompose the system into a suitable set of microservices. We then experimented with different input streams to see how it affects the quality of the decomposition. 
+This chapter concludes the research by answering the research questions. 
+
+\subsection{Conclusion}
+In order to answer the main research question, we first answer each of the sub-questions. 
+
+\begin{itemize}
+    \item[$SQ_1$] \textit{What is currently known about static, dynamic and semantic data extracted from monolithic software?}
+\end{itemize}
+
+This sub-question is answered by studying related literature. The literature review showed that most of the techniques rely on only one source of information when decomposing the monolith. The most utilised information source is the static dependencies resulting from the project's source code. Only a handful of approaches include multiple views of the system. 
+
+\begin{itemize}
+    \item[$SQ_2$] \textit{What measures are used in the literature to define the quality of a decomposition?}
+\end{itemize}
+
+We continued studying the related approach to find out which measures are most commonly used for determining the quality of a microservice decomposition. Although many microservice specific metrics to measure the internal quality of microservices have been proposed, there does not seem to be a consistent use among them in the community. For this reason, we decided to choose the metrics that are most often used throughout the related work. These most commonly used metrics measure the functional independence and the modularity quality of the microservice candidates.
+
+\begin{itemize}
+    \item[$SQ_3$] \textit{What algorithms are commonly used for the task of microservice identification?}
+\end{itemize}
+
+In the literature review, we also studied the clustering algorithms that are most commonly used for the task of decomposing software. During this study, we found out that the majority of the related researches focused on graph-based clustering algorithms. As the name already implies, graph-based clustering algorithms partition a graph, which means the software needs to be represented as a graph. The study also showed that there is no consistent use of the clustering algorithms among the community.
+
+\begin{itemize}
+    \item[$SQ_4$] \textit{What is the decomposition quality when incorporating only a single source of information?}
+\end{itemize}
+
+After we built and verified our novel multi-view clustering technique, we validated it by executing it on seven open-source Python projects. For each project, we created a microservice decomposition based on static, semantic and dynamic information, respectively. The quality of the resulting decomposition is then measured with the metrics resulting from $SQ_2$. The results show that decompositions constructed with semantic information provide the most coherent functionality to other services (measured by CHD and CHM) when comparing it to static and dynamic decompositions. However, the semantic decomposition also showed a significant increase in terms of IFN and OPN. The high OPN score for the semantic decomposition also results in a low SMQ score. The static and dynamic based decompositions appear to be more loosely coupled but also slightly less functionally cohesive than semantic decompositions. The SMQ metric gave the best results when only static information is included. The best CMQ score is achieved when only semantic information is included.
+
+\begin{itemize}
+    \item[$SQ_5$] \textit{How does the quality of the decomposition change when incorporating multiple sources of information?}
+\end{itemize}
+
+Regarding the SMQ and CMQ scores for the decompositions constructed with multiple views, we observe a significantly lower SMQ score and significantly higher CMQ score when semantic edges are incorporated. This means that we can
+say that including semantic information as input for the decomposition significantly decreases the structural modularity quality of the decomposition. Moreover, the decompositions that are constructed with static and semantic information as input are for all quality metrics (on average) at least as good as the worst performing individual group. The same applies when semantic and dynamic data are combined, except for the SMQ metric. 
+Next to this, the results did not show a consistent pattern in the quality results when incorporating different views of the system. This means we did not observe a consistent increase or decrease in terms of the metrics when multiple views of the system are incorporated. To conclude, this means that our expectation that decompositions with more information result in better decompositions is rejected.
+
+\begin{itemize}
+    \item[$MRQ$] \textit{What is the effect of combining static, dynamic and semantic sources of information extracted from monolithic software on the quality of the discovered microservices?}
+\end{itemize}
+
+In this thesis, we studied the effect of combining static, dynamic, and semantic sources of information on the resulting microservices decomposition. Before this study, we would expect that adding more information results in a better decomposition. However, the results show that the quality of decomposition does not gradually increase when additional sources of information are included. Using multiple sources of information could increase the quality, but an obvious pattern in the quality metrics is not found in this thesis. 
